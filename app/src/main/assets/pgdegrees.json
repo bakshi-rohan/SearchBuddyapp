@@ -1,0 +1,393 @@
+[
+  {
+    "PG": "M.Tech",
+    "specialisation": [
+      "Agriculture",
+      "Automobile",
+      "Aviation",
+      "Bio-Chemistry/Bio-Technology",
+      "Biomedical",
+      "Ceramics",
+      "Chemical",
+      "Civil",
+      "Computers",
+      "Electrical",
+      "Electronics/Telecommunication",
+      "Energy",
+      "Environmental",
+      "Instrumentation",
+      "Marine",
+      "Mechanical",
+      "Metallurgy",
+      "Mineral",
+      "Mining",
+      "Nuclear",
+      "Paint/Oil",
+      "Petroleum",
+      "Plastics",
+      "Production/Industrial",
+      "Textile"
+    ]
+  },
+  {
+
+    "PG": "MBA/PGDM",
+    "specialisation": [
+      "Advertising/Mass Communication",
+      "Finance",
+      "HR/Industrial Relations",
+      "Information Technology",
+      "International Business",
+      "Marketing",
+      "Systems",
+      "Operations",
+      "Hospitality Management",
+      "Business Analytics",
+      "Other Management"
+    ]
+  },
+  {
+    "PG": "CA",
+    "specialisation": [
+      "CA",
+      "Pursuing",
+      "First Attempt",
+      "Second Attempt"
+    ]
+  },
+  {
+    "PG": "CS",
+    "specialisation": [
+      "Any",
+      "CS",
+      "Other"
+    ]
+  },
+  {
+    "PG": "ICWA (CMA)",
+    "specialisation": [
+      "Any",
+      "ICWA (CMA)",
+      "Other"
+    ]
+  },
+  {
+    "PG": "Integrated PG",
+    "specialisation": [
+      "Journalism / Mass Communication",
+      "Management",
+      "PR/ Advertising",
+      "Tourism"
+    ]
+  },
+  {
+    "PG": "LLM",
+    "specialisation": [
+      "Any",
+      "Law",
+      "Other"
+    ]
+  },
+  {
+    "PG": "M.A",
+    "specialisation": [
+      "Anthropology",
+      "Arts & Humanities",
+      "Communication",
+      "Economics",
+      "English",
+      "Film",
+      "Fine Arts",
+      "Hindi",
+      "History",
+      "Journalism",
+      "Maths",
+      "Political Science",
+      "PR/ Advertising",
+      "Psychology",
+      "Sanskrit",
+      "Sociology",
+      "Statistics"
+    ]
+  },
+  {
+    "PG": "M.Arch",
+    "specialisation": [
+      "Any",
+      "Architecture",
+      "Other"
+    ]
+  },
+  {
+    "PG": "M.Com",
+    "specialisation": [
+      "Any",
+      "Commerce",
+      "Other"
+    ]
+  },
+  {
+    "PG": "M.Ed",
+    "specialisation": [
+      "Any",
+      "Education",
+      "Other"
+    ]
+  },
+  {
+    "PG": "M.Pharma",
+    "specialisation": [
+      "Any",
+      "Pharma",
+      "Other"
+    ]
+  },
+  {
+    "PG": "MS/M.Sc",
+    "specialisation": [
+      "Agriculture",
+      "Anthropology",
+      "Bio-Chemistry",
+      "Biology",
+      "Botany",
+      "Chemistry",
+      "Computers",
+      "Dairy Technology",
+      "Electronics",
+      "Environmental science",
+      "Food Technology",
+      "Geology",
+      "Home science",
+      "Maths",
+      "Microbiology",
+      "Nursing",
+      "Physics",
+      "Statistics",
+      "Zoology",
+      "Veterinary Science",
+      "Biotechnology",
+      "Organic Chemistry",
+      "Optometry",
+      "Astronautical Engineering",
+      "Aerospace & Mechanical Engineering",
+      "Chemical Engineering & Materials Science",
+      "Civil & Environmental Engineering",
+      "Electrical Engineering",
+      "Industrial & Systems Engineering",
+      "Petroleum Engineering",
+      "Cyber Security Engineering",
+      "Data Informatics",
+      "Systems Architecting and Engineering",
+      "Mechanical Engineering",
+      "Marine Engineering",
+      "Electronics & Embedded Technology",
+      "Mechatronics",
+      "Hospitality Administration"
+    ]
+  },
+  {
+    "PG": "M.C.A",
+    "specialisation": [
+      "Any",
+      "Computers",
+      "Other"
+    ]
+  },
+  {
+    "PG": "Medical - MS/MD",
+    "specialisation": [
+      "Cardiology",
+      "Dermatology",
+      "ENT",
+      "General Practitioner",
+      "Gyneocology",
+      "Hepatology",
+      "Immunology",
+      "Microbiology",
+      "Neonatal",
+      "Nephrology",
+      "Urology",
+      "Obstretrics",
+      "Oncology",
+      "Opthalmology",
+      "Orthopaedic",
+      "Pathology",
+      "Pediatrics",
+      "Psychiatry",
+      "Psychology",
+      "Radiology",
+      "Rheumatology",
+      "Ayurveda",
+      "Thoracic Medicine",
+      "Sports Medicine",
+      "Aviation Medicine/Aerospace Medicine",
+      "Tuberculosis & Respiratory Diseases / Pulmonary Medicine",
+      "Medical Genetics",
+      "Palliative Medicine",
+      "Public Health (Epidemiology)",
+      "Blood Banking & Immuno. Haem./Imm. Haem. & Blood Trans.",
+      "Tropical Medicine",
+      "Maternity & Child Health",
+      "Pulmonary Medicine",
+      "CCM",
+      "P.S.M",
+      "Emergency Medicine",
+      "R&D",
+      "Anaesthesiology",
+      "Anatomy",
+      "Forensic Medicine/Forensic Medicine & Toxicology",
+      "Geriatrics",
+      "Hospital Administration",
+      "Health Administration",
+      "Lab Medicine",
+      "Nuclear Medicine",
+      "Pharmacology",
+      "Physical Medicine & Rehabilitation",
+      "Radiotherapy",
+      "Social & Preventive Medicine / Community Medicine",
+      "Venereology",
+      "Bio-Chemistry",
+      "Unani",
+      "Bio-Physics",
+      "General Surgery",
+      "Neuro Surgery",
+      "Traumatology and Surgery"
+    ]
+  },
+  {
+    "PG": "PG Diploma",
+    "specialisation": [
+      "Chemical",
+      "Civil",
+      "Computers",
+      "Electrical",
+      "Electronics",
+      "Mechanical"
+    ]
+  },
+  {
+    "PG": "MVSC",
+    "specialisation": [
+      "Any",
+      "Veterinary Science",
+      "Other"
+    ]
+  },
+  {
+    "PG": "MCM",
+    "specialisation": [
+      "Any",
+      "Computers and Management",
+      "Other"
+    ]
+  },
+  {
+    "PG": "MDS",
+    "specialisation": [
+      "Any",
+      "Dentistry",
+      "Other"
+    ]
+  },
+  {
+    "PG": "MFA",
+    "specialisation": [
+      "Sculpture",
+      "Printmaking",
+      "Visual Communication"
+    ]
+  },
+  {
+    "PG": "M.Des",
+    "specialisation": [
+      "Animation Film Design",
+      "Apparel Design",
+      "Ceramic & Glass Design",
+      "Design For Retail Experience",
+      "Digital Game Design",
+      "Film and Video Communication",
+      "Furniture Design",
+      "Graphic Design",
+      "Information Design",
+      "Interaction Design",
+      "Lifestyle Accessory Design",
+      "New Media Design",
+      "Photography Design",
+      "Product Design",
+      "Strategic Design Management",
+      "Textile Design",
+      "Toy & Game Design",
+      "Transportation & Automobile Design",
+      "Universal Design"
+    ]
+  },
+  {
+    "PG": "DM",
+    "specialisation": [
+      "Clinical Pharmacology",
+      "Clinical Haematology",
+      "Pulmonary Medicine",
+      "Neuro Radiology",
+      "Nephrology",
+      "Neonatology",
+      "Oncology",
+      "Gastroenterology",
+      "Cardiology",
+      "Neurology",
+      "Rheumatology",
+      "Endocrinology",
+      "Clinical Immunology",
+      "Pulmonary Med. & Critical Care Med.",
+      "Cardiac -Anaes.",
+      "Haematology Pathology",
+      "Medical Genetics",
+      "Hepatology",
+      "Immunology",
+      "Child & Adolescent Psychiatry",
+      "Pediatric Gastroenterology",
+      "Pediatric Cardiology",
+      "Pediatric Anaesthesia",
+      "Neuro Anaesthesia",
+      "Pediatric Nephrology",
+      "Reproductive Medicine",
+      "Virology",
+      "Pediatric Oncology",
+      "Geriatric Mental Health",
+      "Pediatric Hepatology",
+      "Infectious Diseases",
+      "Organ Transplant Anaesthesia & Critical Care",
+      "Critical Care Medicine"
+    ]
+  },
+  {
+    "PG": "M.Ch",
+    "specialisation": [
+      "Hand Surgery",
+      "Gynaecological Oncology",
+      "Pediatric Cardio-Thoracic Vascular Surgery",
+      "Plastic & Reconstructive Surgery",
+      "Hepato Pancreato Biliary Surgery",
+      "Urology/Genito -Urinary Surgery",
+      "Hand & Micro Surgery",
+      "Burns & Plastic Surgery",
+      "Endocrine Surgery",
+      "Oncology",
+      "Vascular Surgery",
+      "Cardio Thoracic Surgery",
+      "Cardio Thoracic and Vascular Surgery",
+      "Neuro Surgery",
+      "Pediatric Surgery",
+      "Plastic Surgery",
+      "Surgical Gastroenterology/G.I. Surgery",
+      "Surgical Oncology",
+      "Thoracic Surgery",
+      "Urology"
+    ]
+  },
+  {
+    "PG": "Others",
+    "specialisation": [
+      "Others"
+    ]
+  }
+]

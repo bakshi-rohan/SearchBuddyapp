@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable-v24/darwer_icon.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/applied_jobs_border.xml" value="0.125" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/border.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/border_dothislater.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/border_job_category.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/border_shadow.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/border_top_companies.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/bottom_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/btn_black_bg.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/button_border.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/child_selector.xml" value="0.1235" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/circle.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/circle_shape.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/circular_progress_bar.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/dotted_border.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/down_arrow.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/edit.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/field_job_shadow.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/gradient_color.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/ic_baseline_mail_outline_24.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/job_selector.xml" value="0.1235" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/login_btn_border.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/nav_bar_color.xml" value="0.125" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/profile_section_border.xml" value="0.125" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/profile_selector.xml" value="0.1235" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/progress_background.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/recomm_jo_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/recomm_jobs_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/recruiter_jobs_border.xml" value="0.125" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/rectangle_border.xml" value="0.122" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/rounded_bckg.xml" value="0.1235" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/rounded_home_ui.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/rounded_login_ui.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/save_cancel_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/search_bar.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/side_nav_bar.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/signup_button_border.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/work_status_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/work_status_selected_border.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/drawable/yellow_border.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_about_us.xml" value="0.22" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_ad_work_history.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_add_professional_detail.xml" value="0.18" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_after_notification.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_basic_details.xml" value="0.18" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_contact_us.xml" value="0.33" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_dashboard.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_demo_form_one.xml" value="0.28432835820895525" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_demo_form_two.xml" value="0.36674259681093396" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_demo_login.xml" value="0.16" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_demo_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_education_details.xml" value="0.21" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_faq.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_field_sales.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_forgot_password.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_form_one.xml" value="0.18" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_form_three.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_form_two.xml" value="0.22" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_lgn_sgn_up.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_login.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_login_signup.xml" value="0.16" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_personal_details.xml" value="0.22" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_prefrence.xml" value="0.15" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_prefrences.xml" value="0.17980072463768115" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_professional_details.xml" value="0.15" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_profile_setting.xml" value="0.17980072463768115" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_reset_password.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_settings.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_signup.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/activity_splash.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/adapter_applied_jobs.xml" value="0.33" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/applied_job_recyler_layput.xml" value="0.24905183312262957" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/custom_alert_dialog.xml" value="0.2329683698296837" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/edu_field.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/field_sale_recycler_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_about_company_tab.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_add_work_history.xml" value="0.17980072463768115" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_applied__jobs.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_applied_jobs_description.xml" value="0.17980072463768115" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_filter.xml" value="0.25" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_home_fragment.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_job_description.xml" value="0.25" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_job_description_tab.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_questions.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_sales_jobs.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_settin.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/home_toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/item_drop_down.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/job_category_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/layout_chip_entry.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/nav_header_navigation.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/notification.xml" value="0.17980072463768115" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/progress_dialog_view.xml" value="0.1" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/question_recyler_layout.xml" value="0.16673792218896966" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/recommended_recyler_layout.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/row_add_professional_detail.xml" value="0.15" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/top_companies_recyler_layout.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/work_field.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/layout/work_history_recyler_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/menu/left_navigation_drawer.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/Rohan Bakshi/AndroidStudioProjects/Searchbuddy2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1005" />
+        <entry key="..\:/Users/Rohan Bakshi/AppData/Local/Android/Sdk/platforms/android-32/data/res/drawable/btn_radio.xml" value="0.1035" />
+        <entry key="..\:/Users/Rohan Bakshi/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.17980072463768115" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

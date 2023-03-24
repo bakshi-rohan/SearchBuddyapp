@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/login_bg">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/sbs_logo"></ImageView>
+
+
+            <LinearLayout
+                android:id="@+id/parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="28dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".Signup_form">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="5dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/add_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:gravity="start"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="+ add more"
+                        android:layout_weight="1"
+                        android:textColor="@color/choclate"
+                        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/delete_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/seogee_ui"
+        android:text="-delete"
+        android:layout_marginEnd="38dp"
+        android:layout_weight="1"
+        android:textColor="@color/choclate"
+        android:textSize="16sp"></TextView>
+
+
+</LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/add_edu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:gravity="start"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="+ add more"
+                        android:layout_weight="1"
+                        android:textColor="@color/choclate"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/delete_edu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:visibility="gone"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="-delete"
+                        android:layout_marginEnd="38dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/choclate"
+                        android:textSize="16sp"></TextView>
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sbmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/login_btn_border"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:backgroundTint="#936030">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_skip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_dothislater"
+                    android:fontFamily="@font/seoge_bold"
+                    android:text="I will do this later"
+                    android:textAllCaps="false"
+                    android:textColor="@color/choclate"
+                    android:textSize="14dp"
+                    app:backgroundTint="#ffffff">
+
+                </com.google.android.material.button.MaterialButton>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

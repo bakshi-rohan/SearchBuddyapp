@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUs">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="89dp"
+        android:gravity="center"
+        android:text="Reach Us!"
+        android:textSize="18sp"
+        android:textColor="@color/choclate"
+        android:fontFamily="@font/seoge_bold_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:text="Please go through FAQ page,we might have already answered your query there."
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/choclate"
+        android:layout_marginHorizontal="5dp"
+        android:textSize="16sp"
+        android:linksClickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="2dp"
+        android:text="Reach us at info@searchbuddy.in"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/choclate"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+</androidx.constraintlayout.widget.ConstraintLayout>

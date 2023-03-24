@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Forms.Signup_CV">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/sbs_logo"></ImageView>
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/your_state_progress_bar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="four"
+            app:spb_maxStateNumber="five"
+            app:spb_descriptionTopSpaceIncrementer="6dp"
+            app:spb_stateDescriptionSize="9.5sp"
+            app:spb_stateBackgroundColor="#f7f5f5"
+            app:spb_stateSize="30dp"
+            android:layout_marginTop="3dp"
+            app:spb_animationDuration="1800"
+            app:spb_stateForegroundColor="#009688"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee"
+            app:spb_currentStateDescriptionColor="#009688"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="true"
+            app:spb_checkStateCompleted="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:text="Resume/CV:"
+            android:textColor="@color/choclate"
+            android:textSize="14sp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Supported file formats PDF,DOC,DOCX"
+            android:textColor="@color/app_grey"
+            android:textSize="12sp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Maximum file size 2 MB"
+            android:textColor="@color/app_grey"
+            android:textSize="12sp"></TextView>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/profile_section_border"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Resume"
+                    android:textColor="@color/choclate"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="1dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="*"
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"
+                    android:visibility="gone"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_resume"
+                    android:layout_width="55dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/resume"></ImageView>
+
+                <TextView
+                    android:id="@+id/choose_resume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Select a File"
+                    android:textColor="#8A414141"
+                    android:textSize="12sp"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/file_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text=""
+                    android:textSize="12sp"></TextView>
+
+                <LinearLayout
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/button_border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/resume_upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="Upload File"
+                        android:textColor="@color/choclate"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/button_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/resume_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="Download"
+                        android:textColor="@color/choclate"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sbmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/login_btn_border"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Save and Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:backgroundTint="#936030">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/save_cancel_border"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Skip"
+            android:textAllCaps="false"
+            android:textColor="@color/choclate"
+            android:visibility="gone"
+            android:textSize="18dp"
+            app:backgroundTint="#FFFFFF">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+
+</LinearLayout>

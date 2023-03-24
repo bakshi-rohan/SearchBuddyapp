@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="22dp"
+        android:text="We are Searchbuddy"
+        android:fontFamily="@font/seoge_bold_two"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="5dp"
+        android:text="On a mission to create a powerful sales talent discovery and hiring platform"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/seoge_bold_two"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+    <ImageView
+        android:id="@+id/img_about_us"
+        android:layout_width="210dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        android:layout_marginHorizontal="4dp"
+        android:src="@drawable/about_us">
+    </ImageView>
+
+     >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="@dimen/value_25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_about_us"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/seogee_ui"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="At Searchbuddy we bring together an ecosystem of exceptional sales talent and scouts looking to hire such talent on a single platform"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="We understand that sales is the most critical function in your organization and it fuels your enterprise growth. We believe a good saleshiring strategy is key to your organization P and L. Through searchbuddy we aim to bring the focus and best practices into your sales hiring."
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/seogee_ui">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="We have carefully created evaluation frameworks which help you find the right attributes for your sales hiring. We engage with top sales talent and our offline teams carefully align them to the right jobs. Our offline teams comprise of seasoned recruiters who have been accomplishing milestones in their sales hiring careers. For our clients  we provide platform with latest tech but we also ensure a talent advisor engages with you to bring the right sales talent to your open positions"
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/seogee_ui">
+            </TextView>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

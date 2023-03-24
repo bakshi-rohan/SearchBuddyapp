@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Educational Details"
+                    android:textColor="@color/choclate"
+                    android:textSize="14sp"></TextView>
+                <!--    <ImageView-->
+                <!--        android:id="@+id/croos_btn"-->
+                <!--        android:layout_width="30dp"-->
+                <!--        android:layout_height="30dp"-->
+                <!--        android:layout_weight="1"-->
+                <!--        android:layout_marginStart="118dp"-->
+                <!--        android:layout_marginTop="3dp"-->
+                <!--        android:layout_gravity="center_vertical"-->
+                <!--        android:src="@drawable/cross"></ImageView>-->
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Add some educational details about yourself to help recruiters know you"
+                android:textColor="@color/app_grey"
+                android:textSize="12sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Qualifications"
+                android:textColor="@color/choclate"
+                android:textSize="14sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tenth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="54dp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:minHeight="27dp"
+                    android:text="10th"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/twelve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="54dp"
+                    android:layout_weight="1"
+                    android:minHeight="27dp"
+                    android:text="12th"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/graduate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginLeft="-2dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:layout_weight="1"
+                    android:text="Graduation"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/post_graduate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:layout_weight="1"
+                    android:text="Post-Graduataion"
+                    android:textColor="@color/app_grey"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tenth_llc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="10th"
+                android:textColor="@color/choclate"
+                android:textSize="14sp"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_board_tw"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Board"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_board_tw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_schl_tw"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="School Name"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_school_tw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_cgpa"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Cgpa/percentage"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cgpa_tw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tenth_start"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Start Year"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ten_start_yr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="4"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_ten_end"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="End Year"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ten_end_yr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="4"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/twe_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="12th"
+                android:textColor="@color/choclate"></TextView>
+
+                <RelativeLayout
+                    android:id="@+id/notice_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/et_board"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_school_twe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="School Name"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_school_twe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_perc_twe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Cgpa/percentage"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_perc_twe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_twe_start"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Start year"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_twe_start_yr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/twe_end_yr"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownSelector="@drawable/baseline_calendar_month_24"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/grad_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Graduation Details"
+                android:textColor="@color/choclate"
+                android:textSize="14sp"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
+            <Spinner
+                android:id="@+id/ti_grad_deg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" University"
+                android:minHeight="52dp"
+                app:boxStrokeColor="#936030"
+                app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_spec_grad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/Specialization"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/spec_grad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/grad_uni_rl"
+                    android:background="@drawable/rounded_bckg"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="4dp">
+
+                    <Spinner
+                        android:id="@+id/ti_grad_uni"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" University"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141">
+                    </Spinner>
+                </RelativeLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_cgpa_grad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Cgpa/percentage"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cgpa_grad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/start_grad"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/end_grad"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/post_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Post Graduation Details"
+                android:textColor="@color/choclate"
+                android:textSize="14sp"></TextView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
+                    <Spinner
+                        android:id="@+id/ti_postgrad_deg"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Degree"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_spec_postgrad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Specialization"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/spec_postgrad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
+
+            <Spinner
+                android:id="@+id/ti_postgrad_uni"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" University"
+                android:minHeight="52dp"
+                app:boxStrokeColor="#936030"
+                app:hintTextColor="#8A414141">
+            </Spinner>
+                </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_cgpa_postgrad"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Cgpa/percentage"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cgpa_postgrad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="4"
+                    android:inputType="numberDecimal"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/start_postgrad"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/rounded_bckg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/function_rl">
+
+                    <Spinner
+                        android:id="@+id/end_postgrad"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--            start-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/choclate"
+            android:minHeight="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/save_cancel_border"
+                android:fontFamily="@font/seoge_bold_two"
+                android:gravity="center"
+                android:minWidth="82dp"
+                android:minHeight="27dp"
+                android:text="Cancel"
+                android:textColor="@color/choclate"></TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="26dp"
+                android:background="@drawable/save_cancel_border"
+                android:fontFamily="@font/seoge_bold_two"
+                android:gravity="center"
+                android:minWidth="82dp"
+                android:minHeight="27dp"
+                android:text="Save"
+                android:textColor="@color/choclate"></TextView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

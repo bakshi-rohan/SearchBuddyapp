@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/seoge_bold_two"
+        android:text="Filter Jobs"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/iv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/seoge_bold_two"
+        android:text="Clear All"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        app:cornerRadius="5dp"
+        android:textColor="@color/app_grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/button_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_done"
+        app:layout_goneMarginEnd="20dp">
+    </com.google.android.material.button.MaterialButton>
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_refresh"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:src="@drawable/refresh"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/button_done"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/button_done"-->
+    <!--        app:layout_goneMarginEnd="20dp" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginEnd="7dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/seoge_bold_two"
+        android:text="Clear All"
+        android:textAllCaps="false"
+        android:textColor="@color/app_grey"
+        android:textSize="14sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/heading"
+        app:layout_constraintEnd_toStartOf="@+id/iv_refresh"
+        app:layout_constraintTop_toTopOf="@+id/heading" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_done"
+        >
+
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/cattle_type_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/Wfh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="WFH"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/wfh_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/exper_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Experience"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/exparrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/salary_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Salary"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/sal_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/location_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/loc_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/fresh_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/freshness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Date Posted"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/fresh_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/department_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Department"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/depart_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/heading_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text=""
+                android:textColor="@color/app_blue"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_cattle_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:context=".MainActivity" >
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_salary_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:context=".MainActivity" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seoge_bold_two">
+                </TextView>
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rangeSlider_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:valueFrom="0"
+                    android:valueTo="30"
+                    android:stepSize="1"
+                    app:tickColorInactive="@color/choclate"
+                    app:tickColorActive="@color/choclate"
+                    app:thumbColor="@color/choclate"
+                    app:haloColor="@color/choclate"
+                    app:trackColor="@color/choclate"
+                    app:labelBehavior="floating"
+                    app:values="@array/initial_range_slider_values" />
+                <TextView
+                    android:id="@+id/salary_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="0 Lpa to 30 Lpa"
+                    android:textColor="@color/choclate">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_location_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:context=".MainActivity" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search locations"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seoge_bold_two">
+                </TextView>
+                <MultiAutoCompleteTextView
+                    android:id="@+id/ti_location_form"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/search_bar"
+                    android:minHeight="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="10dp"
+                    android:hint=" Location(Start typing)"
+                    app:boxStrokeColor="#936030"
+                    app:hintTextColor="#8A414141">
+                </MultiAutoCompleteTextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_freshness_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@drawable/search_bar"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="10dp"
+                tools:context=".MainActivity" >
+                <Spinner
+                    android:id="@+id/ti_date_posted"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=" Location"
+                    app:boxStrokeColor="#936030"
+                    app:hintTextColor="#8A414141">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_department_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:context=".MainActivity" >
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cattle_status"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MainActivity" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Experience"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seoge_bold_two">
+                </TextView>
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rangeSlider_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:valueFrom="0"
+                    android:valueTo="30"
+                    android:stepSize="1"
+                    app:tickColorInactive="@color/choclate"
+                    app:tickColorActive="@color/choclate"
+                    app:thumbColor="@color/choclate"
+                    app:haloColor="@color/choclate"
+                    app:trackColor="@color/choclate"
+                    app:labelBehavior="floating"
+                    app:values="@array/initial_range_slider_values" />
+                <TextView
+                    android:id="@+id/exp_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="0 years to 30 years"
+                    android:textColor="@color/choclate">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <include
+        android:id="@+id/include2"
+        layout="@layout/filter_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

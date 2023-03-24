@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Forms.Form_Two">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Faq">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/searchbuddy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/save_cancel_border"
+            android:fontFamily="@font/seoge_bold_two"
+            android:gravity="center"
+            android:minWidth="102dp"
+            android:minHeight="27dp"
+            android:text="Searchbuddy"
+            android:textColor="@color/choclate"></TextView>
+
+        <TextView
+            android:id="@+id/candidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/save_cancel_border"
+            android:fontFamily="@font/seoge_bold_two"
+            android:gravity="center"
+            android:minWidth="102dp"
+            android:minHeight="27dp"
+            android:text="Candidate"
+            android:textColor="@color/choclate"></TextView>
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/ll_searchbuddy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:text="What is SearchBuddy? "
+        android:textColor="@color/black"
+        android:textSize="13sp">
+    </TextView>
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        android:text="SearchBuddy is a exclusively for sales hiring platform. As a recruiter you can find select sales talent here and as a candidate you will be able to find sales openings. Through this platform we aim to create a sales professional’s community.  "
+        android:textColor="@color/app_grey"
+        android:textSize="12sp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="7dp"
+        android:text="Is Searchbuddy a job board?"
+        android:textColor="@color/black"
+        android:textSize="13sp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="3dp"
+        android:text="Yes,Searchbuddy has a job board and candidates can find latest jobs available across our platform through the jobs section of our website. This is equipped with all relevant filters like location recency etc. "
+        android:textColor="@color/app_grey"
+        android:textSize="12sp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="7dp"
+        android:text="What is the vision of searchbuddy? "
+        android:textColor="@color/black"
+        android:textSize="13sp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        android:text="Searchbuddy wants to become the leading sales hiring platform, we plan to achieve this by building a large community brining the sales professionals and companies on a single platform. We would like to harness synergies of such a platform for the benefit of all its stakeholders "
+        android:textColor="@color/app_grey"
+        android:fontFamily="@font/seogee_ui"
+        android:textSize="12sp">
+    </TextView>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_searchbuddy">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Can anyone register on this platform? "
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="Yes, any candidate can sign up on this platform and create their account, this will allow candidates to discover jobs and get discovered by companies and recruiters who are recruiting on our platform."
+            android:textColor="@color/app_grey"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/seogee_ui"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Is this a job portal?"
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:text="We have a job portal as a part of our overall offering. This allows users to post their specific requirements and allows candidates to search for specific roles as per their desired criteria’s. "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="How will my confidential information like profile picture, resume and personal information be handled? "
+            android:textColor="@color/black"
+            android:layout_marginEnd="3dp"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="We take utmost care to comply with all security aspects and preserve our candidate’s personal data and information. Be rest assured your data will not be shared with anyone outside search buddy. Only the recruiters you allow access can view your information and only the same can share your information "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:layout_marginEnd="3dp"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Does this platform take job opportunities from other job portals and publish here? "
+            android:textColor="@color/black"
+            android:layout_marginEnd="3dp"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="No, the job opportunities published here are published by search buddy users and its their discretion to publish on search buddy or other portals of their choice. We do not redirect any jobs from any portals onto our job page. Our jobs are through search buddy’s genuine users only "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:layout_marginEnd="3dp"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Whom can I contact if I face any problem or have any queries? "
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="In case you face any queries please go through the FAQ section to see if your query is already answered, if your query is not already answered you can go to our website’s support section to get in touch with our support team.  "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:layout_marginEnd="3dp"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Can I deactivate/ delete my account? "
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="Yes, you control all the data on your account, you can choose to delete your account at any time with us.  "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:layout_marginEnd="5dp"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Can I also be on other job portals too? "
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:text="Yes, you are free to be on any other portals as you may like this will have no impact on your membership at search buddy "
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:text="Can everyone see my complete profile?"
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:text="Only recruiters who have active positions opened on Search buddy can see your profile, your profile will not be accessible to any other candidate. We have other policies like barring some companies to see you"
+            android:textColor="@color/app_grey"
+            android:fontFamily="@font/seogee_ui"
+            android:textSize="12sp">
+        </TextView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

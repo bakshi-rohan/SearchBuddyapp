@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".Forms.Form_Two">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="68dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Basic Details"
+                android:textColor="@color/choclate"
+                android:textSize="17sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Add some basic details about yourself to help recruiters know you"
+                android:textColor="@color/app_grey"
+                android:textSize="13sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Work Status"
+                android:textColor="@color/app_grey"
+                android:textSize="14sp"
+                android:visibility="gone"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/fresher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="132dp"
+                    android:minHeight="27dp"
+                    android:text="Fresher"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/experienced"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="132dp"
+                    android:minHeight="27dp"
+                    android:text="Experienced"
+                    android:textColor="@color/app_grey"></TextView>
+
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="26dp"
+                android:hint="Name"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141"
+                app:startIconDrawable="@drawable/location_icon">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Mobile Number"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141"
+                app:startIconDrawable="@drawable/mobile_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="D.O.B"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141"
+                app:startIconDrawable="@drawable/baseline_calendar_month_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Gender"
+                android:textColor="@color/app_grey"
+                android:textSize="14sp"
+                android:visibility="gone"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:text="Male"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:text="Female"
+                    android:textColor="@color/app_grey"></TextView>
+
+                <TextView
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/work_status_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:text="Others"
+                    android:textColor="@color/app_grey"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Differently Able"
+                    android:textColor="@color/app_grey"
+                    android:textSize="16sp"></TextView>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/choclate"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="Yes."
+                        android:textColor="@color/app_grey"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:buttonTint="@color/choclate"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="No"
+                        android:textColor="@color/app_grey"
+                        android:textSize="16dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:hint="Email"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_desg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="14dp"
+                android:hint="Designation"
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_desg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:inputType="text"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/ti_location_form"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/rounded_bckg"
+                android:hint=" Location"
+                android:minHeight="52dp"
+                app:boxStrokeColor="#936030"
+                app:hintTextColor="#8A414141"></Spinner>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text="Resume"
+                android:textColor="@color/choclate"
+                android:textSize="14sp"
+                android:visibility="gone"></TextView>
+
+            <LinearLayout
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
+                android:minHeight="100dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="Resume"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:visibility="gone"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="*"
+                        android:textColor="#ff0000"
+                        android:textSize="16sp"
+                        android:visibility="gone">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="69dp"
+                        android:layout_marginHorizontal="11.7dp"
+                        android:src="@drawable/resume"></ImageView>
+
+                    <TextView
+                        android:id="@+id/choose_resume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="Choose File"
+                        android:textColor="#8A414141"
+                        android:textSize="12sp"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="73dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/button_border"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/resume_upload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/seoge_bold_two"
+                            android:text="UPLOAD"
+                            android:textColor="@color/app_blue"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/file_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="28dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text=""
+                android:textColor="#8A414141"
+                android:textSize="12sp"></TextView>
+            <!--            start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="32dp"
+                android:background="@color/choclate"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/save_cancel_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:text="Cancel"
+                    android:textColor="@color/choclate"></TextView>
+
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="162dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/save_cancel_border"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:gravity="center"
+                    android:minWidth="82dp"
+                    android:minHeight="27dp"
+                    android:text="Save"
+                    android:textColor="@color/choclate"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

@@ -1,0 +1,215 @@
+[
+  {
+    "_id": "Chemical",
+    "subIndustries": [
+    "Select Industry"
+    ],
+    "_class": "com.gatepass.main.model.mongodb.Industries"
+  },
+  {
+  "_id": "BFSI",
+  "subIndustries": [
+    "Banking",
+    "Credit rating",
+    "Financial Services",
+    "Fund-Raising",
+    "Insurance",
+    "Investment Banking",
+    "Mutual Funds",
+    "Venture Capital & Private Equity"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Chemical",
+  "subIndustries": [
+    "Agro Chemical",
+    "Chemicals"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Internet",
+  "subIndustries": [
+    "Internet"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Education",
+  "subIndustries": [
+    "Education (Online & offline)",
+    "Higher Education"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Electronics",
+  "subIndustries": [
+    "Electronic Manufacturing"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Consumer",
+  "subIndustries": [
+    "Food Production",
+    "Apparel/ Garments/ Textiles/ Fashion",
+    "Consumer Electronics",
+    "Consumer Goods",
+    "Arts and Crafts",
+    "Beauty/Fitness/PersonalCare/SPA",
+    "Beverages/ Liquor /Brewery / Distillery",
+    "Office supplies, stationery",
+    "Consumer Services",
+    "Cosmetics",
+    "Dairy",
+    "Gems/ Jewellery",
+    "Textiles",
+    "Tobacco",
+    "Wine and Spirits"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Logistics and Supply Chain Logistics/ Courier/ Cargo/Transportation",
+  "subIndustries": [
+    "Logistics and Supply Chain Logistics/ Courier/ Cargo/Transportation"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Retail",
+  "subIndustries": [
+    "Retail"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Govt",
+  "subIndustries": [
+    "Govt"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Military & Army",
+  "subIndustries": [
+    "Military & Army"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Construction & Real estate",
+  "subIndustries": [
+    "Construction & Real estate"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Industrial",
+  "subIndustries": [
+    "Automotive",
+    "Building Materials",
+    "Capital Goods/Machinery",
+    "Cement",
+    "Furniture",
+    "Glass / Ceramics / marble / Concrete/furniture",
+    "Heat Ventilation Air Conditioning",
+    "Industrial Automation",
+    "Oil & Energy",
+    "Packaging and Containers",
+    "Paper & Forest Products",
+    "Plastics",
+    "Printing & publishing",
+    "Steel",
+    "Sugar",
+    "Tyres & rubber",
+    "Utilities"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Philanthropy & NGO",
+  "subIndustries": [
+    "Philanthropy & NGO"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Pharma",
+  "subIndustries": [
+    "Medical Devices & Diagnostics",
+    "Clinical Research",
+    "Nutrition",
+    "Veterinary & animal health",
+    "Pharmaceutical & therapy"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Hospital & Health Care",
+  "subIndustries": [
+    "Hospital & Health Care"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Professional Services",
+  "subIndustries": [
+    "Audit firms",
+    "Advertising",
+    "Analytics",
+    "Human Resources",
+    "Legal Services / LPO",
+    "Management Consulting",
+    "Recruiting / staffing / Executive search"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Renewal etc",
+  "subIndustries": [
+    "Renewal etc"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Water Treatment / Waste Management",
+  "subIndustries": [
+    "Water Treatment / Waste Management"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Agriculture / Horticulture / Farming",
+  "subIndustries": [
+    "Agriculture / Horticulture / Farming"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Defense & Space",
+  "subIndustries": [
+    "Defense & Space"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Mining & Metals",
+  "subIndustries": [
+    "Mining & Metals"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "IT & Technology",
+  "subIndustries": [
+    "Semiconductors",
+    "Cloud & Network Security",
+    "Computer Games",
+    "Computer Hardware",
+    "Computer Networking",
+    "Computer Software",
+    "Gaming",
+    "Information Technology and Services"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Telecom",
+  "subIndustries": [
+    "Telecommunications"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Travel / Aviation",
+  "subIndustries": [
+    "Travel / Aviation"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+},{
+  "_id": "Other",
+  "subIndustries": [
+    "Other"
+  ],
+  "_class": "com.gatepass.main.model.mongodb.Industries"
+}]

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idNestedSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Categories.FieldSales"
+        android:orientation="vertical"
+      >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"></ImageView>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bar_"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15.6dp"
+                android:background="@drawable/search_bar"
+                android:layoutDirection="rtl"
+                app:defaultQueryHint="search"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null"
+                app:queryHint="Job title,Companies"
+                app:searchIcon="@drawable/ic_baseline_search_24">
+
+            </androidx.appcompat.widget.SearchView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#F5F5F5"
+            android:minHeight="29dp">
+
+            <ImageView
+                android:id="@+id/filters"
+                android:layout_width="22dp"
+                android:layout_height="23dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/filter">
+            </ImageView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_grp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_1"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="WFH"
+                        android:visibility="gone"
+                        android:textColor="@color/app_blue"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/app_blue"
+                        app:chipStrokeWidth=".5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_2"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Experience"
+                        android:textColor="@color/choclate"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/choclate"
+                        app:chipStrokeWidth=".5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_3"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salary"
+                        android:textColor="@color/choclate"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/choclate"
+                        app:chipStrokeWidth=".5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_4"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textColor="@color/choclate"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/choclate"
+                        app:chipStrokeWidth=".5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_5"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date Posted"
+                        android:textColor="@color/choclate"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/choclate"
+                        app:chipStrokeWidth=".5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_6"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Department"
+                        android:visibility="gone"
+                        android:textColor="@color/app_blue"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/app_blue"
+                        app:chipStrokeWidth=".5dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/job_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@color/app_grey"
+            android:textSize="12sp"></TextView>
+        <TextView
+            android:id="@+id/txtNoData"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/seogee_ui"
+            android:text="No Positions found"
+            android:textColor="@color/app_grey"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/field_sale_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/idPBLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/choclate"
+            android:fontFamily="@font/seoge_bold_two"
+            android:text="Load More"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            app:cornerRadius="6dp"
+            android:visibility="gone"
+           />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

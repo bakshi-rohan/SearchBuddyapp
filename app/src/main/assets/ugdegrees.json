@@ -1,0 +1,274 @@
+
+[
+
+    {
+        "UG": "B.tech/B.E",
+        "specialisation": [
+            "Agriculture",
+            "Automobile",
+            "Aviation",
+            "Bio-Chemistry/Bio-Technology",
+            "Biomedical",
+            "Ceramics",
+            "Chemical",
+            "Civil",
+            "Computers",
+            "Electrical",
+            "Electronics/Telecommunication",
+            "Energy",
+            "Environmental",
+            "Instrumentation",
+            "Marine",
+            "Mechanical",
+            "Metallurgy",
+            "Mineral",
+            "Mining",
+            "Nuclear",
+            "Paint/Oil",
+            "Petroleum",
+            "Plastics",
+            "Production/Industrial",
+            "Textile"
+        ]
+    },
+    {
+        "UG": "B.C.A",
+        "specialisation": [
+            "Any",
+            "Computers",
+            "Others"
+        ]
+    },
+    {
+        "UG": "B.A",
+        "specialisation": [
+            "Arts&Humanities",
+            "Communication",
+            "Economics",
+            "English",
+            "Film",
+            "Fine Arts",
+            "Hindi",
+            "History",
+            "Journalism",
+            "Maths",
+            "Pass Course",
+            "Political Science",
+            "PR/Advertising",
+            "Psychology",
+            "Sanskrit",
+            "Sociology",
+            "Statistics",
+            "Vocational Course",
+            "Hotel Management"
+        ]
+    },
+    {
+        "UG": "B.Arch",
+        "specialisation": [
+            "Any",
+            "Architecture",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.B.A/B.M.S",
+        "specialisation": [
+            "Any",
+            "Management",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.Com",
+        "specialisation": [
+            "Any",
+            "Commerce",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.ed",
+        "specialisation": [
+            "Any",
+            "Education",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.D.S",
+        "specialisation": [
+            "Any",
+            "Dentistry",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.H.M",
+        "specialisation": [
+            "Any",
+            "Hotel Management",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.Pharma",
+        "specialisation": [
+            "Any",
+            "Pharma",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.Sc",
+        "specialisation": [
+            "Agriculture",
+            "Anthropology",
+            "Bio-Chemistry",
+            "Biology",
+            "Botany",
+            "Chemistry",
+            "Computers",
+            "Dairy Technology",
+            "Electronics",
+            "Environmental Science",
+            "Food Technology",
+            "Geology",
+            "Home Science",
+            "Maths",
+            "Microbiology",
+            "Nursing",
+            "Physics",
+            "Statistics",
+            "Zoology",
+            "General",
+            "Hospitality and Hotel Management",
+            "Optometry",
+            "Nautical Science",
+            "IT"
+        ]
+    },
+    {
+        "UG": "LLB",
+        "specialisation": [
+            "Any",
+            "Law",
+            "Other"
+        ]
+    },
+    {
+        "UG": "MBBS",
+        "specialisation": [
+            "Any",
+            "Medicine",
+            "Other"
+        ]
+    },
+    {
+        "UG": "Diploma",
+        "specialisation": [
+            "Architecture",
+            "Chemical",
+            "Civil",
+            "Computers",
+            "Electrical",
+            "Electronics/Telecommunication",
+            "Engineering",
+            "Export/Import",
+            "Fashion Designing/Other Designing",
+            "Graphic/ Web Designing",
+            "Hotel Management",
+            "Insurance",
+            "Management",
+            "Mechanical",
+            "Tourism",
+            "Visual Arts",
+            "Vocational Course"
+        ]
+    },
+    {
+        "UG": "BVSC",
+        "specialisation": [
+            "Any",
+            "Veterinary Science",
+            "Other"
+        ]
+    },
+    {
+        "UG": "BAMS",
+        "specialisation": [
+            "Any",
+            "Ayurveda",
+            "Other"
+        ]
+    },
+    {
+        "UG": "BHMS",
+        "specialisation": [
+            "Any",
+            "Homeopathy",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.El.Ed",
+        "specialisation": [
+            "Any",
+            "Elementary Education",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.P.ED",
+        "specialisation": [
+            "Any",
+            "Physical Education",
+            "Other"
+        ]
+    },
+    {
+        "UG": "BHMCT",
+        "specialisation": [
+            "Any",
+            "Hotel Management",
+            "Other"
+        ]
+    },
+    {
+        "UG": "B.Des",
+        "specialisation": [
+            "Animation Film Design",
+            "Ceramic & Glass Design",
+            "Exhibition Design",
+            "Film and Video Communication",
+            "Textile Design",
+            "Furniture Design",
+            "Product Design",
+            "Graphic Design"
+        ]
+    },
+    {
+        "UG": "BFA",
+        "specialisation": [
+            "Painting",
+            "Sculpture",
+            "Art History",
+            "Printmaking",
+            "Visual Communication"
+        ]
+    },
+    {
+        "UG": "B.U.M.S",
+        "specialisation": [
+            "Any",
+            "Unani Medicine",
+            "Other"
+        ]
+    },
+    {
+        "UG": "Others",
+        "specialisation": [
+            "Others"
+        ]
+    }
+]

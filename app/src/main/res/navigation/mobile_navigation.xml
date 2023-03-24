@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.searchbuddy.Homefragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_fragment">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_mycattle"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_nav_sales"
+            app:destination="@id/nav_sales" />
+        <action
+            android:id="@+id/action_navigation_home_to_nav_job_desc"
+            app:destination="@id/nav_job_desc" />
+        <action
+            android:id="@+id/action_navigation_home_to_applied_jobs"
+            app:destination="@id/applied_jobs" />
+        <action
+            android:id="@+id/action_navigation_home_to_appliedjobs_desc"
+            app:destination="@id/appliedjobs_desc" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.searchbuddy.Profile.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_nav_profile_to_nav_sales"
+            app:destination="@id/nav_sales"
+            app:popUpToInclusive="true"
+            app:popUpTo="@layout/fragment_sales_jobs"/>
+        <action
+            android:id="@+id/action_nav_profile_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sales"
+        android:name="com.example.searchbuddy.Categories.Sales_jobs"
+        android:label="Sales_jobs"
+        tools:layout="@layout/fragment_sales_jobs">
+        <action
+            android:id="@+id/action_nav_sales_to_nav_job_desc"
+            app:destination="@id/nav_job_desc"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_nav_sales_to_filter"
+            app:destination="@id/filter" />
+        <action
+            android:id="@+id/action_nav_sales_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_sales_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_nav_sales_to_navigation_home"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_nav_sales_to_question_fragment"
+            app:destination="@id/question_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_job_desc"
+        android:name="com.example.searchbuddy.Categories.Job_description"
+        android:label="job_description"
+        tools:layout="@layout/fragment_job_description">
+        <action
+            android:id="@+id/action_nav_job_desc_to_nav_sales"
+            app:destination="@id/nav_sales"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_sales"/>
+        <argument
+            android:name="position_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_job_desc_to_question_fragment"
+            app:destination="@id/question_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filter"
+        android:name="com.example.searchbuddy.FilterFragment"
+        android:label="Filter"
+        tools:layout="@layout/fragment_filter">
+        <action
+            android:id="@+id/action_filter_to_nav_sales"
+            app:destination="@id/nav_sales" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/applied_jobs"
+        android:name="com.example.searchbuddy.AppliedJobs.Applied_Jobs"
+        android:label="Applied Jobs"
+        tools:layout="@layout/fragment_applied__jobs">
+        <action
+            android:id="@+id/action_applied_jobs_to_nav_sales"
+            app:destination="@id/nav_sales" />
+        <action
+            android:id="@+id/action_applied_jobs_to_nav_job_desc"
+            app:destination="@id/nav_job_desc" />
+        <action
+            android:id="@+id/action_applied_jobs_to_appliedjobs_desc"
+            app:destination="@id/appliedjobs_desc" />
+    </fragment>
+
+<fragment
+    android:id="@+id/appliedjobs_desc"
+    android:name="com.example.searchbuddy.Categories.AppliedJobsDescription"
+    android:label="Applied Jobs Description"
+    tools:layout="@layout/fragment_applied_jobs_description">
+
+</fragment>
+    <fragment
+        android:id="@+id/question_fragment"
+        android:name="com.example.searchbuddy.Categories.Questions"
+        android:label="Questions"
+        tools:layout="@layout/fragment_questions">
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:label="dashboard"
+        tools:layout="@layout/activity_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_dashboard_to_nav_sales"
+            app:destination="@id/nav_sales" />
+    </fragment>
+</navigation>

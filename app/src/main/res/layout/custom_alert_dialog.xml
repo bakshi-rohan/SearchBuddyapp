@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvTitlePopup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:fontFamily="@font/seogee_ui"
+                android:text="test"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/saparator" />
+
+            <TextView
+                android:id="@+id/tvMessagePopup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginBottom="10dip"
+                android:fontFamily="@font/seogee_ui"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:gravity="center" >
+
+                <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dip"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="#00000000"-->
+
+                <!--card_view:cardCornerRadius="4dp">-->
+
+                <Button
+                    android:id="@+id/btnYesPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_black_bg"
+                    android:clickable="true"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:layout_gravity="center"
+                    android:text="@android:string/yes"
+                    android:gravity="center"
+                    android:fontFamily="@font/seogee_ui"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+                <!--</android.support.v7.widget.CardView>-->
+
+
+
+                <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dip"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="20dip"-->
+                <!--android:background="#00000000"-->
+                <!--card_view:cardCornerRadius="4dp">-->
+
+                <Button
+                    android:id="@+id/btnNoPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_black_bg"
+                    android:clickable="true"
+                    android:text="@android:string/no"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/seogee_ui"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+                <!--</android.support.v7.widget.CardView>-->
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

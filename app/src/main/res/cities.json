@@ -1,0 +1,4363 @@
+ [
+        {
+            "Districtname": "Adilabad",
+            "State": "Telangana",
+            "CombinedName": "Adilabad - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Warangal",
+            "State": "Telangana",
+            "CombinedName": "Warangal - Telangana",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Karim Nagar",
+            "State": "Telangana",
+            "CombinedName": "Karim Nagar - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mahabub Nagar",
+            "State": "Telangana",
+            "CombinedName": "Mahabub Nagar - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "K.V.Rangareddy",
+            "State": "Telangana",
+            "CombinedName": "K.V.Rangareddy - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Medak",
+            "State": "Telangana",
+            "CombinedName": "Medak - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nalgonda",
+            "State": "Telangana",
+            "CombinedName": "Nalgonda - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nizamabad",
+            "State": "Telangana",
+            "CombinedName": "Nizamabad - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hyderabad",
+            "State": "Telangana",
+            "CombinedName": "Hyderabad - Telangana",
+            "Region": "South India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Ananthapur",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Ananthapur - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Cuddapah",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Cuddapah - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chittoor",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Chittoor - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kurnool",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Kurnool - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Prakasam",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Prakasam - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Godavari",
+            "State": "Andhra Pradesh",
+            "CombinedName": "West Godavari - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Krishna",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Krishna - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nellore",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Nellore - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Guntur",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Guntur - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Khammam",
+            "State": "Telangana",
+            "CombinedName": "Khammam - Telangana",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Godavari",
+            "State": "Andhra Pradesh",
+            "CombinedName": "East Godavari - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Visakhapatnam",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Visakhapatnam - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pondicherry",
+            "State": "Pondicherry",
+            "CombinedName": "Pondicherry - Pondicherry",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Vizianagaram",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Vizianagaram - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Srikakulam",
+            "State": "Andhra Pradesh",
+            "CombinedName": "Srikakulam - Andhra Pradesh",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lakhimpur",
+            "State": "Assam",
+            "CombinedName": "Lakhimpur - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dibrugarh",
+            "State": "Assam",
+            "CombinedName": "Dibrugarh - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhemaji",
+            "State": "Assam",
+            "CombinedName": "Dhemaji - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Marigaon",
+            "State": "Assam",
+            "CombinedName": "Marigaon - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nagaon",
+            "State": "Assam",
+            "CombinedName": "Nagaon - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Karbi Anglong",
+            "State": "Assam",
+            "CombinedName": "Karbi Anglong - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Golaghat",
+            "State": "Assam",
+            "CombinedName": "Golaghat - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sibsagar",
+            "State": "Assam",
+            "CombinedName": "Sibsagar - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jorhat",
+            "State": "Assam",
+            "CombinedName": "Jorhat - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tinsukia",
+            "State": "Assam",
+            "CombinedName": "Tinsukia - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Karimganj",
+            "State": "Assam",
+            "CombinedName": "Karimganj - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hailakandi",
+            "State": "Assam",
+            "CombinedName": "Hailakandi - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Cachar",
+            "State": "Assam",
+            "CombinedName": "Cachar - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North Cachar Hills",
+            "State": "Assam",
+            "CombinedName": "North Cachar Hills - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Darrang",
+            "State": "Assam",
+            "CombinedName": "Darrang - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sonitpur",
+            "State": "Assam",
+            "CombinedName": "Sonitpur - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bongaigaon",
+            "State": "Assam",
+            "CombinedName": "Bongaigaon - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kokrajhar",
+            "State": "Assam",
+            "CombinedName": "Kokrajhar - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Goalpara",
+            "State": "Assam",
+            "CombinedName": "Goalpara - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhubri",
+            "State": "Assam",
+            "CombinedName": "Dhubri - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kamrup",
+            "State": "Assam",
+            "CombinedName": "Kamrup - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nalbari",
+            "State": "Assam",
+            "CombinedName": "Nalbari - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Barpeta",
+            "State": "Assam",
+            "CombinedName": "Barpeta - Assam",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Begusarai",
+            "State": "Bihar",
+            "CombinedName": "Begusarai - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Khagaria",
+            "State": "Bihar",
+            "CombinedName": "Khagaria - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Darbhanga",
+            "State": "Bihar",
+            "CombinedName": "Darbhanga - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Madhubani",
+            "State": "Bihar",
+            "CombinedName": "Madhubani - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Muzaffarpur",
+            "State": "Bihar",
+            "CombinedName": "Muzaffarpur - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Samastipur",
+            "State": "Bihar",
+            "CombinedName": "Samastipur - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sitamarhi",
+            "State": "Bihar",
+            "CombinedName": "Sitamarhi - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Champaran",
+            "State": "Bihar",
+            "CombinedName": "East Champaran - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Supaul",
+            "State": "Bihar",
+            "CombinedName": "Supaul - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Vaishali",
+            "State": "Bihar",
+            "CombinedName": "Vaishali - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Purnia",
+            "State": "Bihar",
+            "CombinedName": "Purnia - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Araria",
+            "State": "Bihar",
+            "CombinedName": "Araria - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Katihar",
+            "State": "Bihar",
+            "CombinedName": "Katihar - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kishanganj",
+            "State": "Bihar",
+            "CombinedName": "Kishanganj - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Madhepura",
+            "State": "Bihar",
+            "CombinedName": "Madhepura - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Saharsa",
+            "State": "Bihar",
+            "CombinedName": "Saharsa - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Saran",
+            "State": "Bihar",
+            "CombinedName": "Saran - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Siwan",
+            "State": "Bihar",
+            "CombinedName": "Siwan - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhojpur",
+            "State": "Bihar",
+            "CombinedName": "Bhojpur - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sheohar",
+            "State": "Bihar",
+            "CombinedName": "Sheohar - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gopalganj",
+            "State": "Bihar",
+            "CombinedName": "Gopalganj - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Champaran",
+            "State": "Bihar",
+            "CombinedName": "West Champaran - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gaya",
+            "State": "Bihar",
+            "CombinedName": "Gaya - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Aurangabad(BH)",
+            "State": "Bihar",
+            "CombinedName": "Aurangabad(BH) - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Arwal",
+            "State": "Bihar",
+            "CombinedName": "Arwal - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhagalpur",
+            "State": "Bihar",
+            "CombinedName": "Bhagalpur - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Banka",
+            "State": "Bihar",
+            "CombinedName": "Banka - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Munger",
+            "State": "Bihar",
+            "CombinedName": "Munger - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Buxar",
+            "State": "Bihar",
+            "CombinedName": "Buxar - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jehanabad",
+            "State": "Bihar",
+            "CombinedName": "Jehanabad - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Patna",
+            "State": "Bihar",
+            "CombinedName": "Patna - Bihar",
+            "Region": "East India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Sheikhpura",
+            "State": "Bihar",
+            "CombinedName": "Sheikhpura - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jamui",
+            "State": "Bihar",
+            "CombinedName": "Jamui - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lakhisarai",
+            "State": "Bihar",
+            "CombinedName": "Lakhisarai - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nalanda",
+            "State": "Bihar",
+            "CombinedName": "Nalanda - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nawada",
+            "State": "Bihar",
+            "CombinedName": "Nawada - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rohtas",
+            "State": "Bihar",
+            "CombinedName": "Rohtas - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kaimur (Bhabua)",
+            "State": "Bihar",
+            "CombinedName": "Kaimur (Bhabua) - Bihar",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kanker",
+            "State": "Chhattisgarh",
+            "CombinedName": "Kanker - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bastar",
+            "State": "Chhattisgarh",
+            "CombinedName": "Bastar - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dantewada",
+            "State": "Chhattisgarh",
+            "CombinedName": "Dantewada - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bijapur(CGH)",
+            "State": "Chhattisgarh",
+            "CombinedName": "Bijapur(CGH) - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Narayanpur",
+            "State": "Chhattisgarh",
+            "CombinedName": "Narayanpur - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bilaspur(CGH)",
+            "State": "Chhattisgarh",
+            "CombinedName": "Bilaspur(CGH) - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Janjgir-champa",
+            "State": "Chhattisgarh",
+            "CombinedName": "Janjgir-champa - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Korba",
+            "State": "Chhattisgarh",
+            "CombinedName": "Korba - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Durg",
+            "State": "Chhattisgarh",
+            "CombinedName": "Durg - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rajnandgaon",
+            "State": "Chhattisgarh",
+            "CombinedName": "Rajnandgaon - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kawardha",
+            "State": "Chhattisgarh",
+            "CombinedName": "Kawardha - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Surguja",
+            "State": "Chhattisgarh",
+            "CombinedName": "Surguja - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Raigarh",
+            "State": "Chhattisgarh",
+            "CombinedName": "Raigarh - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jashpur",
+            "State": "Chhattisgarh",
+            "CombinedName": "Jashpur - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Koriya",
+            "State": "Chhattisgarh",
+            "CombinedName": "Koriya - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Raipur",
+            "State": "Chhattisgarh",
+            "CombinedName": "Raipur - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Mahasamund",
+            "State": "Chhattisgarh",
+            "CombinedName": "Mahasamund - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhamtari",
+            "State": "Chhattisgarh",
+            "CombinedName": "Dhamtari - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gariaband",
+            "State": "Chhattisgarh",
+            "CombinedName": "Gariaband - Chhattisgarh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "New Delhi",
+            "State": "Delhi",
+            "CombinedName": "New Delhi - Delhi",
+            "Region": "North India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Ahmedabad",
+            "State": "Gujarat",
+            "CombinedName": "Ahmedabad - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gandhi Nagar",
+            "State": "Gujarat",
+            "CombinedName": "Gandhi Nagar - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Banaskantha",
+            "State": "Gujarat",
+            "CombinedName": "Banaskantha - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mahesana",
+            "State": "Gujarat",
+            "CombinedName": "Mahesana - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Surendra Nagar",
+            "State": "Gujarat",
+            "CombinedName": "Surendra Nagar - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Patan",
+            "State": "Gujarat",
+            "CombinedName": "Patan - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sabarkantha",
+            "State": "Gujarat",
+            "CombinedName": "Sabarkantha - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Amreli",
+            "State": "Gujarat",
+            "CombinedName": "Amreli - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rajkot",
+            "State": "Gujarat",
+            "CombinedName": "Rajkot - Gujarat",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Junagadh",
+            "State": "Gujarat",
+            "CombinedName": "Junagadh - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhavnagar",
+            "State": "Gujarat",
+            "CombinedName": "Bhavnagar - Gujarat",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Jamnagar",
+            "State": "Gujarat",
+            "CombinedName": "Jamnagar - Gujarat",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Porbandar",
+            "State": "Gujarat",
+            "CombinedName": "Porbandar - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Diu",
+            "State": "Daman & Diu",
+            "CombinedName": "Diu - Daman & Diu",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kachchh",
+            "State": "Gujarat",
+            "CombinedName": "Kachchh - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Anand",
+            "State": "Gujarat",
+            "CombinedName": "Anand - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kheda",
+            "State": "Gujarat",
+            "CombinedName": "Kheda - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Surat",
+            "State": "Gujarat",
+            "CombinedName": "Surat - Gujarat",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "The Dangs",
+            "State": "Gujarat",
+            "CombinedName": "The Dangs - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tapi",
+            "State": "Gujarat",
+            "CombinedName": "Tapi - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Navsari",
+            "State": "Gujarat",
+            "CombinedName": "Navsari - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Vadodara",
+            "State": "Gujarat",
+            "CombinedName": "Vadodara - Gujarat",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Bharuch",
+            "State": "Gujarat",
+            "CombinedName": "Bharuch - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Narmada",
+            "State": "Gujarat",
+            "CombinedName": "Narmada - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dahod",
+            "State": "Gujarat",
+            "CombinedName": "Dahod - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Panch Mahals",
+            "State": "Gujarat",
+            "CombinedName": "Panch Mahals - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Valsad",
+            "State": "Gujarat",
+            "CombinedName": "Valsad - Gujarat",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dadra & Nagar Haveli",
+            "State": "Dadra & Nagar Haveli",
+            "CombinedName": "Dadra & Nagar Haveli - Dadra & Nagar Haveli",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Daman",
+            "State": "Daman & Diu",
+            "CombinedName": "Daman - Daman & Diu",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ambala",
+            "State": "Haryana",
+            "CombinedName": "Ambala - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Yamuna Nagar",
+            "State": "Haryana",
+            "CombinedName": "Yamuna Nagar - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Panchkula",
+            "State": "Haryana",
+            "CombinedName": "Panchkula - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhiwani",
+            "State": "Haryana",
+            "CombinedName": "Bhiwani - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Faridabad",
+            "State": "Haryana",
+            "CombinedName": "Faridabad - Haryana",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Gurgaon",
+            "State": "Haryana",
+            "CombinedName": "Gurgaon - Haryana",
+            "Region": "North India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Rewari",
+            "State": "Haryana",
+            "CombinedName": "Rewari - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mahendragarh",
+            "State": "Haryana",
+            "CombinedName": "Mahendragarh - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hisar",
+            "State": "Haryana",
+            "CombinedName": "Hisar - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sirsa",
+            "State": "Haryana",
+            "CombinedName": "Sirsa - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Fatehabad",
+            "State": "Haryana",
+            "CombinedName": "Fatehabad - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Karnal",
+            "State": "Haryana",
+            "CombinedName": "Karnal - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Panipat",
+            "State": "Haryana",
+            "CombinedName": "Panipat - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jind",
+            "State": "Haryana",
+            "CombinedName": "Jind - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kaithal",
+            "State": "Haryana",
+            "CombinedName": "Kaithal - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kurukshetra",
+            "State": "Haryana",
+            "CombinedName": "Kurukshetra - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jhajjar",
+            "State": "Haryana",
+            "CombinedName": "Jhajjar - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rohtak",
+            "State": "Haryana",
+            "CombinedName": "Rohtak - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sonipat",
+            "State": "Haryana",
+            "CombinedName": "Sonipat - Haryana",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chamba",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Chamba - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kangra",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Kangra - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bilaspur (HP)",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Bilaspur (HP) - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hamirpur(HP)",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Hamirpur(HP) - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Una",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Una - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mandi",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Mandi - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kullu",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Kullu - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lahul & Spiti",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Lahul & Spiti - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kinnaur",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Kinnaur - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shimla",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Shimla - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Sirmaur",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Sirmaur - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Solan",
+            "State": "Himachal Pradesh",
+            "CombinedName": "Solan - Himachal Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bandipur",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Bandipur - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Baramulla",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Baramulla - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kupwara",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Kupwara - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jammu",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Jammu - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kathua",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Kathua - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Udhampur",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Udhampur - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Poonch",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Poonch - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kargil",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Kargil - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Leh",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Leh - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rajauri",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Rajauri - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Reasi",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Reasi - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Srinagar",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Srinagar - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Budgam",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Budgam - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ananthnag",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Ananthnag - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shopian",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Shopian - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pulwama",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Pulwama - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kulgam",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Kulgam - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Doda",
+            "State": "Jammu & Kashmir",
+            "CombinedName": "Doda - Jammu & Kashmir",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhanbad",
+            "State": "Jharkhand",
+            "CombinedName": "Dhanbad - Jharkhand",
+            "Region": "East India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Bokaro",
+            "State": "Jharkhand",
+            "CombinedName": "Bokaro - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Giridh",
+            "State": "Jharkhand",
+            "CombinedName": "Giridh - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hazaribag",
+            "State": "Jharkhand",
+            "CombinedName": "Hazaribag - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chatra",
+            "State": "Jharkhand",
+            "CombinedName": "Chatra - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ramgarh",
+            "State": "Jharkhand",
+            "CombinedName": "Ramgarh - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Koderma",
+            "State": "Jharkhand",
+            "CombinedName": "Koderma - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Latehar",
+            "State": "Jharkhand",
+            "CombinedName": "Latehar - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Garhwa",
+            "State": "Jharkhand",
+            "CombinedName": "Garhwa - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Palamau",
+            "State": "Jharkhand",
+            "CombinedName": "Palamau - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ranchi",
+            "State": "Jharkhand",
+            "CombinedName": "Ranchi - Jharkhand",
+            "Region": "East India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Gumla",
+            "State": "Jharkhand",
+            "CombinedName": "Gumla - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Simdega",
+            "State": "Jharkhand",
+            "CombinedName": "Simdega - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lohardaga",
+            "State": "Jharkhand",
+            "CombinedName": "Lohardaga - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Singhbhum",
+            "State": "Jharkhand",
+            "CombinedName": "West Singhbhum - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Khunti",
+            "State": "Jharkhand",
+            "CombinedName": "Khunti - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Deoghar",
+            "State": "Jharkhand",
+            "CombinedName": "Deoghar - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Godda",
+            "State": "Jharkhand",
+            "CombinedName": "Godda - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jamtara",
+            "State": "Jharkhand",
+            "CombinedName": "Jamtara - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sahibganj",
+            "State": "Jharkhand",
+            "CombinedName": "Sahibganj - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dumka",
+            "State": "Jharkhand",
+            "CombinedName": "Dumka - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pakur",
+            "State": "Jharkhand",
+            "CombinedName": "Pakur - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Seraikela-kharsawan",
+            "State": "Jharkhand",
+            "CombinedName": "Seraikela-kharsawan - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Singhbhum",
+            "State": "Jharkhand",
+            "CombinedName": "East Singhbhum - Jharkhand",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bangalore",
+            "State": "Karnataka",
+            "CombinedName": "Bangalore - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bangalore Rural",
+            "State": "Karnataka",
+            "CombinedName": "Bangalore Rural - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ramanagar",
+            "State": "Karnataka",
+            "CombinedName": "Ramanagar - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bagalkot",
+            "State": "Karnataka",
+            "CombinedName": "Bagalkot - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bijapur(KAR)",
+            "State": "Karnataka",
+            "CombinedName": "Bijapur(KAR) - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Belgaum",
+            "State": "Karnataka",
+            "CombinedName": "Belgaum - Karnataka",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Davangere",
+            "State": "Karnataka",
+            "CombinedName": "Davangere - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bellary",
+            "State": "Karnataka",
+            "CombinedName": "Bellary - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bidar",
+            "State": "Karnataka",
+            "CombinedName": "Bidar - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dharwad",
+            "State": "Karnataka",
+            "CombinedName": "Dharwad - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gadag",
+            "State": "Karnataka",
+            "CombinedName": "Gadag - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Koppal",
+            "State": "Karnataka",
+            "CombinedName": "Koppal - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Yadgir",
+            "State": "Karnataka",
+            "CombinedName": "Yadgir - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gulbarga",
+            "State": "Karnataka",
+            "CombinedName": "Gulbarga - Karnataka",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Haveri",
+            "State": "Karnataka",
+            "CombinedName": "Haveri - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Uttara Kannada",
+            "State": "Karnataka",
+            "CombinedName": "Uttara Kannada - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Raichur",
+            "State": "Karnataka",
+            "CombinedName": "Raichur - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chickmagalur",
+            "State": "Karnataka",
+            "CombinedName": "Chickmagalur - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chitradurga",
+            "State": "Karnataka",
+            "CombinedName": "Chitradurga - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hassan",
+            "State": "Karnataka",
+            "CombinedName": "Hassan - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kodagu",
+            "State": "Karnataka",
+            "CombinedName": "Kodagu - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chikkaballapur",
+            "State": "Karnataka",
+            "CombinedName": "Chikkaballapur - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kolar",
+            "State": "Karnataka",
+            "CombinedName": "Kolar - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mandya",
+            "State": "Karnataka",
+            "CombinedName": "Mandya - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dakshina Kannada",
+            "State": "Karnataka",
+            "CombinedName": "Dakshina Kannada - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Udupi",
+            "State": "Karnataka",
+            "CombinedName": "Udupi - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mysore",
+            "State": "Karnataka",
+            "CombinedName": "Mysore - Karnataka",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Chamrajnagar",
+            "State": "Karnataka",
+            "CombinedName": "Chamrajnagar - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shimoga",
+            "State": "Karnataka",
+            "CombinedName": "Shimoga - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tumkur",
+            "State": "Karnataka",
+            "CombinedName": "Tumkur - Karnataka",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Wayanad",
+            "State": "Kerala",
+            "CombinedName": "Wayanad - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kozhikode",
+            "State": "Kerala",
+            "CombinedName": "Kozhikode - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Malappuram",
+            "State": "Kerala",
+            "CombinedName": "Malappuram - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kannur",
+            "State": "Kerala",
+            "CombinedName": "Kannur - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kasargod",
+            "State": "Kerala",
+            "CombinedName": "Kasargod - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Palakkad",
+            "State": "Kerala",
+            "CombinedName": "Palakkad - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Mahe",
+            "State": "Pondicherry",
+            "CombinedName": "Mahe - Pondicherry",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Alappuzha",
+            "State": "Kerala",
+            "CombinedName": "Alappuzha - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ernakulam",
+            "State": "Kerala",
+            "CombinedName": "Ernakulam - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kottayam",
+            "State": "Kerala",
+            "CombinedName": "Kottayam - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Pathanamthitta",
+            "State": "Kerala",
+            "CombinedName": "Pathanamthitta - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Idukki",
+            "State": "Kerala",
+            "CombinedName": "Idukki - Kerala",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Thrissur",
+            "State": "Kerala",
+            "CombinedName": "Thrissur - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Lakshadweep",
+            "State": "Lakshadweep",
+            "CombinedName": "Lakshadweep - Lakshadweep",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kollam",
+            "State": "Kerala",
+            "CombinedName": "Kollam - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Thiruvananthapuram",
+            "State": "Kerala",
+            "CombinedName": "Thiruvananthapuram - Kerala",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Seoni",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Seoni - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Balaghat",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Balaghat - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mandla",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Mandla - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dindori",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Dindori - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhopal",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Bhopal - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Raisen",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Raisen - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chhatarpur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Chhatarpur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tikamgarh",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Tikamgarh - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Panna",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Panna - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Betul",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Betul - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chhindwara",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Chhindwara - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hoshangabad",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Hoshangabad - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Narsinghpur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Narsinghpur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Harda",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Harda - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Satna",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Satna - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rewa",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Rewa - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Damoh",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Damoh - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sagar",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Sagar - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Anuppur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Anuppur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Umaria",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Umaria - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shahdol",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Shahdol - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sidhi",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Sidhi - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Singrauli",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Singrauli - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Vidisha",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Vidisha - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ashok Nagar",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Ashok Nagar - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shivpuri",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Shivpuri - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Guna",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Guna - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gwalior",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Gwalior - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Datia",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Datia - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhind",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Bhind - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Morena",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Morena - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sheopur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Sheopur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Indore",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Indore - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Dewas",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Dewas - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhar",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Dhar - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Katni",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Katni - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jabalpur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Jabalpur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "East Nimar",
+            "State": "Madhya Pradesh",
+            "CombinedName": "East Nimar - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Nimar",
+            "State": "Madhya Pradesh",
+            "CombinedName": "West Nimar - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Barwani",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Barwani - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Khandwa",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Khandwa - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Burhanpur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Burhanpur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Khargone",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Khargone - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Neemuch",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Neemuch - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mandsaur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Mandsaur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jhabua",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Jhabua - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ratlam",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Ratlam - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Alirajpur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Alirajpur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sehore",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Sehore - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rajgarh",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Rajgarh - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ujjain",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Ujjain - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Shajapur",
+            "State": "Madhya Pradesh",
+            "CombinedName": "Shajapur - Madhya Pradesh",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jalna",
+            "State": "Maharashtra",
+            "CombinedName": "Jalna - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Aurangabad",
+            "State": "Maharashtra",
+            "CombinedName": "Aurangabad - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Beed",
+            "State": "Maharashtra",
+            "CombinedName": "Beed - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jalgaon",
+            "State": "Maharashtra",
+            "CombinedName": "Jalgaon - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhule",
+            "State": "Maharashtra",
+            "CombinedName": "Dhule - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nandurbar",
+            "State": "Maharashtra",
+            "CombinedName": "Nandurbar - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nashik",
+            "State": "Maharashtra",
+            "CombinedName": "Nashik - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Nanded",
+            "State": "Maharashtra",
+            "CombinedName": "Nanded - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Latur",
+            "State": "Maharashtra",
+            "CombinedName": "Latur - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Osmanabad",
+            "State": "Maharashtra",
+            "CombinedName": "Osmanabad - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hingoli",
+            "State": "Maharashtra",
+            "CombinedName": "Hingoli - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Parbhani",
+            "State": "Maharashtra",
+            "CombinedName": "Parbhani - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Goa",
+            "State": "Goa",
+            "CombinedName": "South Goa - Goa",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North Goa",
+            "State": "Goa",
+            "CombinedName": "North Goa - Goa",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kolhapur",
+            "State": "Maharashtra",
+            "CombinedName": "Kolhapur - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Ratnagiri",
+            "State": "Maharashtra",
+            "CombinedName": "Ratnagiri - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sindhudurg",
+            "State": "Maharashtra",
+            "CombinedName": "Sindhudurg - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Satara",
+            "State": "Maharashtra",
+            "CombinedName": "Satara - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sangli",
+            "State": "Maharashtra",
+            "CombinedName": "Sangli - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Mumbai",
+            "State": "Maharashtra",
+            "CombinedName": "Mumbai - Maharashtra",
+            "Region": "West India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Raigarh(MH)",
+            "State": "Maharashtra",
+            "CombinedName": "Raigarh(MH) - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Thane",
+            "State": "Maharashtra",
+            "CombinedName": "Thane - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Akola",
+            "State": "Maharashtra",
+            "CombinedName": "Akola - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Washim",
+            "State": "Maharashtra",
+            "CombinedName": "Washim - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Amravati",
+            "State": "Maharashtra",
+            "CombinedName": "Amravati - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Buldhana",
+            "State": "Maharashtra",
+            "CombinedName": "Buldhana - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gadchiroli",
+            "State": "Maharashtra",
+            "CombinedName": "Gadchiroli - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chandrapur",
+            "State": "Maharashtra",
+            "CombinedName": "Chandrapur - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nagpur",
+            "State": "Maharashtra",
+            "CombinedName": "Nagpur - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Gondia",
+            "State": "Maharashtra",
+            "CombinedName": "Gondia - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhandara",
+            "State": "Maharashtra",
+            "CombinedName": "Bhandara - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Wardha",
+            "State": "Maharashtra",
+            "CombinedName": "Wardha - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Yavatmal",
+            "State": "Maharashtra",
+            "CombinedName": "Yavatmal - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ahmed Nagar",
+            "State": "Maharashtra",
+            "CombinedName": "Ahmed Nagar - Maharashtra",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Solapur",
+            "State": "Maharashtra",
+            "CombinedName": "Solapur - Maharashtra",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Pune",
+            "State": "Maharashtra",
+            "CombinedName": "Pune - Maharashtra",
+            "Region": "West India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Imphal West",
+            "State": "Manipur",
+            "CombinedName": "Imphal West - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Churachandpur",
+            "State": "Manipur",
+            "CombinedName": "Churachandpur - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chandel",
+            "State": "Manipur",
+            "CombinedName": "Chandel - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Thoubal",
+            "State": "Manipur",
+            "CombinedName": "Thoubal - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tamenglong",
+            "State": "Manipur",
+            "CombinedName": "Tamenglong - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ukhrul",
+            "State": "Manipur",
+            "CombinedName": "Ukhrul - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Imphal East",
+            "State": "Manipur",
+            "CombinedName": "Imphal East - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bishnupur",
+            "State": "Manipur",
+            "CombinedName": "Bishnupur - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Senapati",
+            "State": "Manipur",
+            "CombinedName": "Senapati - Manipur",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Aizawl",
+            "State": "Mizoram",
+            "CombinedName": "Aizawl - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mammit",
+            "State": "Mizoram",
+            "CombinedName": "Mammit - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lunglei",
+            "State": "Mizoram",
+            "CombinedName": "Lunglei - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kolasib",
+            "State": "Mizoram",
+            "CombinedName": "Kolasib - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lawngtlai",
+            "State": "Mizoram",
+            "CombinedName": "Lawngtlai - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Champhai",
+            "State": "Mizoram",
+            "CombinedName": "Champhai - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Saiha",
+            "State": "Mizoram",
+            "CombinedName": "Saiha - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Serchhip",
+            "State": "Mizoram",
+            "CombinedName": "Serchhip - Mizoram",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Zunhebotto",
+            "State": "Nagaland",
+            "CombinedName": "Zunhebotto - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dimapur",
+            "State": "Nagaland",
+            "CombinedName": "Dimapur - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Wokha",
+            "State": "Nagaland",
+            "CombinedName": "Wokha - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Phek",
+            "State": "Nagaland",
+            "CombinedName": "Phek - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mokokchung",
+            "State": "Nagaland",
+            "CombinedName": "Mokokchung - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kiphire",
+            "State": "Nagaland",
+            "CombinedName": "Kiphire - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tuensang",
+            "State": "Nagaland",
+            "CombinedName": "Tuensang - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mon",
+            "State": "Nagaland",
+            "CombinedName": "Mon - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kohima",
+            "State": "Nagaland",
+            "CombinedName": "Kohima - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Peren",
+            "State": "Nagaland",
+            "CombinedName": "Peren - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Longleng",
+            "State": "Nagaland",
+            "CombinedName": "Longleng - Nagaland",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Tripura",
+            "State": "Tripura",
+            "CombinedName": "South Tripura - Tripura",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Tripura",
+            "State": "Tripura",
+            "CombinedName": "West Tripura - Tripura",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lower Dibang Valley",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Lower Dibang Valley - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Siang",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "East Siang - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dibang Valley",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Dibang Valley - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Siang",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "West Siang - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lohit",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Lohit - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Papum Pare",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Papum Pare - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tawang",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Tawang - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Kameng",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "West Kameng - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Kameng",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "East Kameng - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lower Subansiri",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Lower Subansiri - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Changlang",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Changlang - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tirap",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Tirap - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kurung Kumey",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Kurung Kumey - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Upper Siang",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Upper Siang - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Upper Subansiri",
+            "State": "Arunachal Pradesh",
+            "CombinedName": "Upper Subansiri - Arunachal Pradesh",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhalai",
+            "State": "Tripura",
+            "CombinedName": "Dhalai - Tripura",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North Tripura",
+            "State": "Tripura",
+            "CombinedName": "North Tripura - Tripura",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Garo Hills",
+            "State": "Meghalaya",
+            "CombinedName": "West Garo Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Garo Hills",
+            "State": "Meghalaya",
+            "CombinedName": "East Garo Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jaintia Hills",
+            "State": "Meghalaya",
+            "CombinedName": "Jaintia Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Khasi Hills",
+            "State": "Meghalaya",
+            "CombinedName": "East Khasi Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Garo Hills",
+            "State": "Meghalaya",
+            "CombinedName": "South Garo Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ri Bhoi",
+            "State": "Meghalaya",
+            "CombinedName": "Ri Bhoi - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Khasi Hills",
+            "State": "Meghalaya",
+            "CombinedName": "West Khasi Hills - Meghalaya",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ganjam",
+            "State": "Odisha",
+            "CombinedName": "Ganjam - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gajapati",
+            "State": "Odisha",
+            "CombinedName": "Gajapati - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kalahandi",
+            "State": "Odisha",
+            "CombinedName": "Kalahandi - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nuapada",
+            "State": "Odisha",
+            "CombinedName": "Nuapada - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Koraput",
+            "State": "Odisha",
+            "CombinedName": "Koraput - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rayagada",
+            "State": "Odisha",
+            "CombinedName": "Rayagada - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nabarangapur",
+            "State": "Odisha",
+            "CombinedName": "Nabarangapur - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Malkangiri",
+            "State": "Odisha",
+            "CombinedName": "Malkangiri - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kandhamal",
+            "State": "Odisha",
+            "CombinedName": "Kandhamal - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Boudh",
+            "State": "Odisha",
+            "CombinedName": "Boudh - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Baleswar",
+            "State": "Odisha",
+            "CombinedName": "Baleswar - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhadrak",
+            "State": "Odisha",
+            "CombinedName": "Bhadrak - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kendujhar",
+            "State": "Odisha",
+            "CombinedName": "Kendujhar - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Khorda",
+            "State": "Odisha",
+            "CombinedName": "Khorda - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Puri",
+            "State": "Odisha",
+            "CombinedName": "Puri - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Cuttack",
+            "State": "Odisha",
+            "CombinedName": "Cuttack - Odisha",
+            "Region": "East India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Jajapur",
+            "State": "Odisha",
+            "CombinedName": "Jajapur - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kendrapara",
+            "State": "Odisha",
+            "CombinedName": "Kendrapara - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jagatsinghapur",
+            "State": "Odisha",
+            "CombinedName": "Jagatsinghapur - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mayurbhanj",
+            "State": "Odisha",
+            "CombinedName": "Mayurbhanj - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nayagarh",
+            "State": "Odisha",
+            "CombinedName": "Nayagarh - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Balangir",
+            "State": "Odisha",
+            "CombinedName": "Balangir - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sonapur",
+            "State": "Odisha",
+            "CombinedName": "Sonapur - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Angul",
+            "State": "Odisha",
+            "CombinedName": "Angul - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dhenkanal",
+            "State": "Odisha",
+            "CombinedName": "Dhenkanal - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sambalpur",
+            "State": "Odisha",
+            "CombinedName": "Sambalpur - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bargarh",
+            "State": "Odisha",
+            "CombinedName": "Bargarh - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jharsuguda",
+            "State": "Odisha",
+            "CombinedName": "Jharsuguda - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Debagarh",
+            "State": "Odisha",
+            "CombinedName": "Debagarh - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sundergarh",
+            "State": "Odisha",
+            "CombinedName": "Sundergarh - Odisha",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chandigarh",
+            "State": "Chandigarh",
+            "CombinedName": "Chandigarh - Chandigarh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Ropar",
+            "State": "Punjab",
+            "CombinedName": "Ropar - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mohali",
+            "State": "Punjab",
+            "CombinedName": "Mohali - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rupnagar",
+            "State": "Punjab",
+            "CombinedName": "Rupnagar - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Patiala",
+            "State": "Punjab",
+            "CombinedName": "Patiala - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ludhiana",
+            "State": "Punjab",
+            "CombinedName": "Ludhiana - Punjab",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Fatehgarh Sahib",
+            "State": "Punjab",
+            "CombinedName": "Fatehgarh Sahib - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sangrur",
+            "State": "Punjab",
+            "CombinedName": "Sangrur - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Barnala",
+            "State": "Punjab",
+            "CombinedName": "Barnala - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Amritsar",
+            "State": "Punjab",
+            "CombinedName": "Amritsar - Punjab",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Tarn Taran",
+            "State": "Punjab",
+            "CombinedName": "Tarn Taran - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bathinda",
+            "State": "Punjab",
+            "CombinedName": "Bathinda - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mansa",
+            "State": "Punjab",
+            "CombinedName": "Mansa - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Muktsar",
+            "State": "Punjab",
+            "CombinedName": "Muktsar - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Moga",
+            "State": "Punjab",
+            "CombinedName": "Moga - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Faridkot",
+            "State": "Punjab",
+            "CombinedName": "Faridkot - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Firozpur",
+            "State": "Punjab",
+            "CombinedName": "Firozpur - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Fazilka",
+            "State": "Punjab",
+            "CombinedName": "Fazilka - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gurdaspur",
+            "State": "Punjab",
+            "CombinedName": "Gurdaspur - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pathankot",
+            "State": "Punjab",
+            "CombinedName": "Pathankot - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hoshiarpur",
+            "State": "Punjab",
+            "CombinedName": "Hoshiarpur - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nawanshahr",
+            "State": "Punjab",
+            "CombinedName": "Nawanshahr - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jalandhar",
+            "State": "Punjab",
+            "CombinedName": "Jalandhar - Punjab",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kapurthala",
+            "State": "Punjab",
+            "CombinedName": "Kapurthala - Punjab",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ajmer",
+            "State": "Rajasthan",
+            "CombinedName": "Ajmer - Rajasthan",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Rajsamand",
+            "State": "Rajasthan",
+            "CombinedName": "Rajsamand - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bhilwara",
+            "State": "Rajasthan",
+            "CombinedName": "Bhilwara - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chittorgarh",
+            "State": "Rajasthan",
+            "CombinedName": "Chittorgarh - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Banswara",
+            "State": "Rajasthan",
+            "CombinedName": "Banswara - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dungarpur",
+            "State": "Rajasthan",
+            "CombinedName": "Dungarpur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kota",
+            "State": "Rajasthan",
+            "CombinedName": "Kota - Rajasthan",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Baran",
+            "State": "Rajasthan",
+            "CombinedName": "Baran - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jhalawar",
+            "State": "Rajasthan",
+            "CombinedName": "Jhalawar - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bundi",
+            "State": "Rajasthan",
+            "CombinedName": "Bundi - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tonk",
+            "State": "Rajasthan",
+            "CombinedName": "Tonk - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Udaipur",
+            "State": "Rajasthan",
+            "CombinedName": "Udaipur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Alwar",
+            "State": "Rajasthan",
+            "CombinedName": "Alwar - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bharatpur",
+            "State": "Rajasthan",
+            "CombinedName": "Bharatpur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dholpur",
+            "State": "Rajasthan",
+            "CombinedName": "Dholpur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jaipur",
+            "State": "Rajasthan",
+            "CombinedName": "Jaipur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Dausa",
+            "State": "Rajasthan",
+            "CombinedName": "Dausa - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sawai Madhopur",
+            "State": "Rajasthan",
+            "CombinedName": "Sawai Madhopur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Karauli",
+            "State": "Rajasthan",
+            "CombinedName": "Karauli - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Barmer",
+            "State": "Rajasthan",
+            "CombinedName": "Barmer - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bikaner",
+            "State": "Rajasthan",
+            "CombinedName": "Bikaner - Rajasthan",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Churu",
+            "State": "Rajasthan",
+            "CombinedName": "Churu - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jhujhunu",
+            "State": "Rajasthan",
+            "CombinedName": "Jhujhunu - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jodhpur",
+            "State": "Rajasthan",
+            "CombinedName": "Jodhpur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Jaisalmer",
+            "State": "Rajasthan",
+            "CombinedName": "Jaisalmer - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nagaur",
+            "State": "Rajasthan",
+            "CombinedName": "Nagaur - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pali",
+            "State": "Rajasthan",
+            "CombinedName": "Pali - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sikar",
+            "State": "Rajasthan",
+            "CombinedName": "Sikar - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sirohi",
+            "State": "Rajasthan",
+            "CombinedName": "Sirohi - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jalor",
+            "State": "Rajasthan",
+            "CombinedName": "Jalor - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ganganagar",
+            "State": "Rajasthan",
+            "CombinedName": "Ganganagar - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hanumangarh",
+            "State": "Rajasthan",
+            "CombinedName": "Hanumangarh - Rajasthan",
+            "Region": "West India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chennai",
+            "State": "Tamil Nadu",
+            "CombinedName": "Chennai - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "Vellore",
+            "State": "Tamil Nadu",
+            "CombinedName": "Vellore - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Tiruvannamalai",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tiruvannamalai - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kanchipuram",
+            "State": "Tamil Nadu",
+            "CombinedName": "Kanchipuram - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tiruvallur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tiruvallur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Villupuram",
+            "State": "Tamil Nadu",
+            "CombinedName": "Villupuram - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Cuddalore",
+            "State": "Tamil Nadu",
+            "CombinedName": "Cuddalore - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Coimbatore",
+            "State": "Tamil Nadu",
+            "CombinedName": "Coimbatore - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Dharmapuri",
+            "State": "Tamil Nadu",
+            "CombinedName": "Dharmapuri - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Salem",
+            "State": "Tamil Nadu",
+            "CombinedName": "Salem - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Erode",
+            "State": "Tamil Nadu",
+            "CombinedName": "Erode - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Karur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Karur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Namakkal",
+            "State": "Tamil Nadu",
+            "CombinedName": "Namakkal - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Krishnagiri",
+            "State": "Tamil Nadu",
+            "CombinedName": "Krishnagiri - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nilgiris",
+            "State": "Tamil Nadu",
+            "CombinedName": "Nilgiris - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dindigul",
+            "State": "Tamil Nadu",
+            "CombinedName": "Dindigul - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kanyakumari",
+            "State": "Tamil Nadu",
+            "CombinedName": "Kanyakumari - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sivaganga",
+            "State": "Tamil Nadu",
+            "CombinedName": "Sivaganga - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ramanathapuram",
+            "State": "Tamil Nadu",
+            "CombinedName": "Ramanathapuram - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tuticorin",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tuticorin - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tirunelveli",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tirunelveli - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Madurai",
+            "State": "Tamil Nadu",
+            "CombinedName": "Madurai - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Theni",
+            "State": "Tamil Nadu",
+            "CombinedName": "Theni - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Virudhunagar",
+            "State": "Tamil Nadu",
+            "CombinedName": "Virudhunagar - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ariyalur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Ariyalur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tiruchirappalli",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tiruchirappalli - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Pudukkottai",
+            "State": "Tamil Nadu",
+            "CombinedName": "Pudukkottai - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tiruvarur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Tiruvarur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Thanjavur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Thanjavur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nagapattinam",
+            "State": "Tamil Nadu",
+            "CombinedName": "Nagapattinam - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Karaikal",
+            "State": "Pondicherry",
+            "CombinedName": "Karaikal - Pondicherry",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Perambalur",
+            "State": "Tamil Nadu",
+            "CombinedName": "Perambalur - Tamil Nadu",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Agra",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Agra - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Aligarh",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Aligarh - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Hathras",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Hathras - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bulandshahr",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Bulandshahr - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gautam Buddha Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Gautam Buddha Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Etah",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Etah - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Firozabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Firozabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Etawah",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Etawah - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Auraiya",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Auraiya - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jhansi",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Jhansi - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Jalaun",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Jalaun - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Lalitpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Lalitpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mainpuri",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Mainpuri - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mathura",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Mathura - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Azamgarh",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Azamgarh - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Allahabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Allahabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kaushambi",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kaushambi - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ghazipur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Ghazipur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jaunpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Jaunpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sonbhadra",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Sonbhadra - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mirzapur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Mirzapur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pratapgarh",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Pratapgarh - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Varanasi",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Varanasi - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Chandauli",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Chandauli - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sant Ravidas Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Sant Ravidas Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pilibhit",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Pilibhit - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bareilly",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Bareilly - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Bijnor",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Bijnor - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Haridwar",
+            "State": "Uttarakhand",
+            "CombinedName": "Haridwar - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Budaun",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Budaun - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hardoi",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Hardoi - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kheri",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kheri - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Meerut",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Meerut - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Bagpat",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Bagpat - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Moradabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Moradabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Jyotiba Phule Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Jyotiba Phule Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rampur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Rampur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Muzaffarnagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Muzaffarnagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Saharanpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Saharanpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shahjahanpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Shahjahanpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mau",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Mau - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Shrawasti",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Shrawasti - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bahraich",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Bahraich - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ballia",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Ballia - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Siddharthnagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Siddharthnagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sant Kabir Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Sant Kabir Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Basti",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Basti - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Deoria",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Deoria - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kushinagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kushinagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gonda",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Gonda - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Balrampur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Balrampur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Gorakhpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Gorakhpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Maharajganj",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Maharajganj - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Banda",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Banda - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chitrakoot",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Chitrakoot - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Mahoba",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Mahoba - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hamirpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Hamirpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Kannauj",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kannauj - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Farrukhabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Farrukhabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Fatehpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Fatehpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kanpur Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kanpur Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Unnao",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Unnao - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kanpur Dehat",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Kanpur Dehat - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Barabanki",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Barabanki - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Faizabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Faizabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ambedkar Nagar",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Ambedkar Nagar - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Ghaziabad",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Ghaziabad - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Lucknow",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Lucknow - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Raebareli",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Raebareli - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sitapur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Sitapur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Sultanpur",
+            "State": "Uttar Pradesh",
+            "CombinedName": "Sultanpur - Uttar Pradesh",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Almora",
+            "State": "Uttarakhand",
+            "CombinedName": "Almora - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bageshwar",
+            "State": "Uttarakhand",
+            "CombinedName": "Bageshwar - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Chamoli",
+            "State": "Uttarakhand",
+            "CombinedName": "Chamoli - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Rudraprayag",
+            "State": "Uttarakhand",
+            "CombinedName": "Rudraprayag - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Dehradun",
+            "State": "Uttarakhand",
+            "CombinedName": "Dehradun - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Tier 2"
+        },
+        {
+            "Districtname": "Udham Singh Nagar",
+            "State": "Uttarakhand",
+            "CombinedName": "Udham Singh Nagar - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nainital",
+            "State": "Uttarakhand",
+            "CombinedName": "Nainital - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Champawat",
+            "State": "Uttarakhand",
+            "CombinedName": "Champawat - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pauri Garhwal",
+            "State": "Uttarakhand",
+            "CombinedName": "Pauri Garhwal - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Pithoragarh",
+            "State": "Uttarakhand",
+            "CombinedName": "Pithoragarh - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Tehri Garhwal",
+            "State": "Uttarakhand",
+            "CombinedName": "Tehri Garhwal - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Uttarkashi",
+            "State": "Uttarakhand",
+            "CombinedName": "Uttarkashi - Uttarakhand",
+            "Region": "North India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Kolkata",
+            "State": "West Bengal",
+            "CombinedName": "Kolkata - West Bengal",
+            "Region": "East India",
+            "Tier": "Metro"
+        },
+        {
+            "Districtname": "North 24 Parganas",
+            "State": "West Bengal",
+            "CombinedName": "North 24 Parganas - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South 24 Parganas",
+            "State": "West Bengal",
+            "CombinedName": "South 24 Parganas - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Birbhum",
+            "State": "West Bengal",
+            "CombinedName": "Birbhum - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Murshidabad",
+            "State": "West Bengal",
+            "CombinedName": "Murshidabad - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nadia",
+            "State": "West Bengal",
+            "CombinedName": "Nadia - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Andaman",
+            "State": "Andaman & Nicobar Islands",
+            "CombinedName": "South Andaman - Andaman & Nicobar Islands",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North And Middle Andaman",
+            "State": "Andaman & Nicobar Islands",
+            "CombinedName": "North And Middle Andaman - Andaman & Nicobar Islands",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Nicobar",
+            "State": "Andaman & Nicobar Islands",
+            "CombinedName": "Nicobar - Andaman & Nicobar Islands",
+            "Region": "South India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Cooch Behar",
+            "State": "West Bengal",
+            "CombinedName": "Cooch Behar - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Jalpaiguri",
+            "State": "West Bengal",
+            "CombinedName": "Jalpaiguri - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Darjiling",
+            "State": "West Bengal",
+            "CombinedName": "Darjiling - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Malda",
+            "State": "West Bengal",
+            "CombinedName": "Malda - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Sikkim",
+            "State": "Sikkim",
+            "CombinedName": "East Sikkim - Sikkim",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Sikkim",
+            "State": "Sikkim",
+            "CombinedName": "West Sikkim - Sikkim",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Sikkim",
+            "State": "Sikkim",
+            "CombinedName": "South Sikkim - Sikkim",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North Sikkim",
+            "State": "Sikkim",
+            "CombinedName": "North Sikkim - Sikkim",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "South Dinajpur",
+            "State": "West Bengal",
+            "CombinedName": "South Dinajpur - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "North Dinajpur",
+            "State": "West Bengal",
+            "CombinedName": "North Dinajpur - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bardhaman",
+            "State": "West Bengal",
+            "CombinedName": "Bardhaman - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Bankura",
+            "State": "West Bengal",
+            "CombinedName": "Bankura - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "West Midnapore",
+            "State": "West Bengal",
+            "CombinedName": "West Midnapore - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "East Midnapore",
+            "State": "West Bengal",
+            "CombinedName": "East Midnapore - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Hooghly",
+            "State": "West Bengal",
+            "CombinedName": "Hooghly - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Howrah",
+            "State": "West Bengal",
+            "CombinedName": "Howrah - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Medinipur",
+            "State": "West Bengal",
+            "CombinedName": "Medinipur - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        },
+        {
+            "Districtname": "Puruliya",
+            "State": "West Bengal",
+            "CombinedName": "Puruliya - West Bengal",
+            "Region": "East India",
+            "Tier": "Others"
+        }
+    ]

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/signup_bg">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/sbs_logo">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="98dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Get started with search buddy!"
+                android:textColor="@color/choclate"
+                android:textSize="21sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Choose a job you love and and you never have to work a day in your life."
+                android:textColor="@color/choclate"
+                android:textSize="10sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="41dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Prefix:"
+                android:textColor="@color/choclate"
+                android:textSize="16sp"></TextView>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_mr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Mr."
+                    android:textColor="@color/choclate"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/radio_mrs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:buttonTint="@color/black"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Miss."
+                    android:textColor="@color/choclate"
+                    android:textSize="16dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="11dp"
+            android:hint="Full Name"
+            app:boxStrokeColor="@color/choclate"
+            app:hintTextColor="#8A414141"
+            app:startIconDrawable="@drawable/user_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#414141" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"
+            android:hint="Email address"
+            app:boxStrokeColor="@color/choclate"
+            app:hintTextColor="#8A414141"
+            app:startIconDrawable="@drawable/ic_baseline_mail_outline_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#414141" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--To be Implemented-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_conf_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            android:hint="Mobile Number"
+            app:boxStrokeColor="@color/choclate"
+            app:hintTextColor="#8A414141"
+            app:startIconDrawable="@drawable/mobile_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_conf_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="#414141" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_forgot_password"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginHorizontal="33dp"-->
+        <!--            android:gravity="end"-->
+        <!--            android:paddingTop="3dp"-->
+        <!--            android:singleLine="true"-->
+        <!--            android:text="Forgot Password?"-->
+        <!--            android:textColor="#006BFF">-->
+
+        <!--        </TextView>-->
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_btn_border"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:backgroundTint="#936030">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Existing User?"
+                android:textColor="#414141"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Sign in"
+                android:textColor="@color/choclate"
+                android:textSize="15sp">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
