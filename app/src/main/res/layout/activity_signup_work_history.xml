@@ -2,14 +2,24 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:id="@+id/sv_wh">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Forms.Signup_Work_History">
-
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +30,7 @@
         android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:layout_marginStart="27dp"
+        android:layout_gravity="center"
         android:layout_marginTop="6dp"
         android:src="@drawable/sbs_logo"></ImageView>
     <com.kofigyan.stateprogressbar.StateProgressBar
@@ -47,11 +57,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/seoge_bold_two"
         android:text="Work Experience:"
+        android:visibility="gone"
         android:textColor="@color/choclate"
-        android:textSize="14sp">
+        android:textSize="16sp">
     </TextView>
     <TextView
         android:layout_width="match_parent"
@@ -59,18 +70,146 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/seogee_ui"
-        android:text="Add details of current or previous employer"
+        android:visibility="gone"
+        android:text="Add details of current employer"
         android:textColor="@color/app_grey"
         android:textSize="13sp">
     </TextView>
 
+        <TextView
+            android:id="@+id/highest_qual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:text="What defines you the best"
+            android:textColor="@color/choclate"
+            android:textSize="16sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+
+            <TextView
+                android:id="@+id/experienced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/work_status_border"
+                android:fontFamily="@font/seoge_bold_two"
+                android:gravity="center"
+                android:minWidth="58dp"
+                android:minHeight="27dp"
+                android:text="Experienced"
+                android:textColor="@color/app_grey"></TextView>
+
+            <TextView
+                android:id="@+id/fresher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/work_status_border"
+                android:fontFamily="@font/seoge_bold_two"
+                android:gravity="center"
+                android:minWidth="83dp"
+                android:minHeight="27dp"
+                android:text="Fresher"
+                android:textColor="@color/app_grey"></TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/experiecne_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/internship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ti_enddate_work"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Have you done any internship?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <RadioGroup
+                    android:id="@+id/radio_layout_intern"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_yes_intern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/choclate"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="Yes."
+                        android:textColor="@color/app_grey"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_no_intern"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:buttonTint="@color/choclate"
+                        android:fontFamily="@font/seogee_ui"
+                        android:text="No"
+                        android:textColor="@color/app_grey"
+                        android:textSize="16dp" />
+                </RadioGroup>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_total_exp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="Total experience(in years)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tt_work"
+                app:boxStrokeColor="#936030"
+                app:hintTextColor="#8A414141">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_total_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ti_company_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:hint="Company Name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tt_work"
@@ -106,52 +245,49 @@
                 android:textColor="#414141" />
 
         </com.google.android.material.textfield.TextInputLayout>
-        <RelativeLayout
-            android:id="@+id/industry_rl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="19dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/level_rl"
-            android:background="@drawable/rounded_bckg">
-            <Spinner
-                android:id="@+id/ti_function_form"
+            <RelativeLayout
+                android:id="@+id/industry_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ti_designation"
+                android:background="@drawable/rounded_bckg">
+                    <Spinner
+                    android:id="@+id/ti_function_form"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=" Location"
+                    android:minHeight="45dp"
+                    app:boxStrokeColor="#936030"
+                    app:hintTextColor="#8A414141"
+                    >
+                </Spinner>
+            </RelativeLayout>
+            <AutoCompleteTextView
+                android:id="@+id/ti_location_form"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=" Location"
-                android:minHeight="45dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/rounded_bckg"
+                android:hint=" Location (Type City ...)"
+                android:minHeight="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/level_rl"
                 app:boxStrokeColor="#936030"
-                app:hintTextColor="#8A414141"
-                >
-            </Spinner>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/notice_rl"
-            android:background="@drawable/rounded_bckg"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/function_rl"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="19dp">
-            <Spinner
-                android:id="@+id/ti_notice"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=" Location"
-                android:minHeight="45dp"
-                app:boxStrokeColor="#936030"
-                app:hintTextColor="#8A414141">
-            </Spinner>
-        </RelativeLayout>
+                app:hintTextColor="#8A414141"></AutoCompleteTextView>
+
+
         <LinearLayout
             android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ti_enddate_work"
@@ -160,11 +296,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/seogee_ui"
-                android:text="Working till present"
-                android:textColor="@color/app_grey"
-                android:textSize="16sp"></TextView>
+                android:text="Is this your present company?"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
 
             <RadioGroup
                 android:id="@+id/radio_layout"
@@ -258,6 +394,29 @@
                 android:textColor="#414141" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notice_rl"
+                android:background="@drawable/rounded_bckg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ti_enddate_work"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="19dp">
+                <Spinner
+                    android:id="@+id/ti_notice"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=" Location"
+                    android:minHeight="45dp"
+                    app:boxStrokeColor="#936030"
+                    app:hintTextColor="#8A414141">
+                </Spinner>
+            </RelativeLayout>
+    </LinearLayout>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sbmt"

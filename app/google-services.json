@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:416198747117:android:d9d1ca5d9eb36da2b6fde4",
         "android_client_info": {
-          "package_name": "com.example.searchbuddy"
+          "package_name": "com.bumptech.searchbuddy"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "416198747117-5jm35nf280hcainnqs0r9q9js6ipjesq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.searchbuddy",
+            "package_name": "com.bumptech.searchbuddy",
             "certificate_hash": "2226e33366acfa9e2fa702cb53ced1b9524d5f14"
           }
         },

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:id="@+id/ns"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:layout_width="match_parent"
@@ -22,7 +23,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#EBEDE0"
+    android:background="#ffffff"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,17 +58,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
         <ImageView
             android:id="@+id/build"
-            android:layout_width="68dp"
-            android:layout_height="88dp"
-            android:src="@drawable/city"
+            android:layout_width="88dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
             android:foregroundGravity="right"
-            android:layout_marginHorizontal="20dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="22dp">
-        </ImageView>
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:src="@drawable/city"></ImageView>
+
         <TextView
             android:id="@+id/txtNoData"
             android:layout_width="wrap_content"
@@ -86,314 +89,189 @@
             android:id="@+id/job_name_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:text=""
+            android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="14dp"
             android:fontFamily="@font/seoge_bold_two">
         </TextView>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/company_name_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_marginStart="108dp"
-        android:textColor="@color/app_blue"
-        android:layout_marginTop="-58dp"
-        android:fontFamily="@font/seogee_ui">
-    </TextView>
-<!--<LinearLayout-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_marginStart="16dp"-->
-<!--    android:layout_marginTop="9dp"-->
-<!--    android:weightSum="6"-->
-<!--    android:orientation="horizontal">-->
-<!--    <ImageView-->
-<!--        android:layout_width="20dp"-->
-<!--        android:layout_height="28dp"-->
-<!--        android:src="@drawable/location_ico"-->
-<!--        android:foregroundGravity="right"-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:layout_marginTop="11dp">-->
-<!--    </ImageView>-->
-<!--    <TextView-->
-<!--        android:id="@+id/location_desc"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text=""-->
-<!--        android:layout_weight="1"-->
-<!--        android:textSize="8sp"-->
-<!--        android:layout_marginTop="22dp"-->
-<!--        android:textColor="@color/app_grey"-->
-<!--        android:fontFamily="@font/seogee_ui">-->
-<!--    </TextView>-->
-<!--    <ImageView-->
-<!--        android:layout_width="22dp"-->
-<!--        android:layout_height="22dp"-->
-<!--        android:src="@drawable/suitcase"-->
-<!--        android:foregroundGravity="right"-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:layout_marginTop="10dp">-->
-<!--    </ImageView>-->
-<!--    <TextView-->
-<!--        android:id="@+id/experience_desc"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="2-4 years"-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:textSize="10sp"-->
-<!--        android:textColor="@color/app_grey"-->
-<!--        android:fontFamily="@font/seogee_ui">-->
-<!--    </TextView>-->
-<!--    <ImageView-->
-<!--        android:layout_width="26dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:src="@drawable/office_building"-->
-<!--        android:layout_weight="1"-->
-<!--        android:foregroundGravity="right"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:layout_marginTop="12dp">-->
-<!--    </ImageView>-->
-<!--    <TextView-->
-<!--        android:id="@+id/industry_types"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text=""-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_marginTop="22dp"-->
-<!--        android:textSize="8sp"-->
-<!--        android:textColor="@color/app_grey"-->
-<!--        android:fontFamily="@font/seogee_ui">-->
-<!--    </TextView>-->
-<!--</LinearLayout>-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="38dp"
-        android:weightSum="6"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="12dp"
-            android:layout_height="22dp"
-            android:src="@drawable/tag"
-            android:foregroundGravity="right"
-            android:layout_weight="1"
-            android:layout_marginTop="17dp">
-        </ImageView>
         <TextView
-            android:id="@+id/function"
+            android:id="@+id/company_name_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text=""
-            android:textSize="10sp"
-            android:layout_marginTop="25dp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="3dp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/seoge_bold_two">
         </TextView>
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@drawable/suitcase"
-            android:foregroundGravity="right"
-            android:layout_weight="1"
-            android:layout_marginTop="18dp">
-        </ImageView>
-        <TextView
-            android:id="@+id/experience_desc"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2-4 years"
-            android:layout_weight="1"
-            android:layout_marginTop="25dp"
-            android:textSize="10sp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
-        </TextView>
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="28dp"
-            android:src="@drawable/level"
-            android:layout_weight="1"
-            android:foregroundGravity="right"
-            android:layout_marginTop="12dp">
-        </ImageView>
-        <TextView
-            android:id="@+id/level"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="3"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_marginStart="2dp"
-            android:textSize="10sp"
+            android:layout_marginTop="18dp"
+            android:minWidth="116dp"
+            android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:layout_marginTop="26dp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
-        </TextView>
+            android:background="@drawable/ronded"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/location_ico"
+                android:layout_marginStart="2dp"
+                android:layout_gravity="center_vertical">
+            </ImageView>
+            <TextView
+                android:id="@+id/location_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="9sp"
+                android:minLines="2"
+                android:maxLength="46"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/seogee_ui">
+            </TextView>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:minWidth="116dp"
+                android:layout_weight="1"
+                android:background="@drawable/ronded"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/suitcase"
+                    android:layout_gravity="center_vertical">
+                </ImageView>
+                <TextView
+                    android:id="@+id/experience_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="9sp"
+                    android:minLines="2"
+                    android:maxLength="26"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seogee_ui">
+                </TextView>
+            </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="18dp"
-        android:weightSum="6"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="12dp"
-            android:layout_height="22dp"
-            android:src="@drawable/location_ico"
-            android:layout_weight="1"
-            android:layout_marginTop="15dp">
-        </ImageView>
-        <TextView
-            android:id="@+id/location_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:textSize="9sp"
-            android:minLines="2"
-            android:maxLength="26"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="19dp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
-        </TextView>
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="29dp"
-            android:src="@drawable/creative_bulb"
-            android:layout_weight="1"
-            android:foregroundGravity="right"
-            android:layout_marginTop="10dp">
-        </ImageView>
-        <TextView
-            android:id="@+id/skills"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:textSize="11sp"
-            android:layout_marginStart="3dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:minWidth="116dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ronded"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/level"
+                    android:layout_gravity="center_vertical">
+                </ImageView>
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="9sp"
+                    android:minLines="2"
+                    android:maxLength="26"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/seogee_ui">
+                </TextView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/grey"
             android:layout_marginTop="22dp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
-        </TextView>
-        <ImageView
-            android:layout_width="28dp"
-            android:layout_height="32dp"
-            android:src="@drawable/office_building"
-            android:layout_weight="1"
-            android:layout_marginStart="-2dp"
-            android:layout_marginTop="12dp">
-        </ImageView>
-        <TextView
-            android:id="@+id/industry_types"
+            android:layout_marginHorizontal="12dp"
+            android:visibility="visible" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_marginTop="22dp"
-            android:textSize="11sp"
-            android:layout_marginStart="3dp"
-            android:textColor="@color/app_grey"
-            android:fontFamily="@font/seogee_ui">
-        </TextView>
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Views:"
+                android:textColor="@color/app_grey"
+                android:fontFamily="@font/seoge_bold_two"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"></TextView>
+            <TextView
+                android:id="@+id/total_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"></TextView>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Applied:"
+                android:fontFamily="@font/seoge_bold_two"
+                android:textColor="@color/app_grey"
+                android:layout_marginTop="4dp"></TextView>
+            <TextView
+                android:id="@+id/total_applied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"></TextView>
+        </LinearLayout>
 
 
     </LinearLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginTop="4dp"-->
-<!--        android:orientation="horizontal">-->
-<!--        <ImageView-->
-<!--            android:layout_width="19dp"-->
-<!--            android:layout_height="19dp"-->
-<!--            android:src="@drawable/location_ico"-->
-<!--            android:layout_marginTop="15dp">-->
-<!--        </ImageView>-->
-<!--        <TextView-->
-<!--            android:id="@+id/location_desc"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Hello"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="11sp"-->
-<!--            android:layout_marginStart="3dp"-->
-<!--            android:layout_marginTop="18dp"-->
-<!--            android:textColor="@color/app_grey"-->
-<!--            android:fontFamily="@font/seogee_ui">-->
-<!--        </TextView>-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="18dp"-->
-<!--            android:orientation="horizontal">-->
-<!--            <ImageView-->
-<!--                android:layout_width="19dp"-->
-<!--                android:layout_height="19dp"-->
-<!--                android:src="@drawable/creative_bulb"-->
-<!--                android:layout_weight="1"-->
-<!--                android:foregroundGravity="right"-->
-<!--                android:layout_marginTop="10dp">-->
-<!--            </ImageView>-->
-<!--            <TextView-->
-<!--                android:id="@+id/skills"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text=""-->
-<!--                android:layout_weight="1"-->
-<!--                android:textSize="11sp"-->
-<!--                android:layout_marginStart="3dp"-->
-<!--                android:layout_marginTop="22dp"-->
-<!--                android:textColor="@color/app_grey"-->
-<!--                android:fontFamily="@font/seogee_ui">-->
-<!--            </TextView>-->
 
-<!--        </LinearLayout>-->
-<!--    </LinearLayout>-->
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:orientation="horizontal">-->
-<!--        <ImageView-->
-<!--            android:layout_width="28dp"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:src="@drawable/office_building"-->
-<!--            android:layout_weight="1"-->
-<!--            android:layout_marginStart="-2dp"-->
-<!--            android:layout_marginTop="12dp">-->
-<!--        </ImageView>-->
-<!--        <TextView-->
-<!--            android:id="@+id/industry_types"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text=""-->
-<!--            android:layout_weight="1"-->
-<!--            android:layout_marginTop="22dp"-->
-<!--            android:textSize="11sp"-->
-<!--            android:layout_marginStart="3dp"-->
-<!--            android:textColor="@color/app_grey"-->
-<!--            android:fontFamily="@font/seogee_ui">-->
-<!--        </TextView>-->
-<!--    </LinearLayout>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="16dp"
         android:weightSum="2"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal">
@@ -424,38 +302,44 @@
             android:fontFamily="@font/seogee_ui">
         </TextView>
     </LinearLayout>
-
-
-</LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/job_description_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:text="Job Description"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="15sp"
-            android:layout_marginStart="21dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/job_desc_border"
+            android:layout_marginStart="18dp"
             >
         </TextView>
         <TextView
             android:id="@+id/about_company_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:text="About Company"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:background="@drawable/job_desc_border"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="6dp"
             android:layout_weight="1">
         </TextView>
     </LinearLayout>
+
+</LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/job_desc_layout"
@@ -549,6 +433,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/button_layout"
         android:layout_width="fill_parent"
         android:layout_height="49dp"
         android:layout_marginTop="25dp"
@@ -572,7 +457,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="19dp"
             android:layout_gravity="center_vertical"
-            android:text="Save"
+            android:text=""
             android:textColor="@color/choclate">
         </TextView>
 <!--        <View-->
@@ -592,7 +477,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="20dp"
             android:layout_gravity="center_vertical"
-            android:text=""
+            android:text="Apply"
             android:layout_marginStart="3dp"
             android:textColor="@color/choclate">
         </TextView>

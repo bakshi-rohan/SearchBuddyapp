@@ -9,36 +9,42 @@
             android:id="@+id/search_jobs"
             android:iconTint="@color/purple_500"
             android:title="Search Jobs"
+            android:icon="@drawable/search_jobss"
             />
 
 <!--        <item-->
 <!--            android:id="@+id/recom_jobs"-->
 <!--            android:title="Recommended Jobs" />-->
 
+
+
         <item
-            android:id="@+id/applied_job"
-            android:title="Applied Jobs" />
+            android:id="@+id/saved_jobs"
+            android:title="Saved Jobs"
+            android:icon="@drawable/diskette"/>
 
     </group>
     <group android:checkableBehavior="none"
         android:id="@+id/group_two">
         <item
-            android:id="@+id/settings"
-            android:title="Settings" />
+            android:id="@+id/contact_us"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/abou_us"
+            android:title="About Us" />
+
+
+        <item
+            android:id="@+id/Faq"
+            android:title="FAQs" />
 
         <item
             android:id="@+id/tnc"
             android:title="Terms and Conditions"
             />
         <item
-            android:id="@+id/abou_us"
-            android:title="About Us" />
-        <item
-            android:id="@+id/contact_us"
-            android:title="Contact Us" />
-        <item
-            android:id="@+id/Faq"
-            android:title="FAQs" />
+            android:id="@+id/settings"
+            android:title="Settings" />
 
         <item
             android:id="@+id/log_out"

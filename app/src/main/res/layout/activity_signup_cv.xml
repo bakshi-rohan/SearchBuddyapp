@@ -17,8 +17,8 @@
             android:id="@+id/imageView3"
             android:layout_width="150dp"
             android:layout_height="70dp"
-            android:layout_marginStart="27dp"
             android:layout_marginTop="6dp"
+            android:layout_gravity="center"
             android:src="@drawable/sbs_logo"></ImageView>
         <com.kofigyan.stateprogressbar.StateProgressBar
             android:id="@+id/your_state_progress_bar_id"
@@ -184,6 +184,8 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+
             <ProgressBar
                 android:id="@+id/progress"
                 android:layout_width="match_parent"
@@ -191,6 +193,75 @@
                 android:layout_centerInParent="true"
                 android:visibility="gone" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/profile_section_border">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="11dp"
+                android:src="@drawable/video_resume"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:singleLine="false"
+                android:text="Upload a 1 min. video introduction"
+                android:textColor="#8A414141"
+                android:textSize="9sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="13dp"
+                android:layout_marginTop="13.8dp"
+                android:background="@drawable/button_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/select_video_resume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="SELECT"
+                    android:textColor="@color/choclate">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/video_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:text=""
+            android:textColor="#8A414141"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"></TextView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sbmt"
@@ -204,7 +275,7 @@
             android:layout_marginEnd="30dp"
             android:background="@drawable/login_btn_border"
             android:fontFamily="@font/seogee_ui"
-            android:text="Save and Continue"
+            android:text="Save and Next"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp"
@@ -226,7 +297,7 @@
             android:text="Skip"
             android:textAllCaps="false"
             android:textColor="@color/choclate"
-            android:visibility="gone"
+            android:visibility="visible"
             android:textSize="18dp"
             app:backgroundTint="#FFFFFF">
         </com.google.android.material.button.MaterialButton>

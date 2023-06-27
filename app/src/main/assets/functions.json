@@ -5,30 +5,30 @@
 	},
 	{
 		"Id" : 13,
-		"Value" : "Channel Sales and P&L"
+		"Value" : "Business Development"
 	},
 	{
 		"Id" : 10,
-		"Value" : "Field Sales"
+		"Value" : "Channel Sales"
 	},
 	{
 		"Id" : 12,
-		"Value" : "Product/ Service Sales"
+		"Value" : "Direct Sales (B2B)"
 	},
 	{
 		"Id" : 14,
-		"Value" : "Sales and Marketing Operations"
+		"Value" : "Field Sales"
 	},
 	{
 		"Id" : 15,
-		"Value" : "Sales Process and Enablement"
+		"Value" : "Govt Sales"
 	},
 	{
 		"Id" : 11,
-		"Value" : "Sales Strategy"
+		"Value" : "Institutional Sales"
 	},{
 	"Id" : 4005,
-	"Value" : "Other"
+	"Value" : "Sales (B2C)"
 }
 
 ]

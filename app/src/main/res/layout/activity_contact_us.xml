@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ContactUs">
 
@@ -10,28 +11,35 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="19dp"
         android:gravity="center"
-        android:text="Reach Us!"
-        android:textSize="18sp"
+        android:text="Contact Us!"
+        android:textSize="22sp"
         android:textColor="@color/choclate"
+        android:visibility="gone"
         android:fontFamily="@font/seoge_bold_two"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/contactus"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"></ImageView>
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
-        android:text="Please go through FAQ page,we might have already answered your query there."
+        android:text="Please go through FAQ page,we might have already answered your queries there."
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/choclate"
-        android:layout_marginHorizontal="5dp"
-        android:textSize="16sp"
-        android:linksClickable="true"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="14dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/seoge_bold_two"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
     <TextView
         android:id="@+id/textView15"
@@ -39,9 +47,84 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="2dp"
-        android:text="Reach us at info@searchbuddy.in"
+        android:text="Reach us at:"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/choclate"
-        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:textSize="17sp"
+        android:linksClickable="true"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/baseline_email_24"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="info@searchbuddy.in"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/app_grey"
+            android:textSize="13.5sp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:linksClickable="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/baseline_home_24"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:text="709,Bhandari House 91,Nehru Place,New Delhi,110019 "
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/app_grey"
+            android:layout_marginTop="1dp"
+            android:textSize="13.5sp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:linksClickable="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/baseline_local_phone_24"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="+91 1141096816(Mon-Fri 10AM-7PM)"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/app_grey"
+            android:layout_marginTop="1dp"
+            android:textSize="13.5sp"
+            android:fontFamily="@font/seoge_bold_two"
+            android:linksClickable="true" />
+    </LinearLayout>
+
+</LinearLayout>

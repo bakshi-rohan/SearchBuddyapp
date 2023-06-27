@@ -47,6 +47,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/filter_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -90,6 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Experience"
+                        android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -101,6 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Salary"
+                        android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -123,6 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date Posted"
+                         android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -145,21 +149,61 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/job_length"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/job_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="@color/app_grey"
+                android:textSize="12sp"></TextView>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+
+            <com.rm.rmswitch.RMSwitch
+                android:id="@+id/your_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checked="false"
+                app:forceAspectRatio="false"
+                app:enabled="true"
+                app:switchDesign="slim"
+                android:layout_marginTop="12dp"
+                app:switchBkgCheckedColor="@color/teal_200"
+                app:switchBkgNotCheckedColor="@color/teal_200"
+                app:switchToggleCheckedColor="@color/teal_200"
+                app:switchToggleNotCheckedColor="@color/teal_200"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Premium Jobs"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:textSize="15sp"></TextView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_nodata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="16dp"
-            android:text=""
-            android:textColor="@color/app_grey"
-            android:textSize="12sp"></TextView>
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            android:src="@drawable/nopagefound"></ImageView>
         <TextView
             android:id="@+id/txtNoData"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/seogee_ui"
             android:text="No Positions found"
             android:textColor="@color/app_grey"
@@ -177,7 +221,14 @@
             android:layout_marginTop="0dp"
             android:nestedScrollingEnabled="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/premium_job_recyler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="match_parent"

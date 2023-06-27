@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusableInTouchMode="true"
     android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Profile.Prefrence">
+
     <ProgressBar
         android:id="@+id/progress"
         android:layout_width="match_parent"
@@ -16,73 +17,78 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent" />
+
     <TextView
         android:id="@+id/textViw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@android:drawable/editbox_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="28dp"
+        android:background="@android:drawable/editbox_background"
         android:drawableRight="@drawable/baseline_arrow_drop_down_24"
         android:drawablePadding="16dp"
-        android:hint="Preferred Role"
-        android:padding="12dp" />
+        android:hint="Preferred Function"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textViwe2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@android:drawable/editbox_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViw"
         android:layout_marginTop="24dp"
+        android:background="@android:drawable/editbox_background"
         android:drawableRight="@drawable/baseline_arrow_drop_down_24"
         android:drawablePadding="16dp"
         android:hint="Employment Type"
-        android:padding="12dp" />
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViw" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@android:drawable/editbox_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViwe2"
         android:layout_marginTop="24dp"
+        android:background="@android:drawable/editbox_background"
         android:drawableRight="@drawable/baseline_arrow_drop_down_24"
         android:drawablePadding="16dp"
         android:hint="Work Type"
-        android:padding="12dp" />
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViwe2" />
 
     <TextView
         android:id="@+id/textViewCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
         android:layout_marginTop="24dp"
         android:drawablePadding="16dp"
-        android:visibility="gone"
         android:hint="Preferred City"
-        android:padding="12dp" />
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <MultiAutoCompleteTextView
         android:id="@+id/ti_location_form"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_bck_pref"
-        android:minHeight="38dp"
-        android:layout_marginBottom="4dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_bck_pref"
         android:drawablePadding="16dp"
-        android:hint=" Location (Start typing)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:hint=" Location (Type City)"
+        android:minHeight="48dp"
         app:boxStrokeColor="@color/app_grey"
-        app:hintTextColor="#8A414141">
+        app:hintTextColor="#8A414141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
     </MultiAutoCompleteTextView>
     <!--ti_pref_location_form-->
 
@@ -94,39 +100,43 @@
         android:background="@color/choclate"
         android:minHeight="48dp"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/save_cancel_border"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="31dp"
+            android:background="@drawable/rounded_rect"
             android:fontFamily="@font/seoge_bold_two"
             android:gravity="center"
             android:minWidth="82dp"
             android:minHeight="27dp"
             android:text="Cancel"
-            android:textColor="@color/choclate"></TextView>
+            android:textColor="@color/choclate">
+        </TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="162dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/save_cancel_border"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="31dp"
+            android:background="@drawable/rounded_rect"
             android:fontFamily="@font/seoge_bold_two"
             android:gravity="center"
             android:minWidth="82dp"
             android:minHeight="27dp"
             android:text="Save"
-            android:textColor="@color/choclate"></TextView>
+            android:textColor="@color/choclate">
+                    </TextView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

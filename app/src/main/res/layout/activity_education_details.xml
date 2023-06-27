@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
+    android:fillViewport="true"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:fillViewport="true">
+    android:focusableInTouchMode="true">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -86,26 +85,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="11dp"
+                    android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
                     android:gravity="center"
                     android:minWidth="54dp"
-                    android:visibility="gone"
-                    android:layout_weight="1"
                     android:minHeight="27dp"
                     android:text="10th"
-                    android:textColor="@color/app_grey"></TextView>
+                    android:textColor="@color/app_grey"
+                    android:visibility="gone"></TextView>
 
                 <TextView
                     android:id="@+id/twelve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="11dp"
+                    android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
                     android:gravity="center"
                     android:minWidth="54dp"
-                    android:layout_weight="1"
                     android:minHeight="27dp"
                     android:text="12th"
                     android:textColor="@color/app_grey"></TextView>
@@ -115,14 +114,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
                     android:layout_marginLeft="-2dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
                     android:gravity="center"
                     android:minWidth="82dp"
                     android:minHeight="27dp"
-                    android:layout_weight="1"
                     android:text="Graduation"
                     android:textColor="@color/app_grey"></TextView>
 
@@ -132,150 +131,153 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-12dp"
                     android:layout_marginRight="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
                     android:gravity="center"
                     android:minWidth="82dp"
                     android:minHeight="27dp"
-                    android:layout_weight="1"
                     android:text="Post-Graduataion"
                     android:textColor="@color/app_grey"></TextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/tenth_llc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="21dp"
-                android:fontFamily="@font/seoge_bold_two"
-                android:text="10th"
-                android:textColor="@color/choclate"
-                android:textSize="14sp"></TextView>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_board_tw"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Board"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_board_tw"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="10th"
+                    android:textColor="@color/choclate"
+                    android:textSize="14sp"></TextView>
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_schl_tw"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="School Name"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_school_tw"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_board_tw"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Board"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_board_tw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#414141" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_cgpa"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Cgpa/percentage"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cgpa_tw"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_schl_tw"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:maxLength="4"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="School Name"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_school_tw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#414141" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tenth_start"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Start Year"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_ten_start_yr"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_cgpa"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:maxLength="4"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Cgpa/percentage"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cgpa_tw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:textColor="#414141" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_ten_end"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="End Year"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_ten_end_yr"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tenth_start"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:maxLength="4"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Start Year"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_ten_start_yr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="4"
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_ten_end"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="End Year"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_ten_end_yr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="4"
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/twe_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/seoge_bold_two"
-                android:text="12th"
-                android:textColor="@color/choclate"></TextView>
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="12th"
+                    android:textColor="@color/choclate"></TextView>
 
                 <RelativeLayout
                     android:id="@+id/notice_rl"
@@ -297,68 +299,68 @@
                         app:hintTextColor="#8A414141"></Spinner>
                 </RelativeLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_school_twe"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="School Name"
-                android:visibility="gone"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_school_twe"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_school_twe"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="School Name"
+                    android:visibility="gone"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_school_twe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#414141" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_perc_twe"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Cgpa/percentage"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_perc_twe"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_perc_twe"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:maxLength="4"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Cgpa/percentage"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_perc_twe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:textColor="#414141" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_twe_start"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Start year"
-                android:visibility="gone"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_twe_start_yr"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_twe_start"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Start year"
+                    android:visibility="gone"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_twe_start_yr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:textColor="#414141" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -380,21 +382,23 @@
                         app:hintTextColor="#8A414141"></Spinner>
                 </RelativeLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/grad_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="21dp"
-                android:fontFamily="@font/seoge_bold_two"
-                android:text="Graduation Details"
-                android:textColor="@color/choclate"
-                android:textSize="14sp"></TextView>
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Graduation Details"
+                    android:textColor="@color/choclate"
+                    android:textSize="14sp"></TextView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -403,17 +407,18 @@
                     android:layout_marginTop="27dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
-            <Spinner
-                android:id="@+id/ti_grad_deg"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=" University"
-                android:minHeight="52dp"
-                app:boxStrokeColor="#936030"
-                app:hintTextColor="#8A414141"></Spinner>
+
+                    <Spinner
+                        android:id="@+id/ti_grad_deg"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" University"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
                 </RelativeLayout>
->
+                >
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ti_spec_grad"
@@ -434,16 +439,17 @@
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <RelativeLayout
+                    android:id="@+id/grad_uni_rl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/grad_uni_rl"
-                    android:background="@drawable/rounded_bckg"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="27dp"
-                    android:layout_marginBottom="4dp">
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
 
-                    <Spinner
+                    <AutoCompleteTextView
                         android:id="@+id/ti_grad_uni"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
@@ -451,9 +457,9 @@
                         android:hint=" University"
                         android:minHeight="52dp"
                         app:boxStrokeColor="#936030"
-                        app:hintTextColor="#8A414141">
-                    </Spinner>
+                        app:hintTextColor="#8A414141"></AutoCompleteTextView>
                 </RelativeLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ti_cgpa_grad"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -470,15 +476,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
-                        android:maxLength="4"
+                        android:maxLength="3"
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="19dp"
+                    android:visibility="gone"
                     android:background="@drawable/rounded_bckg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/function_rl">
@@ -512,21 +520,24 @@
                         app:hintTextColor="#8A414141"></Spinner>
                 </RelativeLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/post_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="21dp"
-                android:fontFamily="@font/seoge_bold_two"
-                android:text="Post Graduation Details"
-                android:textColor="@color/choclate"
-                android:textSize="14sp"></TextView>
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Post Graduation Details"
+                    android:textColor="@color/choclate"
+                    android:textSize="14sp"></TextView>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -534,6 +545,7 @@
                     android:layout_marginTop="27dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
+
                     <Spinner
                         android:id="@+id/ti_postgrad_deg"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -544,6 +556,7 @@
                         app:boxStrokeColor="#936030"
                         app:hintTextColor="#8A414141"></Spinner>
                 </RelativeLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ti_spec_postgrad"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -563,6 +576,7 @@
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -570,40 +584,37 @@
                     android:layout_marginTop="27dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
-
-            <Spinner
-                android:id="@+id/ti_postgrad_uni"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=" University"
-                android:minHeight="52dp"
-                app:boxStrokeColor="#936030"
-                app:hintTextColor="#8A414141">
-            </Spinner>
+                    <AutoCompleteTextView
+                        android:id="@+id/ti_postgrad_uni"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" University"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></AutoCompleteTextView>
                 </RelativeLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ti_cgpa_postgrad"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:hint="Cgpa/percentage"
-                app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cgpa_postgrad"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_cgpa_postgrad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="4"
-                    android:inputType="numberDecimal"
-                    android:textColor="#414141" />
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Cgpa/percentage"
+                    app:boxStrokeColor="@color/choclate"
+                    app:hintTextColor="#8A414141">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cgpa_postgrad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:textColor="#414141" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
 
                 <RelativeLayout
@@ -611,6 +622,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="19dp"
+                    android:visibility="gone"
                     android:background="@drawable/rounded_bckg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/function_rl">
@@ -648,27 +660,26 @@
             <!--            start-->
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
             android:background="@color/choclate"
             android:minHeight="48dp"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent">
 
 
             <TextView
                 android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="26dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/save_cancel_border"
+                android:background="@drawable/rounded_rect"
                 android:fontFamily="@font/seoge_bold_two"
                 android:gravity="center"
                 android:minWidth="82dp"
@@ -680,14 +691,14 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginEnd="26dp"
-                android:background="@drawable/save_cancel_border"
+                android:background="@drawable/rounded_rect"
                 android:fontFamily="@font/seoge_bold_two"
                 android:gravity="center"
                 android:minWidth="82dp"

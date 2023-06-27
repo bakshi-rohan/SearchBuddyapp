@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.searchbuddy.Homefragment"
+        android:name="com.searchbuddy.searchbuddy.Homefragment"
         android:label="Home"
         tools:layout="@layout/fragment_home_fragment">
 
@@ -20,16 +20,20 @@
         <action
             android:id="@+id/action_navigation_home_to_nav_job_desc"
             app:destination="@id/nav_job_desc" />
-        <action
-            android:id="@+id/action_navigation_home_to_applied_jobs"
-            app:destination="@id/applied_jobs" />
+
         <action
             android:id="@+id/action_navigation_home_to_appliedjobs_desc"
             app:destination="@id/appliedjobs_desc" />
+        <action
+            android:id="@+id/action_navigation_home_to_saved_jobs"
+            app:destination="@id/saved_jobs" />
+        <action
+            android:id="@+id/action_navigation_home_to_nav_progress"
+            app:destination="@id/nav_progress" />
     </fragment>
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.searchbuddy.Profile.Profile"
+        android:name="com.searchbuddy.searchbuddy.Profile.Profile"
         android:label="Profile"
         tools:layout="@layout/fragment_setting">
         <action
@@ -44,7 +48,7 @@
 
     <fragment
         android:id="@+id/nav_sales"
-        android:name="com.example.searchbuddy.Categories.Sales_jobs"
+        android:name="com.searchbuddy.searchbuddy.Categories.Sales_jobs"
         android:label="Sales_jobs"
         tools:layout="@layout/fragment_sales_jobs">
         <action
@@ -70,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_job_desc"
-        android:name="com.example.searchbuddy.Categories.Job_description"
+        android:name="com.searchbuddy.searchbuddy.Categories.Job_description"
         android:label="job_description"
         tools:layout="@layout/fragment_job_description">
         <action
@@ -87,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/filter"
-        android:name="com.example.searchbuddy.FilterFragment"
+        android:name="com.searchbuddy.searchbuddy.FilterFragment"
         android:label="Filter"
         tools:layout="@layout/fragment_filter">
         <action
@@ -96,8 +100,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/applied_jobs"
-        android:name="com.example.searchbuddy.AppliedJobs.Applied_Jobs"
+        android:id="@+id/nav_progress"
+        android:name="com.searchbuddy.searchbuddy.AppliedJobs.Applied_Jobs"
         android:label="Applied Jobs"
         tools:layout="@layout/fragment_applied__jobs">
         <action
@@ -107,22 +111,35 @@
             android:id="@+id/action_applied_jobs_to_nav_job_desc"
             app:destination="@id/nav_job_desc" />
         <action
-            android:id="@+id/action_applied_jobs_to_appliedjobs_desc"
+            android:id="@+id/action_nav_progress_to_appliedjobs_desc"
             app:destination="@id/appliedjobs_desc" />
-    </fragment>
 
+    </fragment>
+    <fragment
+        android:id="@+id/saved_jobs"
+        android:name="com.searchbuddy.searchbuddy.Categories.SavedJobs"
+        android:label="Saved Jobs"
+        tools:layout="@layout/fragment_saved_jobs">
+        <action
+            android:id="@+id/action_saved_jobs_to_nav_job_desc"
+            app:destination="@id/nav_job_desc" />
+    </fragment>
 <fragment
     android:id="@+id/appliedjobs_desc"
-    android:name="com.example.searchbuddy.Categories.AppliedJobsDescription"
+    android:name="com.searchbuddy.searchbuddy.Categories.AppliedJobsDescription"
     android:label="Applied Jobs Description"
     tools:layout="@layout/fragment_applied_jobs_description">
 
 </fragment>
     <fragment
         android:id="@+id/question_fragment"
-        android:name="com.example.searchbuddy.Categories.Questions"
+        android:name="com.searchbuddy.searchbuddy.Categories.Questions"
         android:label="Questions"
         tools:layout="@layout/fragment_questions">
+        <action
+            android:id="@+id/action_question_fragment_to_successfully_applied"
+            app:destination="@id/successfully_applied"
+            app:popUpTo="@id/nav_sales"/>
     </fragment>
     <fragment
         android:id="@+id/dashboard"
@@ -134,6 +151,16 @@
             app:destination="@id/nav_profile" />
         <action
             android:id="@+id/action_dashboard_to_nav_sales"
+            app:destination="@id/nav_sales" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successfully_applied"
+        android:name="com.searchbuddy.searchbuddy.Successfully_Applied"
+        android:label="AppliedSuccess"
+        tools:layout="@layout/fragment_successfully__applied">
+        <action
+            android:id="@+id/action_successfully_applied_to_nav_sales"
             app:destination="@id/nav_sales" />
     </fragment>
 </navigation>

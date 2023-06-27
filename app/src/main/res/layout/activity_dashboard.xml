@@ -26,9 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
-            android:background="@color/orange"
+            android:background="@color/grey"
             android:minHeight="43dp"
-            app:itemIconTint="@color/bnv_tab_item_foreground"
             app:itemTextColor="@color/bnv_tab_item_foreground"
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -63,13 +62,62 @@
         android:checkableBehavior="none"
         android:fitsSystemWindows="true"
         android:theme="@style/NavigationViewStyle"
-        app:itemIconSize="16dp"
+        app:itemIconSize="18dp"
         app:itemTextColor="#1D1D1D"
         app:itemTextAppearance="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/left_navigation_drawer" />
+        app:menu="@menu/left_navigation_drawer">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".7dp"
+            android:background="@color/black"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="120dp" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Our Presence"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:fontFamily="@font/seoge_bold_two"
+    android:layout_marginBottom="85dp"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="42dp"
+    android:gravity="center"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginStart="39dp"
+            android:layout_marginBottom="36dp"
+        >
+
+           <ImageView
+               android:id="@+id/linkdn"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/lkdn"></ImageView>
+
+            <ImageView
+                android:id="@+id/fb"
+                android:layout_width="30dp"
+                android:layout_height="27dp"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/fb"></ImageView>
+            <ImageView
+                android:id="@+id/insta"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/instagram"></ImageView>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+
 
     <ProgressBar
         android:id="@+id/progress"

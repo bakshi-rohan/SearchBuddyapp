@@ -8,14 +8,16 @@ plugins {
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
-
+    compileSdk 34
+    aaptOptions {
+        cruncherEnabled = false
+    }
     defaultConfig {
-        applicationId "com.example.searchbuddy"
+        applicationId "com.bumptech.searchbuddy"
         minSdk 23
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -96,8 +98,15 @@ dependencies {
     implementation 'com.params.stepview:stepview:1.0.2'
     implementation 'com.kofigyan.stateprogressbar:stateprogressbar:0.0.8'
     implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
+    // This dependency is downloaded from the Google’s Maven repository.
+    // So, make sure you also include that repository in your project's build.gradle file.
+    implementation("com.google.android.play:app-update:2.0.1")
+    // For Kotlin users also import the Kotlin extensions library for Play In-App Update:
+    implementation("com.google.android.play:app-update-ktx:2.0.0")
 //    implementation 'com.github.pchmn:MaterialChipsInput:1.0.8'
     // progress bar
+    implementation 'com.rm:rmswitch:1.2.2'
+//    implementation 'com.github.gouravkhunger:AccoLib:1.1.1'
 //    implementation 'com.github.aliab:circular-music-progressbar:v1.4.0'
         // ...
 

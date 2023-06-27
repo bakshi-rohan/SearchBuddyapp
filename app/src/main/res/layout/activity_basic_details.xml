@@ -103,8 +103,7 @@
                 android:layout_marginTop="26dp"
                 android:hint="Name"
                 app:boxStrokeColor="@color/choclate"
-                app:hintTextColor="#8A414141"
-                app:startIconDrawable="@drawable/location_icon">
+                app:hintTextColor="#8A414141">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_location"
@@ -298,6 +297,7 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="14dp"
                 android:hint="Designation"
+                android:visibility="gone"
                 app:boxStrokeColor="@color/choclate"
                 app:hintTextColor="#8A414141">
 
@@ -459,14 +459,17 @@
                     android:minHeight="27dp"
                     android:text="Cancel"
                     android:textColor="@color/choclate"></TextView>
-
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
                 <TextView
                     android:id="@+id/save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="162dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/save_cancel_border"
                     android:fontFamily="@font/seoge_bold_two"
                     android:gravity="center"

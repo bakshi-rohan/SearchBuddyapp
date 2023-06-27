@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signup_bg"
     tools:context=".Forms.Form_Two">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,7 +26,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/seogee_ui"
             android:text="Add Work Experience"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="18dp"
             android:layout_marginStart="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -76,8 +75,49 @@
                 android:textColor="#414141" />
 
         </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_total_exp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:hint="Total experience(in years)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_designation"
+        app:boxStrokeColor="#936030"
+        app:hintTextColor="#8A414141">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_total_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="#414141" />
 
+    </com.google.android.material.textfield.TextInputLayout>
+    <RelativeLayout
+        android:id="@+id/industry_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_total_exp"
+        android:background="@drawable/rounded_bckg">
+        <Spinner
+            android:id="@+id/ti_function_form"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Location"
+            android:minHeight="45dp"
+            app:boxStrokeColor="#936030"
+            app:hintTextColor="#8A414141"
+            >
+        </Spinner>
+    </RelativeLayout>
         <AutoCompleteTextView
             android:id="@+id/ti_location_form"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -87,13 +127,82 @@
             android:layout_marginTop="27dp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/rounded_bckg"
-            android:hint=" Location (Start typing...)"
+            android:hint=" Location (Type City ...)"
             android:minHeight="52dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ti_designation"
+            app:layout_constraintTop_toBottomOf="@+id/industry_rl"
             app:boxStrokeColor="#936030"
             app:hintTextColor="#8A414141"></AutoCompleteTextView>
 
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_location_form"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/seogee_ui"
+            android:text="Is this your present company?"
+            android:textColor="@color/app_grey"
+            android:textSize="13sp"></TextView>
+
+        <RadioGroup
+            android:id="@+id/radio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_yes_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/choclate"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Yes."
+                android:textColor="@color/app_grey"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/radio_no_work"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:buttonTint="@color/choclate"
+                android:fontFamily="@font/seogee_ui"
+                android:text="No"
+                android:textColor="@color/app_grey"
+                android:textSize="16dp" />
+        </RadioGroup>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notice_rl"
+        android:background="@drawable/rounded_bckg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ti_enddate_work"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="19dp">
+        <Spinner
+            android:id="@+id/ti_notice"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Location"
+            android:minHeight="45dp"
+            app:boxStrokeColor="#936030"
+            app:hintTextColor="#8A414141">
+        </Spinner>
+    </RelativeLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/start_from"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -108,7 +217,7 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ti_location_form"
+            app:layout_constraintTop_toBottomOf="@+id/ll"
             app:startIconDrawable="@drawable/baseline_calendar_month_24"
             app:hintTextColor="#8A414141">
 
@@ -155,96 +264,51 @@
             android:textColor="#414141" />
 
     </com.google.android.material.textfield.TextInputLayout>
-        <LinearLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="22dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ti_enddate_work"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/seogee_ui"
-                android:text="Working till present"
-                android:textColor="@color/app_grey"
-                android:textSize="16sp"></TextView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_btn_border"
+        android:fontFamily="@font/seogee_ui"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:backgroundTint="#936030"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notice_rl">
+    </com.google.android.material.button.MaterialButton>
 
-            <RadioGroup
-                android:id="@+id/radio_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:orientation="horizontal">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/login_btn_border"
+        android:fontFamily="@font/seogee_ui"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/choclate"
+        android:textSize="18dp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save">
+    </com.google.android.material.button.MaterialButton>
 
-                <RadioButton
-                    android:id="@+id/radio_yes_work"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/choclate"
-                    android:fontFamily="@font/seogee_ui"
-                    android:text="Yes."
-                    android:textColor="@color/app_grey"
-                    android:textSize="15dp" />
 
-                <RadioButton
-                    android:id="@+id/radio_no_work"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="2dp"
-                    android:buttonTint="@color/choclate"
-                    android:fontFamily="@font/seogee_ui"
-                    android:text="No"
-                    android:textColor="@color/app_grey"
-                    android:textSize="16dp" />
-            </RadioGroup>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/choclate"
-            android:minHeight="48dp"
-            android:layout_marginTop="350dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll">
-
-            <TextView
-                android:id="@+id/cancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/save_cancel_border"
-                android:fontFamily="@font/seoge_bold_two"
-                android:gravity="center"
-                android:minWidth="82dp"
-                android:minHeight="27dp"
-                android:text="Cancel"
-                android:textColor="@color/choclate"></TextView>
-
-            <TextView
-                android:id="@+id/save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="162dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/save_cancel_border"
-                android:fontFamily="@font/seoge_bold_two"
-                android:gravity="center"
-                android:minWidth="82dp"
-                android:minHeight="27dp"
-                android:text="Save"
-                android:textColor="@color/choclate"></TextView>
-        </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,16 +38,26 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    <TextView
-        android:id="@+id/browse_jobs"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Browse Jobs"
+        android:orientation="horizontal"
         android:layout_marginTop="36dp"
-        android:layout_marginLeft="85dp"
-        android:fontFamily="@font/seoge_bold_two"
-        android:textColor="@color/choclate"
-        android:textSize="12sp"></TextView>
+        android:layout_marginLeft="95dp">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="11dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/magnifine"></ImageView>
+        <TextView
+            android:id="@+id/browse_jobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse Jobs"
+            android:fontFamily="@font/seoge_bold_two"
+            android:textColor="@color/choclate"
+            android:textSize="12sp"></TextView>
+    </LinearLayout>
 </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,6 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
                     android:fontFamily="@font/seogee_ui"
                     android:text="Sign in your account to continue"
                     android:textColor="@color/black"
@@ -86,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="1dp"
                     android:fontFamily="@font/seogee_ui"
-                    android:text="Your job search"
+                    android:text="your sales job search"
                     android:textColor="@color/black"
                     android:textSize="14sp">
 
@@ -132,7 +141,6 @@
                     android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
                     android:textColor="#414141" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -151,13 +159,7 @@
                 android:textColor="#936030">
 
             </TextView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/black"
-                android:layout_marginHorizontal="36dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="20dp"/>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
@@ -188,44 +190,36 @@
                 android:background="@drawable/btn_login_otp"
                 android:fontFamily="@font/seogee_ui"
                 android:text="Login with OTP"
+                android:visibility="gone"
                 android:textAllCaps="false"
                 android:textColor="@color/choclate"
                 android:textSize="18dp"
                 app:backgroundTint="#FFFFFF">
 
             </com.google.android.material.button.MaterialButton>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/black"
+                android:layout_marginHorizontal="36dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/google_login"></ImageView>
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/linkedin"
-                android:layout_marginLeft="21dp"
-                android:layout_marginTop="8dp"></ImageView>
-        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
                     android:fontFamily="@font/seogee_ui"
                     android:text="New User?"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="17dp"
                     android:textColor="#414141"
                     android:textSize="15sp"></TextView>
 
@@ -233,9 +227,9 @@
                     android:id="@+id/tv_signup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
                     android:fontFamily="@font/seogee_ui"
                     android:text="Sign Up"
+                    android:layout_marginStart="2dp"
                     android:textColor="@color/choclate"
                     android:textSize="15sp"></TextView>
             </LinearLayout>

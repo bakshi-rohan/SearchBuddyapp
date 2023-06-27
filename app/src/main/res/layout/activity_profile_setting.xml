@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:id="@+id/ps_sv"
     tools:context=".Forms.Form_Two">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -150,8 +151,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:boxStrokeColor="@color/choclate"
-        app:hintTextColor="#8A414141"
-        app:startIconDrawable="@drawable/location_icon">
+        app:hintTextColor="#8A414141">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
@@ -173,13 +173,14 @@
         app:layout_constraintTop_toBottomOf="@+id/ti_name"
         app:boxStrokeColor="@color/choclate"
         app:hintTextColor="#8A414141"
-        app:startIconDrawable="@drawable/mobile_phone">
+        app:endIconDrawable="@drawable/mobile_phone">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
+            android:maxLength="10"
             android:textColor="#414141" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -191,6 +192,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:hint="Designation"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_number"
         app:boxStrokeColor="@color/choclate"

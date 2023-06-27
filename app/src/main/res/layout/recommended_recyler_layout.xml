@@ -5,8 +5,8 @@
     >
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="245dp"
+        android:layout_height="129dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/recomm_jo_border"
@@ -18,16 +18,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:weightSum="3"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/company_image"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
+                android:layout_width="58dp"
+                android:layout_height="52dp"
                 android:paddingBottom="6dp"
-                android:paddingTop="6dp"
-                android:paddingLeft="2dp"
-                android:layout_marginStart="-5dp"
+                android:paddingTop="4dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
                 android:src="@drawable/jobs_two">
 
             </ImageView>
@@ -35,7 +38,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
                 android:orientation="vertical">
 
 
@@ -54,12 +59,21 @@
                     android:id="@+id/company_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="7dp"
                     android:paddingTop="1dp"
                     android:text=""
                     android:textColor="@color/app_grey"
                     android:textSize="11sp"></TextView>
             </LinearLayout>
+            <ImageView
+                android:id="@+id/save_job_button"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/bookmark"></ImageView>
+
         </LinearLayout>
 
 
@@ -87,7 +101,7 @@
                 android:maxLines="2"
                 android:layout_marginStart="3dp"
                 android:textColor="@color/black"
-                android:textSize="8sp">
+                android:textSize="9sp">
 
             </TextView>
         </LinearLayout>
@@ -113,9 +127,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="1dp"
                 android:fontFamily="@font/seoge_bold_two"
-                android:text="Experience"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="9sp"></TextView>
+                android:textSize="11sp"></TextView>
         </LinearLayout>
 
 

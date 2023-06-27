@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,7 +30,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="150dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="27dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/sbs_logo"></ImageView>
 
@@ -59,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="11dp"
-                android:layout_marginTop="34dp"
+                android:layout_marginTop="18dp"
                 android:fontFamily="@font/seogee_ui"
                 android:text="Educational Details"
                 android:textColor="@color/choclate"
@@ -76,6 +75,7 @@
                 android:fontFamily="@font/seogee_ui"
                 android:text="Add educational details to get more personalised jobs"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"></TextView>
@@ -122,17 +122,17 @@
                 android:id="@+id/highest_qual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="21dp"
+                android:layout_marginHorizontal="11dp"
+                android:layout_marginTop="6dp"
                 android:fontFamily="@font/seoge_bold_two"
-                android:text="Highest Qualification"
+                android:text="Select your highest qualification"
                 android:textColor="@color/choclate"
-                android:textSize="14sp"></TextView>
+                android:textSize="16sp"></TextView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="14dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -169,8 +169,8 @@
                     android:id="@+id/graduate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
@@ -184,8 +184,8 @@
                     android:id="@+id/post_graduate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="-12dp"
-                    android:layout_marginRight="6dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginStart="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/work_status_border"
                     android:fontFamily="@font/seoge_bold_two"
@@ -270,6 +270,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
+                        android:maxLength="3"
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -282,6 +283,7 @@
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginTop="19dp"
                     android:hint="Start Year"
+                    android:visibility="gone"
                     app:boxStrokeColor="@color/choclate"
                     app:hintTextColor="#8A414141">
 
@@ -316,7 +318,7 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-<!--tweleve layout-->
+<!--twelve layout-->
             <LinearLayout
                 android:id="@+id/twe_ll"
                 android:layout_width="match_parent"
@@ -410,7 +412,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
-                        android:maxLength="4"
+                        android:maxLength="3"
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -467,6 +469,7 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -476,12 +479,30 @@
                     android:text="Graduation Details"
                     android:textColor="@color/choclate"
                     android:textSize="14sp"></TextView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
+
+                    <Spinner
+                        android:id="@+id/ti_grad_edu_type"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Select Education Type"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
 
@@ -523,7 +544,7 @@
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
 
-                    <Spinner
+                    <AutoCompleteTextView
                         android:id="@+id/ti_grad_uni"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
@@ -531,7 +552,7 @@
                         android:hint=" University"
                         android:minHeight="52dp"
                         app:boxStrokeColor="#936030"
-                        app:hintTextColor="#8A414141"></Spinner>
+                        app:hintTextColor="#8A414141"></AutoCompleteTextView>
                 </RelativeLayout>
 
 
@@ -551,8 +572,8 @@
                         android:id="@+id/cgpa_grad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLength="4"
                         android:inputType="numberDecimal"
+                        android:maxLength="3"
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -564,6 +585,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginTop="19dp"
+                    android:visibility="gone"
                     android:background="@drawable/rounded_bckg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/function_rl">
@@ -615,12 +637,30 @@
                     android:text="Post Graduation Details"
                     android:textColor="@color/choclate"
                     android:textSize="14sp"></TextView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/rounded_bckg">
+
+                    <Spinner
+                        android:id="@+id/ti_postgrad_edu_type"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Select Education Type"
+                        android:minHeight="52dp"
+                        app:boxStrokeColor="#936030"
+                        app:hintTextColor="#8A414141"></Spinner>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
 
@@ -661,7 +701,7 @@
                     android:layout_marginBottom="4dp"
                     android:background="@drawable/rounded_bckg">
 
-                    <Spinner
+                    <AutoCompleteTextView
                         android:id="@+id/ti_postgrad_uni"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
@@ -669,7 +709,7 @@
                         android:hint=" University"
                         android:minHeight="52dp"
                         app:boxStrokeColor="#936030"
-                        app:hintTextColor="#8A414141"></Spinner>
+                        app:hintTextColor="#8A414141"></AutoCompleteTextView>
                 </RelativeLayout>
 
 
@@ -688,8 +728,8 @@
                         android:id="@+id/cgpa_postgrad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLength="4"
                         android:inputType="numberDecimal"
+                        android:maxLength="3"
                         android:textColor="#414141" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -700,6 +740,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginTop="19dp"
+                    android:visibility="gone"
                     android:background="@drawable/rounded_bckg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/function_rl">

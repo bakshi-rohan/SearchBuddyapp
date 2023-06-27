@@ -252,6 +252,37 @@
                     android:src="@drawable/down_arrow" />
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/level_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="1dp"
+                android:visibility="gone"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/level_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Level"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/down_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
                 android:id="@+id/department_head"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -383,7 +414,7 @@
                     android:layout_marginBottom="4dp"
                     android:layout_marginTop="6dp"
                     android:paddingLeft="10dp"
-                    android:hint=" Location(Start typing)"
+                    android:hint=" Location(Type City ...)"
                     app:boxStrokeColor="#936030"
                     app:hintTextColor="#8A414141">
                 </MultiAutoCompleteTextView>
@@ -402,6 +433,28 @@
                 tools:context=".MainActivity" >
                 <Spinner
                     android:id="@+id/ti_date_posted"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=" Location"
+                    app:boxStrokeColor="#936030"
+                    app:hintTextColor="#8A414141">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@drawable/search_bar"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="10dp"
+                tools:context=".MainActivity" >
+                <Spinner
+                    android:id="@+id/level_spinner"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

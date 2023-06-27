@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.searchbuddy">
+    package="com.bumptech.searchbuddy">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -30,101 +29,104 @@
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         tools:replace="android:label"
         tools:targetApi="31">
+
         <activity
-            android:name=".Login.BrowseJobsDescription"
+            android:name="com.searchbuddy.searchbuddy.Applied_succesfully"
             android:exported="false" />
         <activity
-            android:name=".Login.FragmentActivity"
+            android:name="com.searchbuddy.searchbuddy.FirstScreen"
             android:exported="false" />
         <activity
-            android:name=".Login.BrowseJobs"
+            android:name="com.searchbuddy.searchbuddy.Login.EnterOtp"
             android:exported="false" />
         <activity
-            android:name=".Forms.Signup_prefrences"
+            android:name="com.searchbuddy.searchbuddy.Login.LoginWithOTP"
             android:exported="false" />
         <activity
-            android:name=".Forms.Signup_Work_History"
+            android:name="com.searchbuddy.searchbuddy.Login.BrowseJobsDescription"
             android:exported="false" />
         <activity
-            android:name=".Forms.Signup_Education_Details"
+            android:name="com.searchbuddy.searchbuddy.Login.FragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".Forms.Signup_CV"
+            android:name="com.searchbuddy.searchbuddy.Login.BrowseJobs"
             android:exported="false" />
         <activity
-            android:name=".Profile.AddProfessionalDetail"
+            android:name="com.searchbuddy.searchbuddy.Forms.Signup_prefrences"
             android:exported="false" />
         <activity
-            android:name=".AboutUs"
+            android:name="com.searchbuddy.searchbuddy.Forms.Signup_Work_History"
             android:exported="false" />
         <activity
-            android:name=".ContactUs"
+            android:name="com.searchbuddy.searchbuddy.Forms.Signup_Education_Details"
             android:exported="false" />
         <activity
-            android:name=".Faq"
+            android:name="com.searchbuddy.searchbuddy.Forms.Signup_CV"
             android:exported="false" />
         <activity
-            android:name=".ProfileSetting"
+            android:name="com.searchbuddy.searchbuddy.Profile.AddProfessionalDetail"
             android:exported="false" />
         <activity
-            android:name=".Profile.Prefrence"
+            android:name="com.searchbuddy.searchbuddy.AboutUs"
             android:exported="false" />
         <activity
-            android:name=".Profile.ProfessionalDetails"
+            android:name="com.searchbuddy.searchbuddy.ContactUs"
+            android:exported="false" />
+        <activity
+            android:name="com.searchbuddy.searchbuddy.Faq"
+            android:exported="false" />
+        <activity
+            android:name="com.searchbuddy.searchbuddy.ProfileSetting"
+            android:exported="false" />
+        <activity
+            android:name="com.searchbuddy.searchbuddy.Profile.Prefrence"
+            android:exported="false" />
+        <activity
+            android:name="com.searchbuddy.searchbuddy.Profile.ProfessionalDetails"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Profile.PersonalDetails"
+            android:name="com.searchbuddy.searchbuddy.Profile.PersonalDetails"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Profile.Education_details"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Profile.Education_details"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Profile.BasicDetails"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Profile.BasicDetails"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Dashboard.Dashboard"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Dashboard.Dashboard"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Forms.Form_One"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Forms.Form_One"
+            android:exported="false" />
+        <activity
+            android:name="com.searchbuddy.searchbuddy.Login.ResetPassword"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.ResetPassword"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Login.ForgotPassword"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.ForgotPassword"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Login.Signup"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.Signup"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Login.LoginSignup"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Login.LoginSignup"
             android:exported="false"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.Login"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="com.searchbuddy.searchbuddy.Login.Login"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Splash"
+            android:name="com.searchbuddy.searchbuddy.Splash"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -134,7 +136,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.searchbuddy.searchbuddy.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
 
@@ -149,7 +151,7 @@
         </provider>
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="com.searchbuddy.searchbuddy.MyFirebaseMessagingService"
             android:exported="false"
             tools:ignore="Instantiatable">
             <intent-filter>
