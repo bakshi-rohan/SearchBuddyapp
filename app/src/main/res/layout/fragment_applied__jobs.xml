@@ -79,6 +79,7 @@
                 app:forceAspectRatio="false"
                 app:enabled="true"
                 app:switchDesign="slim"
+                android:visibility="gone"
                 android:layout_marginTop="12dp"
                 app:switchBkgCheckedColor="#009688"
                 app:switchBkgNotCheckedColor="#009688"
@@ -90,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text="Premium Jobs"
                 android:layout_marginTop="16dp"
+                android:visibility="gone"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/seoge_bold_two"
                 android:textSize="16sp"></TextView>
@@ -114,6 +116,28 @@
             android:layout_gravity="center"
             android:visibility="gone"
             />
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/nav_applied_shimmer"/>
+
+                <include
+                    layout="@layout/nav_applied_shimmer"/>
+
+                <include
+                    layout="@layout/nav_applied_shimmer"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/applied_job_recycler"
         android:layout_width="match_parent"

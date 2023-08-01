@@ -52,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="#F5F5F5"
+            android:visibility="gone"
             android:minHeight="29dp">
 
             <ImageView
@@ -91,7 +92,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Experience"
-                        android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -103,7 +103,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Salary"
-                        android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -126,7 +125,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Date Posted"
-                         android:visibility="gone"
                         android:textColor="@color/choclate"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/choclate"
@@ -177,6 +175,7 @@
                 app:enabled="true"
                 app:switchDesign="slim"
                 android:layout_marginTop="12dp"
+                android:visibility="gone"
                 app:switchBkgCheckedColor="@color/teal_200"
                 app:switchBkgNotCheckedColor="@color/teal_200"
                 app:switchToggleCheckedColor="@color/teal_200"
@@ -187,6 +186,7 @@
                 android:layout_height="wrap_content"
                 android:text="Premium Jobs"
                 android:layout_marginTop="16dp"
+                android:visibility="gone"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/seoge_bold_two"
                 android:textSize="15sp"></TextView>
@@ -219,7 +219,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="0dp"
-            android:nestedScrollingEnabled="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/premium_job_recyler"
@@ -227,6 +226,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="0dp"
+            android:visibility="gone"
             android:nestedScrollingEnabled="false"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
         <ProgressBar

@@ -56,6 +56,7 @@ RecyclerView.Adapter<com.searchbuddy.searchbuddy.Adapter.AppliedJobsAdapter.View
         Log.i("date",outputDateStr)
         holder.applied_date.text = outputDateStr
         holder.applied_status.text = ItemsViewModel.status
+//        holder.location.text=ItemsViewModel.location.toString()
 
 //        var ski=ItemsViewModel.skills.toString()
 //        var skillSub = ski.substring(1,ski.length-1)
@@ -74,7 +75,7 @@ RecyclerView.Adapter<com.searchbuddy.searchbuddy.Adapter.AppliedJobsAdapter.View
         val company_image: ImageView = itemView.findViewById(R.id.company_image_apply)
         val job_name: TextView = itemView.findViewById(R.id.job_name_apply)
         val company_name: TextView = itemView.findViewById(R.id.company_name_apply)
-//        val location: TextView = itemView.findViewById(R.id.location_field_applied)
+        val location: TextView = itemView.findViewById(R.id.location_field_applied)
 //        val salary: TextView = itemView.findViewById(R.id.skill_field)
         val applied_date: TextView = itemView.findViewById(R.id.applied_date)
         val applied_status: TextView = itemView.findViewById(R.id.status)

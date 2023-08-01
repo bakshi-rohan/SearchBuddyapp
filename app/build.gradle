@@ -6,7 +6,7 @@ plugins {
     id 'com.google.firebase.crashlytics'
 }
 apply plugin: 'kotlin-android'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdk 34
     aaptOptions {
@@ -16,8 +16,8 @@ android {
         applicationId "com.bumptech.searchbuddy"
         minSdk 23
         targetSdk 32
-        versionCode 3
-        versionName "1.2"
+        versionCode 5
+        versionName "1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,6 +50,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-messaging-ktx:23.1.1'
     implementation 'com.google.firebase:protolite-well-known-types:18.0.0'
@@ -71,6 +72,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.1'
     // Retrofit Logging
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.5'
     // coroutines
@@ -98,16 +100,11 @@ dependencies {
     implementation 'com.params.stepview:stepview:1.0.2'
     implementation 'com.kofigyan.stateprogressbar:stateprogressbar:0.0.8'
     implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
-    // This dependency is downloaded from the Google’s Maven repository.
-    // So, make sure you also include that repository in your project's build.gradle file.
     implementation("com.google.android.play:app-update:2.0.1")
-    // For Kotlin users also import the Kotlin extensions library for Play In-App Update:
     implementation("com.google.android.play:app-update-ktx:2.0.0")
-//    implementation 'com.github.pchmn:MaterialChipsInput:1.0.8'
-    // progress bar
     implementation 'com.rm:rmswitch:1.2.2'
-//    implementation 'com.github.gouravkhunger:AccoLib:1.1.1'
-//    implementation 'com.github.aliab:circular-music-progressbar:v1.4.0'
+    implementation("com.ericktijerou.koleton:koleton:1.0.0-beta01")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
         // ...
 
 //    implementation 'com.karumi:dexter:5.0.0'

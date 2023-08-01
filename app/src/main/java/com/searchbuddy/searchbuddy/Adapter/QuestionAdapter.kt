@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.searchbuddy.R
 import com.searchbuddy.searchbuddy.model.Question
 
-lateinit var context:Context
+ private lateinit var context:Context
 class QuestionAdapter (private val mList: List<Question>): RecyclerView.Adapter<QuestionAdapter.ViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

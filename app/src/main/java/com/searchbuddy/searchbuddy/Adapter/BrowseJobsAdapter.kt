@@ -3,6 +3,11 @@ package com.searchbuddy.searchbuddy.Adapter
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,18 +17,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.auth0.android.jwt.JWT
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.searchbuddy.searchbuddy.Login.BrowseJobsDescription
 import com.searchbuddy.searchbuddy.Login.Login
-
 import com.searchbuddy.searchbuddy.model.Positions
+import java.util.concurrent.Executors
 
 
-class BrowseJobsAdapter(private val mList: List<Positions>) :
+class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context) :
     RecyclerView.Adapter<BrowseJobsAdapter.ViewHolder>(), Filterable {
     var filterProductList = mList
     var datalist = mList
-    lateinit var context:Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.field_sale_recycler_layout, parent, false)
@@ -56,8 +61,33 @@ class BrowseJobsAdapter(private val mList: List<Positions>) :
             intent.putExtra("url", ItemsViewModel.url)
             view.context.startActivity(intent)
         }
-        // sets the image to the imageview from our itemHolder class
 
+        // sets the image to the imageview from our itemHolder class
+        if (ItemsViewModel.logo!=null){
+            var picname=ItemsViewModel.logo
+            val executor = Executors.newSingleThreadExecutor()
+            var image: Bitmap? = null
+            val handler = Handler(Looper.getMainLooper())
+            var uri= Uri.parse( "https://www.searchbuddy.in/api/get-picture/organisation/"+picname)
+            Glide.with(context).load(uri).into(holder.company_image_field);
+            executor.execute {
+                val imageUrl =
+                    "https://www.searchbuddy.in/api/get-picture/organisation/"+picname
+                try {
+                    val `in` = java.net.URL(imageUrl).openStream()
+                    image = BitmapFactory.decodeStream(`in`)
+                    if (image != null) {
+
+                        handler.post {
+                            holder.company_image_field.setImageBitmap(image)
+                        }
+                    }
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }
         holder.company_image_field.setImageResource(R.drawable.city)
 
         // sets the text to the textview from our itemHolder class
@@ -67,18 +97,34 @@ class BrowseJobsAdapter(private val mList: List<Positions>) :
             holder.description.text = skres
         }
 
-        if (ItemsViewModel.salary==null){
-            holder.salary_field.text=""
-            holder.rupee.visibility= View.GONE
-        }else if (ItemsViewModel.salary!=null){
-            var sa = ItemsViewModel.salary.toString()
-            var rez=sa.substring(1,sa.length-1)
-            holder.salary_field.text=rez.toString()
+        if (ItemsViewModel.salary.isEmpty()==true) {
+            holder.salary_field.text = ""
+            holder.rupee.visibility = View.GONE
+        }
+        else if (ItemsViewModel.salary!=null){
+            if (ItemsViewModel.salary.isEmpty()!=true) {
+                var salfrom = ItemsViewModel.salary.get(0).toString()
+                var salTo = ItemsViewModel.salary.get(1).toString()
+                holder.salary_field.text = salfrom+" Lpa"+" - "+salTo+" Lpa"
+            }
         }
         if (ItemsViewModel.location!=null) {
-            var loc = ItemsViewModel.location.toString()
-            var locres = loc.substring(1, loc.length - 1)
-            holder.location.text = locres
+            if (ItemsViewModel.location.size>2) {
+                var loc_one = ItemsViewModel.location.get(0)
+                var loc_two = ItemsViewModel.location.get(1)
+                holder.location.text = loc_one+" , "+loc_two+" and more"
+            }
+            else if (ItemsViewModel.location.size<2){
+                var loc = ItemsViewModel.location.toString()
+                var locres = loc.substring(1, loc.length - 1)
+                holder.location.text = locres
+            }
+        }
+
+        if (ItemsViewModel.expFrm!=null&&ItemsViewModel.expTo!=null){
+            var expfrm=ItemsViewModel.expFrm.toString()
+            var expto=ItemsViewModel.expTo.toString()
+            holder.exp_field.text=expfrm+" - "+expto+" Yr"
         }
 //        if (holder.experience_field!=null) {
 //            holder.experience_field.text = ItemsViewModel.industry
@@ -127,6 +173,7 @@ class BrowseJobsAdapter(private val mList: List<Positions>) :
         val job_name_field: TextView = itemView.findViewById(R.id.job_name_field)
         val rupee: ImageView = itemView.findViewById(R.id.rupee)
         val save: ImageView = itemView.findViewById(R.id.save_job_button)
+        val exp_field:TextView=itemView.findViewById(R.id.exp_field)
 
     }
 

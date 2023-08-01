@@ -1,10 +1,8 @@
 package com.searchbuddy.searchbuddy.Dashboard
 
 import android.app.DownloadManager
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -19,6 +17,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.core.view.iterator
@@ -27,9 +26,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.ActivityDashboardBinding
-
+import com.google.android.material.badge.ExperimentalBadgeUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.navigation.NavigationView
@@ -39,7 +39,9 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.searchbuddy.searchbuddy.AboutUs
 import com.searchbuddy.searchbuddy.Adapter.FieldSalesAdapter
+import com.searchbuddy.searchbuddy.Blogs
 import com.searchbuddy.searchbuddy.ContactUs
 import com.searchbuddy.searchbuddy.Faq
 import com.searchbuddy.searchbuddy.FirstScreen
@@ -51,7 +53,7 @@ import java.util.concurrent.Executors
 
 //import java.lang.reflect.Array.newInstance
 
-class Dashboard : AppCompatActivity() {
+@ExperimentalBadgeUtils class Dashboard : AppCompatActivity() {
     lateinit var navController: NavController
     lateinit var bottomNavView: BottomNavigationView
     lateinit var drawerNav: NavigationView
@@ -73,6 +75,7 @@ lateinit var appUpdateManager:AppUpdateManager
         drawerNav = binding.navDrawerView
         bottomNavView = binding.navView
         analytics = FirebaseAnalytics.getInstance(this)
+
         val menu: Menu = drawerNav.menu
         val nav: Menu = bottomNavView.menu
         var settings = menu.findItem(R.id.settings)
@@ -91,6 +94,7 @@ lateinit var appUpdateManager:AppUpdateManager
         var search_jobs = menu.findItem(R.id.search_jobs)
         var about_us = menu.findItem(R.id.abou_us)
         var setting = menu.findItem(R.id.settings)
+        var blogs = menu.findItem(R.id.blogs)
         var jobs = nav.findItem(R.id.nav_sales)
 
         val headerview: View = drawerNav.inflateHeaderView(R.layout.nav_header_navigation)
@@ -113,6 +117,7 @@ lateinit var appUpdateManager:AppUpdateManager
         if (username != null) {
             user.setText(username)
         }
+
 // Creates instance of the manager.
          appUpdateManager = AppUpdateManagerFactory.create(this)
 
@@ -123,7 +128,7 @@ lateinit var appUpdateManager:AppUpdateManager
         appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
                 // For a flexible update, use AppUpdateType.FLEXIBLE
-                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)
             ) {
                 // Request the update.
             }
@@ -132,7 +137,7 @@ lateinit var appUpdateManager:AppUpdateManager
                 // Pass the intent that is returned by 'getAppUpdateInfo()'.
                 appUpdateInfo,
                 // Or 'AppUpdateType.FLEXIBLE' for flexible updates.
-                AppUpdateType.IMMEDIATE,
+                AppUpdateType.FLEXIBLE,
                 // The current activity making the update request.
                 this,
                 // Include a request code to later monitor this update request.
@@ -149,19 +154,21 @@ lateinit var appUpdateManager:AppUpdateManager
             }
         }
 binding.fb.setOnClickListener {
-    val openURL = Intent(android.content.Intent.ACTION_VIEW)
+    val openURL = Intent(Intent.ACTION_VIEW)
     openURL.data =
         Uri.parse("https://www.facebook.com/people/SearchBuddy/100089299568762/")
     startActivity(openURL)
 }
+
+
         binding.insta.setOnClickListener {
-            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data =
                 Uri.parse("https://www.instagram.com/searchbuddy_/")
             startActivity(openURL)
         }
 binding.linkdn.setOnClickListener{
-    val openURL = Intent(android.content.Intent.ACTION_VIEW)
+    val openURL = Intent(Intent.ACTION_VIEW)
     openURL.data =
         Uri.parse("https://www.linkedin.com/company/searchbuddy/?viewAsMember=true")
     startActivity(openURL)
@@ -178,7 +185,7 @@ binding.linkdn.setOnClickListener{
         }
 
         fun AlertLogout() {
-            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             //set title for alert dialog
             builder.setTitle("Alert!")
             //set message for alert dialog
@@ -196,13 +203,13 @@ binding.linkdn.setOnClickListener{
             }
             builder.setNegativeButton("No") { dialogInterface, which ->
             }
-            val alertDialog: androidx.appcompat.app.AlertDialog = builder.create()
+            val alertDialog: AlertDialog = builder.create()
             alertDialog.setCancelable(false)
             alertDialog.show()
         }
 
         fun goTnc() {
-            var download = this?.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+            var download = this?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
             var url =
                 "https://searchbuddy-assets.s3.ap-south-1.amazonaws.com/document/Terms%20of%20Use%20Agreement%20Search%20Buddy%20v.3.pdf"
             var uri = Uri.parse(url)
@@ -230,7 +237,7 @@ binding.linkdn.setOnClickListener{
         }
 
         fun goAbout_us() {
-            var intent = Intent(this, com.searchbuddy.searchbuddy.AboutUs::class.java)
+            var intent = Intent(this, AboutUs::class.java)
             startActivity(intent)
         }
 
@@ -241,6 +248,10 @@ binding.linkdn.setOnClickListener{
 
         fun goSetting() {
             var intent = Intent(this, ProfileSetting::class.java)
+            startActivity(intent)
+        }
+        fun goBlogs(){
+            var intent = Intent(this, Blogs::class.java)
             startActivity(intent)
         }
         faq.setOnMenuItemClickListener(object : MenuItem.OnMenuItemClickListener {
@@ -255,6 +266,16 @@ binding.linkdn.setOnClickListener{
         setting.setOnMenuItemClickListener(object : MenuItem.OnMenuItemClickListener {
             override fun onMenuItemClick(item: MenuItem): Boolean {
                 goSetting()
+
+                drawer.closeDrawer(GravityCompat.START)
+
+                return true
+            }
+        })
+
+        blogs.setOnMenuItemClickListener(object : MenuItem.OnMenuItemClickListener {
+            override fun onMenuItemClick(item: MenuItem): Boolean {
+                goBlogs()
 
                 drawer.closeDrawer(GravityCompat.START)
 
@@ -447,23 +468,26 @@ binding.linkdn.setOnClickListener{
                     val executor = Executors.newSingleThreadExecutor()
                     var image: Bitmap? = null
                     val handler = Handler(Looper.getMainLooper())
-                    executor.execute {
-                        val imageUrl =
-                            "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
-                        try {
-                            val `in` = java.net.URL(imageUrl).openStream()
-                            image = BitmapFactory.decodeStream(`in`)
-                            if (image != null) {
-
-                                handler.post {
-                                    profile_pic.setImageBitmap(image)
-                                    drawer_profile.setImageBitmap(image)
-                                }
-                            }
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                        }
-                    }
+                    var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName)
+                    Glide.with(this).load(uri).into(drawer_profile);
+                    Glide.with(this).load(uri).into(profile_pic);
+//                    executor.execute {
+//                        val imageUrl =
+//                            "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
+//                        try {
+//                            val `in` = java.net.URL(imageUrl).openStream()
+//                            image = BitmapFactory.decodeStream(`in`)
+//                            if (image != null) {
+//
+//                                handler.post {
+//                                    profile_pic.setImageBitmap(image)
+//                                    drawer_profile.setImageBitmap(image)
+//                                }
+//                            }
+//                        } catch (e: Exception) {
+//                            e.printStackTrace()
+//                        }
+//                    }
 
                 }
                 if (it.userDTO.email!=null){

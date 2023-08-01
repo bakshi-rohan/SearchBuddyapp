@@ -19,4 +19,6 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.bumptech.searchbuddy", appContext.packageName)
     }
+
+
 }

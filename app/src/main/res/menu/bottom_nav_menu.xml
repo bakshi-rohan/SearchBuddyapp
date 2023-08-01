@@ -14,7 +14,7 @@
         android:title="" />
     <item
         android:id="@+id/nav_progress"
-        android:icon="@drawable/paper_plane"
+        android:icon="@drawable/progress_selector"
         android:title="" />
     <item
         android:id="@+id/nav_profile"

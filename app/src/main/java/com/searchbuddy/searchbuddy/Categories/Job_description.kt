@@ -4,9 +4,9 @@ package com.searchbuddy.searchbuddy.Categories
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -21,6 +21,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.FragmentJobDescriptionBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -60,6 +61,12 @@ class Job_description : Fragment() {
         bottomNavView = (activity as Dashboard)!!.findViewById(R.id.nav_view)
         bottomNavView.visibility = View.GONE
         binding.aboutCompanyLayout.visibility = View.GONE
+//        binding.ns.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+//            // Check if the user has scrolled downward
+//            if (scrollY > oldScrollY) {
+//                Log.i("hello","hello")            }
+//            // Add more conditions here if you want to handle other scroll events
+//        }
         val text: String = "Job Description"
         binding.jobDescriptionBtn.setBackgroundResource(R.drawable.job_sdesc_selected_border)
         var bundle = Bundle()
@@ -159,7 +166,7 @@ class Job_description : Fragment() {
 
         fun getHtml(htmlBody: String): String {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Html.fromHtml(htmlBody, Html.FROM_HTML_MODE_LEGACY).toString()
+                Html.fromHtml(htmlBody, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH).toString()
             else
                 Html.fromHtml(htmlBody).toString()
         }
@@ -177,7 +184,7 @@ class Job_description : Fragment() {
                             binding.companyNameDescription.setText(it.client)
                         }
                         if (it.expTo != null && it.expFrom != null) {
-                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "years")
+                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
                         }
                         if (it.roleDesc != null) {
                             binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -199,23 +206,9 @@ class Job_description : Fragment() {
                             val executor = Executors.newSingleThreadExecutor()
                             var image: Bitmap? = null
                             val handler = Handler(Looper.getMainLooper())
-                            executor.execute {
-                                val imageUrl =
-                                    "https://www.searchbuddy.in/api/get-picture/organisation/" + logo
-                                try {
-                                    val `in` = java.net.URL(imageUrl).openStream()
-                                    image = BitmapFactory.decodeStream(`in`)
-                                    if (image != null) {
+                            var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
+                            Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
 
-                                        handler.post {
-                                            binding.build.setImageBitmap(image)
-                                            binding.build.setImageBitmap(image)
-                                        }
-                                    }
-                                } catch (e: Exception) {
-                                    e.printStackTrace()
-                                }
-                            }
                         }
                         if (it.positionSaved != null) {
                             if (it.positionSaved == true) {
@@ -231,9 +224,16 @@ class Job_description : Fragment() {
                             }
                         }
                         if (it.location != null) {
-                            val some = it.location.toString()
-                            var somstr = some.substring(1, some.length - 1)
-                            binding.locationDesc.setText(somstr)
+                            if (it.location.size<2) {
+                                val some = it.location.toString()
+                                var somstr = some.substring(1, some.length - 1)
+                                binding.locationDesc.setText(somstr)
+                            }
+                            else if (it.location.size>2){
+                                var loc_one=it.location.get(0)
+                                var loc_two=it.location.get(1)
+                                binding.locationDesc.text=loc_one+" , "+loc_two+" and more"
+                            }
                         }
                         if (it.level != null) {
                             binding.level.setText(it.level)
@@ -298,7 +298,7 @@ class Job_description : Fragment() {
                                     binding.companyNameDescription.setText(it.client)
                                 }
                                 if (it.expTo != null && it.expFrom != null) {
-                                    binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "years")
+                                    binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
                                 }
                                 if (it.roleDesc != null) {
                                     binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -314,23 +314,25 @@ class Job_description : Fragment() {
                                     val executor = Executors.newSingleThreadExecutor()
                                     var image: Bitmap? = null
                                     val handler = Handler(Looper.getMainLooper())
-                                    executor.execute {
-                                        val imageUrl =
-                                            "https://www.searchbuddy.in/api/get-picture/organisation/" + logo
-                                        try {
-                                            val `in` = java.net.URL(imageUrl).openStream()
-                                            image = BitmapFactory.decodeStream(`in`)
-                                            if (image != null) {
-
-                                                handler.post {
-                                                    binding.build.setImageBitmap(image)
-                                                    binding.build.setImageBitmap(image)
-                                                }
-                                            }
-                                        } catch (e: Exception) {
-                                            e.printStackTrace()
-                                        }
-                                    }
+                                    var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
+                                    Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
+//                                    executor.execute {
+//                                        val imageUrl =
+//                                            "https://www.searchbuddy.in/api/get-picture/organisation/" + logo
+//                                        try {
+//                                            val `in` = java.net.URL(imageUrl).openStream()
+//                                            image = BitmapFactory.decodeStream(`in`)
+//                                            if (image != null) {
+//
+//                                                handler.post {
+//                                                    binding.build.setImageBitmap(image)
+//                                                    binding.build.setImageBitmap(image)
+//                                                }
+//                                            }
+//                                        } catch (e: Exception) {
+//                                            e.printStackTrace()
+//                                        }
+//                                    }
                                 }
                                 if (it.positionSaved != null) {
                                     if (it.positionSaved == true) {
@@ -401,7 +403,7 @@ class Job_description : Fragment() {
                                 binding.companyNameDescription.setText(it.client)
                             }
                             if (it.expTo != null && it.expFrom != null) {
-                                binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "years")
+                                binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
                             }
                             if (it.roleDesc != null) {
                                 binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -414,26 +416,9 @@ class Job_description : Fragment() {
                             }
                             if (it.logo != null) {
                                 logo = it.logo
-                                val executor = Executors.newSingleThreadExecutor()
-                                var image: Bitmap? = null
-                                val handler = Handler(Looper.getMainLooper())
-                                executor.execute {
-                                    val imageUrl =
-                                        "https://www.searchbuddy.in/api/get-picture/organisation/" + logo
-                                    try {
-                                        val `in` = java.net.URL(imageUrl).openStream()
-                                        image = BitmapFactory.decodeStream(`in`)
-                                        if (image != null) {
+                                var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
+                                Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
 
-                                            handler.post {
-                                                binding.build.setImageBitmap(image)
-                                                binding.build.setImageBitmap(image)
-                                            }
-                                        }
-                                    } catch (e: Exception) {
-                                        e.printStackTrace()
-                                    }
-                                }
                             }
                             if (it.positionSaved != null) {
                                 if (it.positionSaved == true) {
@@ -479,12 +464,17 @@ class Job_description : Fragment() {
         })
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.build.setImageResource(R.drawable.city)
+    }
+
     fun showToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
     }
     fun getHtml(htmlBody: String): String {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-            Html.fromHtml(htmlBody, Html.FROM_HTML_MODE_LEGACY).toString()
+            Html.fromHtml(htmlBody, Html.FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH).toString()
         else
             Html.fromHtml(htmlBody).toString()
     }

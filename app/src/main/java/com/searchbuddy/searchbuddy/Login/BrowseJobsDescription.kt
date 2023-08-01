@@ -2,19 +2,26 @@ package com.searchbuddy.searchbuddy.Login
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Color
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Html
-import android.text.SpannableString
-import android.text.style.UnderlineSpan
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.ActivityBrowseJobsDescriptionBinding
 import com.searchbuddy.searchbuddy.Categories.JobdescriptionViewModel
+import java.net.URL
+import java.util.concurrent.Executors
 
 class BrowseJobsDescription : AppCompatActivity() {
     var position_name = ""
@@ -24,10 +31,14 @@ class BrowseJobsDescription : AppCompatActivity() {
     lateinit var position_id: String
     lateinit var viewModel: JobdescriptionViewModel
     lateinit var message:String
+    private lateinit var handler: Handler
+    lateinit var logo: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBrowseJobsDescriptionBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this).get(JobdescriptionViewModel::class.java)
+        binding.jobDescriptionBtn.setBackgroundResource(R.drawable.job_sdesc_selected_border)
 
         binding.aboutCompanyLayout.visibility = View.GONE
         val text: String = "Job Description"
@@ -39,18 +50,42 @@ class BrowseJobsDescription : AppCompatActivity() {
             url = intent.extras!!.getString("url").toString()
             Log.i("url",url.toString())
         }
-        val content: SpannableString = SpannableString(text)
-        content.setSpan(UnderlineSpan(), 0, text.length, 0)
-        binding.jobNameDescription.text = position_name
-        binding.companyNameDescription.text = company_name
-        binding.jobDescriptionBtn.setText(content)
+
+        handler = Handler(Looper.getMainLooper())
+//        handler.postDelayed({
+//            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+//            builder.setMessage("Please Log in ")
+//            builder.setPositiveButton("Ok") { dialog, id ->
+//                val intent = Intent(this, FirstScreen::class.java)
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+//                startActivity(intent)
+//                finish()
+//            }
+//            val alertDialog: androidx.appcompat.app.AlertDialog = builder.create()
+//            // Set other dialog properties
+//            alertDialog.setCancelable(false)
+//            try {
+//                alertDialog.show()
+//            }
+//            catch (WindowManager:Throwable) {
+//                Log.i("catch","Catched")
+//            //use a log message
+//        }
+//        }, 5000)
+
+
+//        val content: SpannableString = SpannableString(text)
+//        content.setSpan(UnderlineSpan(), 0, text.length, 0)
+//        binding.jobNameDescription.text = position_name
+//        binding.companyNameDescription.text = company_name
+//        binding.jobDescriptionBtn.setText(content)
 
 
         binding.backBtnDesc.setOnClickListener {
           onBackPressed()
         }
         binding.jobDescriptionBtn.setTypeface(null, Typeface.BOLD)
-        message="Hey this is Searchbuddy"
+//        message="Hey this is Searchbuddy"
 //        binding.similar.setOnClickListener {
 //            Navigation.findNavController(it).navigate(R.id.action_nav_job_desc_to_nav_sales)
 //        }
@@ -81,11 +116,16 @@ class BrowseJobsDescription : AppCompatActivity() {
             binding.jobDescriptionBtn.setTypeface(null, Typeface.BOLD)
             binding.aboutCompanyBtn.setTypeface(null, Typeface.NORMAL)
             binding.aboutCompanyLayout.visibility = View.GONE
-            val text: String = "Job Description"
-            val content: SpannableString = SpannableString(text)
-            content.setSpan(UnderlineSpan(), 0, text.length, 0)
+            binding.jobDescriptionBtn.setBackgroundResource(R.drawable.job_sdesc_selected_border)
+            binding.jobDescriptionBtn.setTextColor(Color.WHITE)
+            binding.aboutCompanyBtn.setTextColor(Color.BLACK)
+            binding.aboutCompanyBtn.setBackgroundResource(R.drawable.job_desc_border)
 
-            binding.jobDescriptionBtn.setText(content)
+//            val text: String = "Job Description"
+//            val content: SpannableString = SpannableString(text)
+//            content.setSpan(UnderlineSpan(), 0, text.length, 0)
+//
+//            binding.jobDescriptionBtn.setText(content)
             binding.aboutCompanyBtn.setText("About Company")
 
         }
@@ -94,11 +134,14 @@ class BrowseJobsDescription : AppCompatActivity() {
             binding.aboutCompanyBtn.setTypeface(null, Typeface.BOLD)
             binding.jobDescriptionBtn.setTypeface(null, Typeface.NORMAL)
             binding.aboutCompanyLayout.visibility = View.VISIBLE
-
-            val text: String = "About Company"
-            val content: SpannableString = SpannableString(text)
-            content.setSpan(UnderlineSpan(), 0, text.length, 0)
-            binding.aboutCompanyBtn.setText(content)
+            binding.aboutCompanyBtn.setBackgroundResource(R.drawable.job_sdesc_selected_border)
+            binding.jobDescriptionBtn.setBackgroundResource(R.drawable.job_desc_border)
+            binding.aboutCompanyBtn.setTextColor(Color.WHITE)
+            binding.jobDescriptionBtn.setTextColor(Color.BLACK)
+//            val text: String = "About Company"
+//            val content: SpannableString = SpannableString(text)
+//            content.setSpan(UnderlineSpan(), 0, text.length, 0)
+//            binding.aboutCompanyBtn.setText(content)
             binding.jobDescriptionBtn.setText("Job Description")
 
 
@@ -138,7 +181,7 @@ class BrowseJobsDescription : AppCompatActivity() {
             else
                 Html.fromHtml(htmlBody).toString()
         }
-        viewModel.requestJobs(this, position_id.toInt(), binding.progress)
+        viewModel.requestNotLoggedJobs(this, position_id.toInt(), binding.progress)
             .observe(this, {
 //                Log.i("qqq", it.expTo)
                 if (it == null) {
@@ -152,7 +195,7 @@ class BrowseJobsDescription : AppCompatActivity() {
                             binding.companyNameDescription.setText(it.client)
                         }
                         if (it.expTo!=null&&it.expFrom!=null) {
-                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "years")
+                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
                         }
                         if (it.roleDesc!=null) {
                             binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -179,6 +222,23 @@ class BrowseJobsDescription : AppCompatActivity() {
 //                            var skillSubString = getSkills.substring(1, getSkills.length - 1)
 //                            binding.skills.setText(skillSubString)
 //                        }
+                        if (it.logo != null) {
+                            logo = it.logo
+                            val executor = Executors.newSingleThreadExecutor()
+                            var image: Bitmap? = null
+                            val handler = Handler(Looper.getMainLooper())
+                            var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
+                            Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
+
+                        }
+                        if (it.url != null) {
+                            var name=it.name
+                            var jd="https://www.searchbuddy.in/#/app/jd?id="+it.id
+                            Log.i("mmm",jd)
+                            val myURL = URL(jd)
+                            message =
+                                "Hey checkout this job I found on SearchBuddy" + "  " + myURL
+                        }
                         if (it.level!=null) {
                             binding.level.setText(it.level)
                         }

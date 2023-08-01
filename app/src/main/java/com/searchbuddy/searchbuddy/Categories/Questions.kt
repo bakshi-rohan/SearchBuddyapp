@@ -94,6 +94,7 @@ class Questions : Fragment() {
                             }
                             else if (newArrayList.size==0){
                                 binding.txtNoData.visibility=View.VISIBLE
+//                                submitResponse()
                             }
                         }
 
@@ -173,6 +174,7 @@ class Questions : Fragment() {
         viewModel.UpdateProfessionalDetail(requireContext(), information, binding.progress)
             .observe(requireActivity(), {
                 Log.i("resp", it.message)
+
                 checkIfFragmentAttached {
                     Navigation.findNavController(binding.btnLogin).navigate(R.id.action_question_fragment_to_successfully_applied)
                 }

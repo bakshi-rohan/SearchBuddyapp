@@ -210,25 +210,27 @@ class ProfileSetting : AppCompatActivity() {
             val executor = Executors.newSingleThreadExecutor()
             var image: Bitmap? = null
             val handler = Handler(Looper.getMainLooper())
-            executor.execute {
-                val imageUrl =
-                    "https://www.searchbuddy.in/api/get-picture/profilepicture/" + filename
-                try {
-                    val `in` = java.net.URL(imageUrl).openStream()
-                    image = BitmapFactory.decodeStream(`in`)
-                    if (image != null) {
-
-                        handler.post {
-                            binding.imProfilePic.setImageBitmap(image)
-                        }
-                    }
-
-                }
-
-                catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
+            var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + filename)
+            Glide.with(this).load(uri).into(binding.imProfilePic);
+//            executor.execute {
+//                val imageUrl =
+//                    "https://www.searchbuddy.in/api/get-picture/profilepicture/" + filename
+//                try {
+//                    val `in` = java.net.URL(imageUrl).openStream()
+//                    image = BitmapFactory.decodeStream(`in`)
+//                    if (image != null) {
+//
+//                        handler.post {
+//                            binding.imProfilePic.setImageBitmap(image)
+//                        }
+//                    }
+//
+//                }
+//
+//                catch (e: Exception) {
+//                    e.printStackTrace()
+//                }
+//            }
 
         })
 //        getImage()

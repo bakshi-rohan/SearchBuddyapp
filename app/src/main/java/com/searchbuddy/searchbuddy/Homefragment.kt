@@ -1,8 +1,10 @@
 package com.searchbuddy.searchbuddy
 
+import CarouselAdapter
 import android.animation.ObjectAnimator
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -18,10 +20,16 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.FragmentHomeFragmentBinding
+import com.google.android.material.badge.BadgeDrawable
+import com.google.android.material.badge.BadgeUtils
+import com.google.android.material.badge.ExperimentalBadgeUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.imageview.ShapeableImageView
+import com.searchbuddy.searchbuddy.Adapter.AppliedJobsAdapter
 import com.searchbuddy.searchbuddy.Adapter.FieldSalesAdapter
 import com.searchbuddy.searchbuddy.Adapter.JobCategoryAdapter
 import com.searchbuddy.searchbuddy.Adapter.RecommendedJobRecyclerAdapter
@@ -29,6 +37,7 @@ import com.searchbuddy.searchbuddy.Adapter.TopCompaniesAdapter
 import com.searchbuddy.searchbuddy.Dashboard.Dashboard
 import com.searchbuddy.searchbuddy.Utils.Constant
 import com.searchbuddy.searchbuddy.Utils.LocalSessionManager
+import com.searchbuddy.searchbuddy.model.CarouselItem
 import com.searchbuddy.searchbuddy.model.JobCategoryModel
 import com.searchbuddy.searchbuddy.model.Positio
 import com.searchbuddy.searchbuddy.model.RecommendedJob
@@ -39,7 +48,7 @@ import java.util.Date
 import java.util.concurrent.Executors
 
 
-class Homefragment : Fragment() {
+@ExperimentalBadgeUtils class Homefragment : Fragment() {
     lateinit var binding: FragmentHomeFragmentBinding
     lateinit var JobRecyclerView: RecyclerView
     lateinit var Reccomended_recyler: RecyclerView
@@ -67,7 +76,7 @@ class Homefragment : Fragment() {
     lateinit var Jobadapter: FieldSalesAdapter
     lateinit var currentDate: String
     lateinit var date: SimpleDateFormat
-    lateinit var appliedJobsAdapter: com.searchbuddy.searchbuddy.Adapter.AppliedJobsAdapter
+    lateinit var appliedJobsAdapter: AppliedJobsAdapter
     lateinit var Applied_recyler: RecyclerView
 
 
@@ -76,6 +85,9 @@ class Homefragment : Fragment() {
     lateinit var profileIcon: ShapeableImageView
     lateinit var UserID: String
     var yo: Int = 0
+    private lateinit var viewPager: ViewPager2
+    private lateinit var carouselAdapter: CarouselAdapter
+    private  var isSearched: Boolean=false
 
     //    lateinit var bar: androidx.appcompat.widget.SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,11 +103,18 @@ class Homefragment : Fragment() {
         LocalSessionManager.removeValue(Constant.FillLocation, requireContext())
 
         binding = FragmentHomeFragmentBinding.inflate(inflater, container, false)
-
+        binding.shimmerView.setVisibility(View.VISIBLE);
+        binding.shimmerView.startShimmer();
+        binding.shimmerViewRecommended.setVisibility(View.VISIBLE);
+        binding.shimmerViewRecommended.startShimmer();
         RecommendedJobs(binding.progress)
         getBasicDetails()
+
         Applied_recyler = binding.appliedRecyler
 //requestAppliedJobs(binding.progress)
+        viewPager = binding.viewPager
+        carouselAdapter = CarouselAdapter(getSampleData())
+        viewPager.adapter = carouselAdapter
         image = arrayOf(
             R.drawable.field_sales,
             R.drawable.direct_sale,
@@ -148,10 +167,12 @@ class Homefragment : Fragment() {
 //        JobRecyclerView.layoutManager = LinearLayoutManager(context)
         newArrayList = arrayListOf<JobCategoryModel>()
         getdata()
-        Topcomapnies(binding.progress)
+
+        binding.hl.visibility=View.GONE
         Reccomended_recyler = binding.recommRecycler
         recommList = arrayListOf<RecommendedJob>()
         Top_recyler = binding.topCompaniesRecycler
+
         Top_List = arrayListOf<TopCompaniesModel>()
         var username = LocalSessionManager.getStringValue("userName", "", requireContext())
         if (username != null) {
@@ -168,9 +189,11 @@ class Homefragment : Fragment() {
         binding.searchBarHom.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
+                isSearched=true
                 var bundle = Bundle()
                 bundle.putString("Search", query)
                 bundle.putString("company", "")
+                bundle.putBoolean("isSearched", isSearched)
 
                 Navigation.findNavController(binding.searchBarHom)
                     .navigate(R.id.action_navigation_home_to_nav_sales, bundle)
@@ -213,6 +236,8 @@ class Homefragment : Fragment() {
 
 //        }
         // Inflate the layout for this fragment
+        Topcomapnies(binding.progress)
+
         return binding.root
 
     }
@@ -233,6 +258,16 @@ class Homefragment : Fragment() {
         profileIcon.visibility = View.VISIBLE
 //        bar.visibility=View.VISIBLE
         notificationIcon.visibility = View.GONE
+        notificationIcon.visibility = View.GONE
+        val badge = BadgeDrawable.create(requireContext())
+        badge.number = 4
+        badge.backgroundColor=Color.RED
+        badge.setVerticalOffset(21);
+        badge.setHorizontalOffset(42);
+        BadgeUtils.attachBadgeDrawable(
+            badge,
+            notificationIcon,
+        )
         binding.profileName.setOnClickListener {
             Navigation.findNavController(it)
                 .navigate(R.id.action_navigation_home_to_navigation_mycattle)
@@ -241,6 +276,8 @@ class Homefragment : Fragment() {
             Navigation.findNavController(it)
                 .navigate(R.id.action_navigation_home_to_navigation_mycattle)
         }
+        binding.shimmerViewRecommended.setVisibility(View.GONE);
+        binding.shimmerViewRecommended.stopShimmer();
         header = (activity as Dashboard)!!.findViewById(R.id.header)
         header.setBackgroundDrawable(
             ContextCompat.getDrawable(
@@ -249,7 +286,7 @@ class Homefragment : Fragment() {
             )
         )
         getBasicDetails()
-
+Topcomapnies(binding.progress)
 
     }
 
@@ -274,25 +311,30 @@ class Homefragment : Fragment() {
             .observe(requireActivity(), {
                 var position_list: ArrayList<RecommendedJob> = ArrayList()
                 if (it.profilePercentage!=null) {
-if (it.profilePercentage==100){
-    binding.warn.visibility=View.GONE
-}
-                    binding.profilePercent.setText(it.profilePercentage.toString() + "% completed")
-                    binding.progressBar.progress = it.profilePercentage
+                    if (it.profilePercentage == 100) {
+                        binding.warn.visibility = View.VISIBLE
+                        binding.warnImg.visibility = View.GONE
+                        binding.warnText.setText("Congratulations!! Your profile is 100% completed.")
+                    }
+                        binding.profilePercent.setText(it.profilePercentage.toString() + "% completed")
+                        binding.progressBar.progress = it.profilePercentage
 //                    Log.i("pppp", it.profilePercentage.toString())
-                    ObjectAnimator.ofInt(
-                        binding.progressBar,
-                        "progress",
-                        0,
-                        binding.progressBar.progress
-                    )
-                        .setDuration(1150)
-                        .start();
+                        ObjectAnimator.ofInt(
+                            binding.progressBar,
+                            "progress",
+                            0,
+                            binding.progressBar.progress
+                        )
+                            .setDuration(1150)
+                            .start();
+binding.shimmerViewRecommended.visibility=View.GONE
+                    binding.shimmerViewRecommended.stopShimmer();
+
                 }
                 if (it.recommendedJobs != null) {
 
                     position_list = it.recommendedJobs as ArrayList<RecommendedJob>
-                    my_adapter = RecommendedJobRecyclerAdapter(position_list,
+                    my_adapter = RecommendedJobRecyclerAdapter(position_list,requireContext(),
                         { index -> saveJobs(index) },
                         { index -> deleteJobs(index) })
                     Reccomended_recyler.adapter = my_adapter
@@ -317,23 +359,26 @@ if (it.profilePercentage==100){
                         val executor = Executors.newSingleThreadExecutor()
                         var image: Bitmap? = null
                         val handler = Handler(Looper.getMainLooper())
-                        executor.execute {
-                            val imageUrl =
-                                "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
-                            try {
-                                val `in` = java.net.URL(imageUrl).openStream()
-                                image = BitmapFactory.decodeStream(`in`)
-                                if (image != null) {
-
-                                    handler.post {
-                                        binding.imProfilePic.setImageBitmap(image)
-                                        binding.dp.setImageBitmap(image)
-                                    }
-                                }
-                            } catch (e: Exception) {
-                                e.printStackTrace()
-                            }
-                        }
+                        var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName)
+                        Glide.with(this).load(uri).into(binding.imProfilePic);
+                        Glide.with(this).load(uri).into(binding.dp);
+//                        executor.execute {
+//                            val imageUrl =
+//                                "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
+//                            try {
+//                                val `in` = java.net.URL(imageUrl).openStream()
+//                                image = BitmapFactory.decodeStream(`in`)
+//                                if (image != null) {
+//
+//                                    handler.post {
+//                                        binding.imProfilePic.setImageBitmap(image)
+//                                        binding.dp.setImageBitmap(image)
+//                                    }
+//                                }
+//                            } catch (e: Exception) {
+//                                e.printStackTrace()
+//                            }
+//                        }
 
                     }
                     if (it.workExperiencePresent != null) {
@@ -370,13 +415,19 @@ if (it.profilePercentage==100){
 
     private fun Topcomapnies(progress: ProgressBar) {
         home_viewmodel.requestTopcompanies(requireContext(), progress).observe(requireActivity(), {
+            binding.shimmerView.setVisibility(View.GONE);
+            binding.shimmerView.stopShimmer();
             var companies_list: ArrayList<TopcomapniesResponseItem> = ArrayList()
             companies_list = it
-            top_adapter = TopCompaniesAdapter(companies_list)
+            top_adapter = TopCompaniesAdapter(companies_list,requireContext())
             Top_recyler.adapter = top_adapter
-if (it.isEmpty()){
-    binding.hl.visibility=View.VISIBLE
-}
+
+//            if (it.isEmpty()){
+//                binding.hl.visibility=View.VISIBLE
+//            }
+//            else{
+//                binding.hl.visibility=View.GONE
+//            }
         })
 
     }
@@ -398,7 +449,7 @@ if (it.isEmpty()){
                 var position_list: ArrayList<Positio> = ArrayList()
                 position_list = it.positions as ArrayList<Positio>
                 appliedJobsAdapter =
-                    com.searchbuddy.searchbuddy.Adapter.AppliedJobsAdapter(
+                    AppliedJobsAdapter(
                         position_list
                     )
 
@@ -430,5 +481,13 @@ if (it.isEmpty()){
         home_viewmodel.deleteJobs(requireContext(), id, binding.progress)
             .observe(viewLifecycleOwner, {
             })
+    }
+    private fun getSampleData(): List<CarouselItem> {
+        // Replace this with your actual data source (list of CarouselItem objects)
+        return listOf(
+            CarouselItem(R.drawable.fleetx, "FleetX"),
+            CarouselItem(R.drawable.motilal, "Image 2"),
+            CarouselItem(R.drawable.sab_paisa, "Image 3")
+        )
     }
 }

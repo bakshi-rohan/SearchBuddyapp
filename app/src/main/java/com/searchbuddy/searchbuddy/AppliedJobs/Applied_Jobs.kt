@@ -14,14 +14,12 @@ import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.FragmentAppliedJobsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.imageview.ShapeableImageView
-import com.rm.rmswitch.RMSwitch
 import com.searchbuddy.searchbuddy.Adapter.NavAppliedJobsAdapter
 import com.searchbuddy.searchbuddy.Adapter.PreAppliedJobsAdapter
 import com.searchbuddy.searchbuddy.Dashboard.Dashboard
 import com.searchbuddy.searchbuddy.Utils.Constant
 import com.searchbuddy.searchbuddy.Utils.LocalSessionManager
 import com.searchbuddy.searchbuddy.model.Positio
-import com.searchbuddy.searchbuddy.model.aa.PayLoad
 
 
 
@@ -72,6 +70,7 @@ class Applied_Jobs : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentAppliedJobsBinding.inflate(inflater, container, false)
+
         AppliedJobsViewMode = ViewModelProvider(this).get(AppliedJobsViewModel::class.java)
         bottomNavView = (activity as Dashboard)!!.findViewById(R.id.nav_view)
         bottomNavView.visibility = View.VISIBLE
@@ -88,6 +87,7 @@ class Applied_Jobs : Fragment() {
                 return true
             }
         })
+
 Applied_recyler = binding.appliedJobRecycler
         PreApplied_recyler=binding.appliedPreJobRecycler
         Applied_recyler.layoutManager = LinearLayoutManager(requireContext())
@@ -96,6 +96,8 @@ Applied_recyler = binding.appliedJobRecycler
 //        binding.backBtn.setOnClickListener {
 //            activity?.onBackPressed()
 //        }
+        binding.shimmerView.setVisibility(View.VISIBLE);
+        binding.shimmerView.startShimmer();
         profileIcon = (activity as Dashboard)!!.findViewById(com.bumptech.searchbuddy.R.id.drawer_icon)
         profileIcon.visibility=View.GONE
        var UserID = LocalSessionManager.getStringValue(Constant.UserID, "", requireContext()).toString()
@@ -130,22 +132,22 @@ Applied_recyler = binding.appliedJobRecycler
                 return true
             }
         })
-        binding.yourId.addSwitchObserver(RMSwitch.RMSwitchObserver { switchView, isChecked ->
-            if (isChecked) {
-                requestPreAppliedJobs(binding.progress)
-                binding.appliedJobRecycler.visibility = View.GONE
-                binding.appliedPreJobRecycler.visibility = View.VISIBLE
-                requestPreAppliedJobs(binding.progress)
-//           binding.txtNopreData.visibility=View.VISIBLE
-//           binding.txtNoData.visibility=View.GONE
-
-            } else {
-                requestAppliedJobs(binding.progress)
-                binding.appliedJobRecycler.visibility = View.VISIBLE
-                binding.appliedPreJobRecycler.visibility = View.GONE
-
-            }
-        })
+//        binding.yourId.addSwitchObserver(RMSwitch.RMSwitchObserver { switchView, isChecked ->
+//            if (isChecked) {
+//                requestPreAppliedJobs(binding.progress)
+//                binding.appliedJobRecycler.visibility = View.GONE
+//                binding.appliedPreJobRecycler.visibility = View.VISIBLE
+//                requestPreAppliedJobs(binding.progress)
+////           binding.txtNopreData.visibility=View.VISIBLE
+////           binding.txtNoData.visibility=View.GONE
+//
+//            } else {
+//                requestAppliedJobs(binding.progress)
+//                binding.appliedJobRecycler.visibility = View.VISIBLE
+//                binding.appliedPreJobRecycler.visibility = View.GONE
+//
+//            }
+//        })
         AppliedJobsViewMode.errorMessage()?.observe(requireActivity(), {
             binding.txtNoData.visibility=View.VISIBLE
             binding.imgNodata.visibility=View.VISIBLE
@@ -170,6 +172,8 @@ Applied_recyler = binding.appliedJobRecycler
                     appliedJobsAdapter = NavAppliedJobsAdapter(position_list)
 
                     Applied_recyler.adapter = appliedJobsAdapter
+                binding.shimmerView.setVisibility(View.GONE);
+                binding.shimmerView.stopShimmer();
               if (position_list.isEmpty()){
                   binding.txtNoData.visibility=View.VISIBLE
                   binding.imgNodata.visibility=View.VISIBLE
@@ -184,38 +188,38 @@ Applied_recyler = binding.appliedJobRecycler
             })
     }
 
-    private fun requestPreAppliedJobs(progress: ProgressBar) {
-//        UserID = LocalSessionManager.getStringValue(Constant.UserID, "", requireContext()).toString()
-        var index: Int = 1
-        var pagesize: Int = 10
-var Mail=LocalSessionManager.getStringValue("Email","",requireContext())
-        var mail=Mail.toString()
-//        var encodedEmail=URLEncoder.encode(mail)
-
-        var email=Mail.toString()
-        var UserID = LocalSessionManager.getStringValue(Constant.UserID, "", requireContext()).toString()
-        yo = UserID.toInt()
-//        var RequestParams = AppliedJobsRequestModel(condition)
-
-        AppliedJobsViewMode.requestPreAppliedJobs(requireContext(),pagesize,index,email.toString(),binding.progress )
-            .observe(requireActivity(), {
-
-                var position_list: ArrayList<PayLoad> = ArrayList()
-                position_list = it.payLoad as ArrayList<PayLoad>
-                PreappliedJobsAdapter = PreAppliedJobsAdapter(position_list)
-
-                PreApplied_recyler.adapter = PreappliedJobsAdapter
-                if (position_list.isEmpty()){
-                    binding.txtNoData.visibility=View.VISIBLE
-                    binding.imgNodata.visibility=View.VISIBLE
-                    binding.searchBar.visibility=View.GONE
-                }
-                else{
-                    binding.txtNoData.visibility=View.GONE
-                    binding.imgNodata.visibility=View.GONE
-                    binding.searchBar.visibility=View.VISIBLE
-
-                }
-            })
-    }
+//    private fun requestPreAppliedJobs(progress: ProgressBar) {
+////        UserID = LocalSessionManager.getStringValue(Constant.UserID, "", requireContext()).toString()
+//        var index: Int = 1
+//        var pagesize: Int = 10
+//var Mail=LocalSessionManager.getStringValue("Email","",requireContext())
+//        var mail=Mail.toString()
+////        var encodedEmail=URLEncoder.encode(mail)
+//
+//        var email=Mail.toString()
+//        var UserID = LocalSessionManager.getStringValue(Constant.UserID, "", requireContext()).toString()
+//        yo = UserID.toInt()
+////        var RequestParams = AppliedJobsRequestModel(condition)
+//
+//        AppliedJobsViewMode.requestPreAppliedJobs(requireContext(),pagesize,index,email.toString(),binding.progress )
+//            .observe(requireActivity(), {
+//
+//                var position_list: ArrayList<PayLoad> = ArrayList()
+//                position_list = it.payLoad as ArrayList<PayLoad>
+//                PreappliedJobsAdapter = PreAppliedJobsAdapter(position_list)
+//
+//                PreApplied_recyler.adapter = PreappliedJobsAdapter
+//                if (position_list.isEmpty()){
+//                    binding.txtNoData.visibility=View.VISIBLE
+//                    binding.imgNodata.visibility=View.VISIBLE
+//                    binding.searchBar.visibility=View.GONE
+//                }
+//                else{
+//                    binding.txtNoData.visibility=View.GONE
+//                    binding.imgNodata.visibility=View.GONE
+//                    binding.searchBar.visibility=View.VISIBLE
+//
+//                }
+//            })
+//    }
 }

@@ -197,7 +197,7 @@ class ApiClient {
             @Header("authorization") token: String,
             @Query("pagesize") pagesize: Int,
             @Query("index") index: Int
-        ): Call<ArrayList<GetSavedJobsResponse>>
+        ): Call<GetSavedJobsResponse>
         @Headers("Content-Type:application/json", "Accept:application/json")
         @GET("candidate/basic-detail/{UserId}")
         fun requestPersonalDetail(
@@ -320,10 +320,8 @@ class ApiClient {
         @Headers("Content-Type:application/json", "Accept:application/json")
         @GET("https://www.searchbuddy.in/api/position/jd/detail/{position_id}")
         fun getJobdescription(
-
             @Path("position_id") id: Int
         ): Call<JobdescriptionResponse>
-
         @Headers("Content-Type:application/json", "Accept:application/json")
         @GET("https://www.searchbuddy.in/api/position/candidate/jd/detail/{position_id}")
         fun getLoggedJobdescription(

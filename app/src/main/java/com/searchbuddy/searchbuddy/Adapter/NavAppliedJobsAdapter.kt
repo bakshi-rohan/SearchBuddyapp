@@ -48,16 +48,7 @@ class NavAppliedJobsAdapter( private val mList: List<Positio>) :
 
         // sets the text to the textview from our itemHolder class
         holder.job_name_field.text = ItemsViewModel.positionName
-        holder.company_name_field.text = ItemsViewModel.createdBy
-//        val inputFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
-//        val outputFormat: DateFormat = SimpleDateFormat("dd MMM yyyy")
-//        val inputDateStr = ItemsViewModel.appliedOn
-//        val date: Date = inputFormat.parse(inputDateStr)
-//        val outputDateStr: String = outputFormat.format(date)
-//        Log.i("date",outputDateStr)
-//        holder.applied_date.text = outputDateStr
-//        holder.applied_status.text = ItemsViewModel.status
-//        holder.progress_bar.stateDescription= descriptionData.toString()
+//        holder.company_name_field.text = ItemsViewModel.createdBy
         holder.progress_bar.setStateDescriptionData(descriptionData)
 //        holder.progress_bar.setCurrentStateNumber()
         holder.itemView.setOnClickListener {
@@ -83,6 +74,24 @@ class NavAppliedJobsAdapter( private val mList: List<Positio>) :
             holder.progress_bar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE)
 
         }
+        if (ItemsViewModel.location!=null) {
+            if (ItemsViewModel.location.size>2) {
+                var loc_one = ItemsViewModel.location.get(0)
+                var loc_two = ItemsViewModel.location.get(1)
+                holder.location.text = loc_one+" , "+loc_two+" and more"
+            }
+            else if (ItemsViewModel.location.size<2){
+                var loc = ItemsViewModel.location.toString()
+                var locres = loc.substring(1, loc.length - 1)
+                holder.location.text = locres
+            }
+            else if (ItemsViewModel.location.isEmpty()){
+                holder.location.visibility=View.GONE
+                holder.loc_icon.visibility=View.GONE
+            }
+        }
+
+
         if (ItemsViewModel.logo!=null){
             var picname=ItemsViewModel.logo
             val executor = Executors.newSingleThreadExecutor()
@@ -117,11 +126,12 @@ class NavAppliedJobsAdapter( private val mList: List<Positio>) :
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val company_image_field: ImageView = itemView.findViewById(R.id.company_image_field)
-//        val description: TextView = itemView.findViewById(R.id.description_field)
-//        val location: TextView = itemView.findViewById(R.id.location_field)
-//        val salary_field: TextView = itemView.findViewById(R.id.salary_field)
+        val loc_icon: ImageView = itemView.findViewById(R.id.loc_icon)
+        val company: TextView = itemView.findViewById(R.id.company_name_field_apply)
+        val location: TextView = itemView.findViewById(R.id.location_field_apply)
+//        val salary_field: TextView = itemView.findViewById(R.id.salary_field_apply)
 //        val apply: TextView = itemView.findViewById(R.id.apply_positions)
-        val company_name_field: TextView = itemView.findViewById(R.id.company_name_field)
+//        val company_name_field: TextView = itemView.findViewById(R.id.company_name_field)
         val job_name_field: TextView = itemView.findViewById(R.id.job_name_field)
         val progress_bar: StateProgressBar = itemView.findViewById(R.id.your_state_progress_bar_id)
 //        val rupee: ImageView = itemView.findViewById(R.id.rupee)

@@ -69,16 +69,16 @@ class FragmentActivity : AppCompatActivity() {
         var clearAll: MaterialButton =toolbar.ivRefresh
         ispremium=intent.getBooleanExtra("premium",false)
 
-        if (ispremium==true){
-            binding.salaryHead.visibility=View.GONE
-            binding.freshHead.visibility=View.GONE
-            binding.experLayout.visibility=View.GONE
-        }
-        else{
-            binding.salaryHead.visibility=View.VISIBLE
-            binding.freshHead.visibility=View.VISIBLE
-            binding.experLayout.visibility=View.VISIBLE
-        }
+//        if (ispremium==true){
+//            binding.salaryHead.visibility=View.GONE
+//            binding.freshHead.visibility=View.GONE
+//            binding.experLayout.visibility=View.GONE
+//        }
+//        else{
+//            binding.salaryHead.visibility=View.VISIBLE
+//            binding.freshHead.visibility=View.VISIBLE
+//            binding.experLayout.visibility=View.VISIBLE
+//        }
         apply.setOnClickListener {
           onBackPressed()
 
@@ -113,7 +113,7 @@ class FragmentActivity : AppCompatActivity() {
                 //Those are the new updated values of sldier when user has finshed dragging
                 Log.i("SliderNewValue From", values[0].toString())
                 Log.i("SliderNewValue To", values[1].toString())
-                binding.expValue.setText(l.toString()+ " years"+ " to " +m.toString()+ " years")
+                binding.expValue.setText(l.toString()+ " Yr"+ " to " +m.toString()+ " years")
 
                 Log.i("SalarySliderNewValuef", salaryValues[0].toString())
                 Log.i("SalarySliderNewValue To", salaryValues[1].toString())
@@ -150,7 +150,7 @@ class FragmentActivity : AppCompatActivity() {
             var exp_end_int = exp_End.toInt()
 
             rangeSlider.setValues(exp_start, exp_End)
-            binding.expValue.setText(exp_start_int.toString() + " years" + " to " + exp_end_int.toString() + " years")
+            binding.expValue.setText(exp_start_int.toString() + " Yr" + " to " + exp_end_int.toString() + " years")
         }
         rangeSlidersalary.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
             override fun onStartTrackingTouch(slider: RangeSlider) {

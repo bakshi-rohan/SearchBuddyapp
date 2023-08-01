@@ -78,27 +78,27 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-<!--            <ImageView-->
-<!--                android:layout_width="16dp"-->
-<!--                android:layout_height="22dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginStart="9dp"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                android:src="@drawable/office_building"></ImageView>-->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/suitcase"></ImageView>
 
-<!--            <TextView-->
-<!--                android:id="@+id/experience_field"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:fontFamily="@font/seogee_ui"-->
-<!--                android:text="2-4 years"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                android:layout_marginHorizontal="4dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="12sp">-->
+            <TextView
+                android:id="@+id/exp_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogee_ui"
+                android:text=""
+                android:layout_marginTop="1dp"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textSize="12sp">
 
-<!--            </TextView>-->
+            </TextView>
 
             <ImageView
                 android:id="@+id/rupee"
@@ -106,6 +106,7 @@
                 android:layout_height="13dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
+                android:layout_marginHorizontal="4dp"
                 android:src="@drawable/rupee"></ImageView>
 
             <TextView
@@ -114,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/seogee_ui"
-                android:text="6-8 Lpa"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="12sp">
 
@@ -135,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/seogee_ui"
-                android:text="Delhi"
+                android:text=""
                 android:layout_marginStart="3dp"
                 android:textColor="@color/black"
                 android:textSize="12sp">
@@ -165,7 +166,7 @@
                 android:layout_marginTop="1dp"
                 android:fontFamily="@font/seogee_ui"
                 android:layout_marginStart="3dp"
-                android:text="Business Development,lead generation,Excel,cold callings and Email"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="12sp">
             </TextView>

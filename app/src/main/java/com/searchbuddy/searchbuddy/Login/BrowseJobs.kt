@@ -20,7 +20,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.ActivityBrowseJobsBinding
-import com.rm.rmswitch.RMSwitch
 import com.searchbuddy.searchbuddy.Adapter.BrowseJobsAdapter
 import com.searchbuddy.searchbuddy.Adapter.PremiumJobsAdapter
 import com.searchbuddy.searchbuddy.Categories.SalesJobsViewModel
@@ -30,6 +29,7 @@ import com.searchbuddy.searchbuddy.model.FieldSalesModel
 import com.searchbuddy.searchbuddy.model.JobRequestModel
 import com.searchbuddy.searchbuddy.model.Positions
 import com.searchbuddy.searchbuddy.model.aa.PrePosition
+import koleton.api.loadSkeleton
 
 class BrowseJobs : AppCompatActivity() {
     lateinit var binding: ActivityBrowseJobsBinding
@@ -72,6 +72,8 @@ class BrowseJobs : AppCompatActivity() {
     lateinit var keyword:Array<String>
     var isPremium:Boolean=true
 lateinit var level:Array<Int>
+    private var isScrollingDown = false
+    private var lastVisibleItemPosition = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBrowseJobsBinding.inflate(layoutInflater)
@@ -79,7 +81,7 @@ lateinit var level:Array<Int>
         activitySalesViewModel = ViewModelProvider(this).get(SalesJobsViewModel::class.java)
         layoutManager = LinearLayoutManager(this)
         keyword= arrayOf("")
-        binding.yourId.isChecked=true
+//        binding.yourId.isChecked=true
 
         FieldJobRecycler = binding.fieldSaleRecycler
         PremiumJobRecycler = binding.premiumJobRecyler
@@ -90,9 +92,14 @@ lateinit var level:Array<Int>
         binding.backBtn.setOnClickListener {
            onBackPressed()
         }
+    FieldJobRecycler.loadSkeleton(R.layout.field_sale_recycler_layout){
+        shimmer(false)
+    }
 //        activitySalesViewModel.errorMessage()?.observe(this, {
 //            showToast(it.toString())
 //        })
+
+
         if (Build.VERSION.SDK_INT >= 21) {
             val window = this.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
@@ -123,39 +130,36 @@ lateinit var level:Array<Int>
             }
         })
 
-        if (isPremium==false){
+
             requestData(binding.progress)
 
-        }
-        else if (isPremium==true){
-            requestPreData(binding.progress)
-        }
+
         binding.jobLength.visibility= View.VISIBLE
 
-        binding.yourId.addSwitchObserver(RMSwitch.RMSwitchObserver { switchView, isChecked ->
-            if (isChecked) {
-                isPremium=true
-                requestPreData(binding.progress)
-                binding.fieldSaleRecycler.visibility = View.GONE
-                binding.premiumJobRecyler.visibility = View.VISIBLE
-                binding.chip3.visibility=View.GONE
-                binding.chip5.visibility=View.GONE
-                binding.chip2.visibility=View.GONE
-                requestPreData(binding.progress)
-//           binding.txtNopreData.visibility=View.VISIBLE
-//           binding.txtNoData.visibility=View.GONE
-
-            } else {
-                isPremium=false
-                requestData(binding.progress)
-                binding.fieldSaleRecycler.visibility = View.VISIBLE
-                binding.premiumJobRecyler.visibility = View.GONE
-                binding.chip3.visibility=View.VISIBLE
-                binding.chip5.visibility=View.VISIBLE
-                binding.chip2.visibility=View.VISIBLE
-
-            }
-        })
+//        binding.yourId.addSwitchObserver(RMSwitch.RMSwitchObserver { switchView, isChecked ->
+//            if (isChecked) {
+//                isPremium=true
+//                requestPreData(binding.progress)
+//                binding.fieldSaleRecycler.visibility = View.GONE
+//                binding.premiumJobRecyler.visibility = View.VISIBLE
+//                binding.chip3.visibility=View.GONE
+//                binding.chip5.visibility=View.GONE
+//                binding.chip2.visibility=View.GONE
+//                requestPreData(binding.progress)
+////           binding.txtNopreData.visibility=View.VISIBLE
+////           binding.txtNoData.visibility=View.GONE
+//
+//            } else {
+//                isPremium=false
+//                requestData(binding.progress)
+//                binding.fieldSaleRecycler.visibility = View.VISIBLE
+//                binding.premiumJobRecyler.visibility = View.GONE
+//                binding.chip3.visibility=View.VISIBLE
+//                binding.chip5.visibility=View.VISIBLE
+//                binding.chip2.visibility=View.VISIBLE
+//
+//            }
+//        })
         binding.filters.setOnClickListener {
             var intent= Intent(this,FragmentActivity::class.java)
             intent.putExtra("premium",isPremium)
@@ -206,7 +210,7 @@ lateinit var level:Array<Int>
 //            requestData(binding.progress)
 //        }
 //    }
-    //    override fun onPause() {
+//        override fun onPause() {
 //        super.onPause()
 //        LocalSessionManager.removeValue(Constant.SliderStartValue,this)
 //        LocalSessionManager.removeValue(Constant.SliderEndValue,this)
@@ -216,8 +220,8 @@ lateinit var level:Array<Int>
 //        LocalSessionManager.removeValue(Constant.DatePosted,this)
 //        LocalSessionManager.removeValue(Constant.cat_name,this)
 //    }
-
-    //    override fun onDestroy() {
+//
+//        override fun onDestroy() {
 //        super.onDestroy()
 //        LocalSessionManager.removeValue(Constant.SliderStartValue,this)
 //        LocalSessionManager.removeValue(Constant.SliderEndValue,this)
@@ -393,7 +397,6 @@ lateinit var level:Array<Int>
             LocationList,
             date_posted,
             functionList,
-            company,
             keyword,
 //            level
 
@@ -416,11 +419,13 @@ lateinit var level:Array<Int>
                             binding.idPBLoading.visibility= View.GONE
                         }
                         position_list = (it.positions as ArrayList<Positions>)
-                        myadapter = BrowseJobsAdapter(position_list)
+                        myadapter = BrowseJobsAdapter(position_list,this)
                         FieldJobRecycler.adapter = myadapter
                         binding.txtNoData.visibility= View.GONE
                         binding.imgNodata.visibility= View.GONE
                         binding.fieldSaleRecycler.visibility= View.VISIBLE
+//                        FieldJobRecycler.hideSkeleton()
+
 
                         if (temp > 3) {
                             binding.idPBLoading.visibility = View.GONE
@@ -581,7 +586,6 @@ lateinit var level:Array<Int>
             LocationList,
             date_posted,
             functionList,
-            company,
             keyword,
 //            level
 
@@ -618,6 +622,7 @@ lateinit var level:Array<Int>
             })
 
     }
+
     private fun saveJobs(index:Int){
 
         var jobList= arrayListOf<Any>()

@@ -12,6 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
+
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:layoutDirection="rtl"
                     android:elevation="6dp"
                     android:layout_marginHorizontal="7dp"
-                    app:defaultQueryHint="Job title,keywords or company"
+                    app:defaultQueryHint="Job title or company"
                     app:iconifiedByDefault="false"
                     app:queryBackground="@null"
                     app:searchIcon="@drawable/magnifine"></androidx.appcompat.widget.SearchView>
@@ -217,12 +218,14 @@
     android:background="@drawable/home_ui_warning"
     android:layout_marginTop="8dp">
     <ImageView
+        android:id="@+id/warn_img"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginStart="4dp"
         android:src="@drawable/warning"></ImageView>
 
     <TextView
+        android:id="@+id/warn_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="157dp"
@@ -259,6 +262,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seoge_bold_two"
                     android:text="View All"
+                    android:visibility="gone"
                     android:layout_marginEnd="20dp"
                     android:textColor="#936030"
                     android:textSize="10sp"></TextView>
@@ -292,6 +296,38 @@
                 android:text="Based on your preferences"
                 android:textColor="@color/app_grey"
                 android:textSize="12sp"></TextView>
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_recommended"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <include
+                    layout="@layout/recommended_recyler_shimmer"/>
+
+                <include
+                    layout="@layout/recommended_recyler_shimmer"/>
+
+                <include
+                    layout="@layout/recommended_recyler_shimmer"/>
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+            </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
             <TextView
                 android:id="@+id/txtNoData"
                 android:layout_width="wrap_content"
@@ -362,10 +398,32 @@
                     android:layout_width="72dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
-                    android:src="@drawable/motilal"
+                    android:src="@drawable/sab_paisa"
                     android:layout_marginHorizontal="8dp"></ImageView>
 
             </LinearLayout>
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <include
+                        layout="@layout/top_companies_recyler_layout"/>
+
+                    <include
+                        layout="@layout/top_companies_recyler_layout"/>
+
+                    <include
+                        layout="@layout/top_companies_recyler_layout"/>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/top_companies_recycler"
                 android:layout_width="match_parent"
@@ -583,47 +641,20 @@
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
-
+<!--Carousel View-->
             <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="31dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="10dp"
+                android:layout_height="match_parent"
                 android:visibility="gone"
-                android:background="@drawable/yellow_border"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:src="@drawable/shield"></ImageView>
+                    android:layout_weight="1"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="9dp"
-                        android:fontFamily="@font/seoge_bold_two"
-                        android:text="Beware of fake details"
-                        android:textSize="18sp"></TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/seogee_ui"
-                        android:text="Make sure not to present fake details"
-                        android:textColor="@color/app_grey"
-                        android:textSize="14sp"></TextView>
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

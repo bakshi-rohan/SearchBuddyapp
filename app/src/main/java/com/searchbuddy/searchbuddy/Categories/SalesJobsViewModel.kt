@@ -95,10 +95,10 @@ class SalesJobsViewModel : ViewModel() {
 //        exp_to:Int,
         progress: ProgressBar
     ): MutableLiveData<JobRequestResponse> {
-        progress.visibility = View.VISIBLE
+        progress.visibility = View.GONE
 
         try {
-            progress.visibility = View.VISIBLE
+            progress.visibility = View.GONE
             CoroutineScope(Dispatchers.IO).launch {
                 val apiService = ApiClient.apiClient().create(ApiClient.ApiInterface::class.java)
                 apiService.requestJobs(Request)
@@ -154,11 +154,11 @@ class SalesJobsViewModel : ViewModel() {
 //        exp_to:Int,
         progress: ProgressBar
     ): MutableLiveData<JobRequestResponse> {
-        progress.visibility = View.VISIBLE
+        progress.visibility = View.GONE
         val token = LocalSessionManager.getStringValue(Constant.TOKEN, "", context)
 
         try {
-            progress.visibility = View.VISIBLE
+            progress.visibility = View.GONE
             CoroutineScope(Dispatchers.IO).launch {
                 val apiService = ApiClient.apiClient().create(ApiClient.ApiInterface::class.java)
                 apiService.requestJobsLogged("Bearer " + token.toString(),Request)

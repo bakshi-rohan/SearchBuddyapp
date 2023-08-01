@@ -137,7 +137,6 @@
                 android:text=""
                 android:textSize="9sp"
                 android:minLines="2"
-                android:maxLength="46"
                 android:gravity="center_vertical"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/black"

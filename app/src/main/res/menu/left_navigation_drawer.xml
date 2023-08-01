@@ -33,6 +33,9 @@
             android:id="@+id/abou_us"
             android:title="About Us" />
 
+        <item
+            android:id="@+id/blogs"
+            android:title="Blogs" />
 
         <item
             android:id="@+id/Faq"

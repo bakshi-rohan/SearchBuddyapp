@@ -50,10 +50,11 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, ForgotPassword::class.java)
             startActivity(intent)
         }
-        binding.btnLoginOtp.setOnClickListener {
-            val intent = Intent(this, LoginWithOTP::class.java)
-            startActivity(intent)
-        }
+//        binding.btnLoginOtp.setOnClickListener {
+//            val intent = Intent(this, LoginWithOTP::class.java)
+//            startActivity(intent)
+//        }
+
         binding.tvSignup.setOnClickListener {
             val intent = Intent(this, Form_One::class.java)
             startActivity(intent)

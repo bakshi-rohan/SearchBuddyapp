@@ -9,28 +9,27 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/border_top_companies"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="208dp"
-            android:layout_height="68dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:minHeight="58dp"
+            android:minWidth="120dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/company_image_top"
-                android:layout_width="58dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="2dp"
-                android:paddingLeft="4dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
                 android:scaleType="centerInside"
                 android:adjustViewBounds="true"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
                 android:src="@drawable/city">
-
             </ImageView>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,12 +40,12 @@
                     android:id="@+id/company_name_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
                     android:fontFamily="@font/seoge_bold_two"
                     android:text=""
-                    android:textSize="13sp"
-                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="18dp"
                     android:textColor="#30475E"></TextView>
 
                                 <TextView

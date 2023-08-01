@@ -3,7 +3,7 @@ package com.searchbuddy.searchbuddy.Adapter
 //import com.example.searchbuddy.model.Position
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -18,6 +18,7 @@ import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.auth0.android.jwt.JWT
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.searchbuddy.searchbuddy.model.Positions
 import java.util.concurrent.Executors
@@ -27,7 +28,6 @@ class FieldSalesAdapter(private val mList: List<Positions>, var context: Context
     var filterProductList = mList
     var datalist = mList
 var saved:Boolean=false
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.field_sale_recycler_layout, parent, false)
@@ -62,28 +62,31 @@ var saved:Boolean=false
 //            RequestOptions()
 //                .placeholder(R.drawable.city)
 //        ).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.company_image_field)
+
         if (ItemsViewModel.logo!=null){
             var picname=ItemsViewModel.logo
             val executor = Executors.newSingleThreadExecutor()
             var image: Bitmap? = null
             val handler = Handler(Looper.getMainLooper())
-            executor.execute {
-                val imageUrl =
-                    "https://www.searchbuddy.in/api/get-picture/organisation/"+picname
-                try {
-                    val `in` = java.net.URL(imageUrl).openStream()
-                    image = BitmapFactory.decodeStream(`in`)
-                    if (image != null) {
-
-                        handler.post {
-                            holder.company_image_field.setImageBitmap(image)
-                        }
-                    }
-
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
+            var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/"+picname)
+            Glide.with(context).load(uri).into(holder.company_image_field);
+//            executor.execute {
+//                val imageUrl =
+//                    "https://www.searchbuddy.in/api/get-picture/organisation/"+picname
+//                try {
+//                    val `in` = java.net.URL(imageUrl).openStream()
+//                    image = BitmapFactory.decodeStream(`in`)
+//                    if (image != null) {
+//
+//                        handler.post {
+//                            holder.company_image_field.setImageBitmap(image)
+//                        }
+//                    }
+//
+//                } catch (e: Exception) {
+//                    e.printStackTrace()
+//                }
+//            }
         }
         // sets the text to the textview from our itemHolder class
         if (ItemsViewModel.skills!=null) {
@@ -91,25 +94,44 @@ var saved:Boolean=false
             var skres = sk.substring(1, sk.length - 1)
             holder.description.text = skres
         }
+        if (ItemsViewModel.expFrm!=null){
+
+        }
 if (ItemsViewModel.postedDay!=null){
     holder.days.text=ItemsViewModel.postedDay.toString()+" days ago"
 }
-        if (ItemsViewModel.salary==null){
-            holder.salary_field.text=""
-            holder.rupee.visibility=View.GONE
-        }else if (ItemsViewModel.salary!=null){
-            var sa = ItemsViewModel.salary.toString()
-            var rez=sa.substring(1,sa.length-1)
-            holder.salary_field.text=rez.toString()
+
+            if (ItemsViewModel.salary.isEmpty()==true) {
+                holder.salary_field.text = ""
+                holder.rupee.visibility = View.GONE
+            }
+        else if (ItemsViewModel.salary!=null){
+            if (ItemsViewModel.salary.isEmpty()!=true) {
+                var salfrom = ItemsViewModel.salary.get(0).toString()
+                var salTo = ItemsViewModel.salary.get(1).toString()
+                holder.salary_field.text = salfrom+" Lpa"+" - "+salTo+" Lpa"
+            }
         }
         if (ItemsViewModel.location!=null) {
-            var loc = ItemsViewModel.location.toString()
-            var locres = loc.substring(1, loc.length - 1)
-            holder.location.text = locres
+            if (ItemsViewModel.location.size>2) {
+                var loc_one = ItemsViewModel.location.get(0)
+                var loc_two = ItemsViewModel.location.get(1)
+                holder.location.text = loc_one+" , "+loc_two+" and more"
+            }
+            else if (ItemsViewModel.location.size<2){
+                var loc = ItemsViewModel.location.toString()
+                var locres = loc.substring(1, loc.length - 1)
+                holder.location.text = locres
+            }
         }
 //        if (holder.experience_field!=null) {
 //            holder.experience_field.text = ItemsViewModel.industry
 //        }
+        if (ItemsViewModel.expFrm!=null&&ItemsViewModel.expTo!=null){
+            var expfrm=ItemsViewModel.expFrm.toString()
+            var expto=ItemsViewModel.expTo.toString()
+            holder.exp_field.text=expfrm+ " - "+expto+" Yr"
+        }
         if (holder.company_name_field!=null) {
             holder.company_name_field.text = ItemsViewModel.organisationName
         }
@@ -211,6 +233,7 @@ if (ItemsViewModel.postedDay!=null){
         val days: TextView = itemView.findViewById(R.id.days)
         val save: ImageView = itemView.findViewById(R.id.save_job_button)
         val rupee: ImageView = itemView.findViewById(R.id.rupee)
+        val exp_field:TextView=itemView.findViewById(R.id.exp_field)
     }
 
     override fun getFilter(): Filter {

@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "416198747117",
-    "project_id": "searchbuddy-eea51",
-    "storage_bucket": "searchbuddy-eea51.appspot.com"
+    "project_number": "196411537038",
+    "project_id": "searchbuddyin-ga4",
+    "storage_bucket": "searchbuddyin-ga4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:416198747117:android:d9d1ca5d9eb36da2b6fde4",
+        "mobilesdk_app_id": "1:196411537038:android:6a32998e08cbbcfe55bbdf",
         "android_client_info": {
           "package_name": "com.bumptech.searchbuddy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "416198747117-5jm35nf280hcainnqs0r9q9js6ipjesq.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.bumptech.searchbuddy",
-            "certificate_hash": "2226e33366acfa9e2fa702cb53ced1b9524d5f14"
-          }
-        },
-        {
-          "client_id": "416198747117-iap4879pnlq9emk2i5sdckq5kquenaou.apps.googleusercontent.com",
+          "client_id": "196411537038-pfvemt0el1jtmh26k5mt8a9q4q6it921.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDzFUwoOeXFoVw9QEk0_o0kHiSdg0w_0CY"
+          "current_key": "AIzaSyA7KNS84YhUMVb47S2M56oWFaKfUmCSDwI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "416198747117-iap4879pnlq9emk2i5sdckq5kquenaou.apps.googleusercontent.com",
+              "client_id": "196411537038-pfvemt0el1jtmh26k5mt8a9q4q6it921.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

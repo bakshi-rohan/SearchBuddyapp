@@ -1,13 +1,10 @@
 package com.searchbuddy.searchbuddy.Categories
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.text.Html
 import android.text.SpannableString
 import android.view.LayoutInflater
@@ -17,11 +14,11 @@ import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.FragmentAppliedJobsDescriptionBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.searchbuddy.searchbuddy.Dashboard.Dashboard
-import java.util.concurrent.Executors
 
 class AppliedJobsDescription : Fragment() {
     lateinit var binding: FragmentAppliedJobsDescriptionBinding
@@ -63,6 +60,8 @@ class AppliedJobsDescription : Fragment() {
             position_id_int = requireArguments().getInt("position_id")
 
         }
+//        binding.build.setImageResource(R.drawable.city)
+
         binding.jobDescriptionBtn.setBackgroundResource(R.drawable.job_sdesc_selected_border)
 
         val id = position_id.toInt()
@@ -105,7 +104,7 @@ class AppliedJobsDescription : Fragment() {
 
         fun getHtml(htmlBody: String): String {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Html.fromHtml(htmlBody, Html.FROM_HTML_MODE_LEGACY).toString()
+                Html.fromHtml(htmlBody, Html.FROM_HTML_MODE_COMPACT).toString()
             else
                 Html.fromHtml(htmlBody).toString()
         }
@@ -123,7 +122,7 @@ class AppliedJobsDescription : Fragment() {
                             binding.companyNameDescription.setText(it.client)
                         }
                         if (it.expTo!=null&&it.expFrom!=null) {
-                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + " years")
+                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + " Yr")
                         }
                         if (it.roleDesc!=null) {
                             binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -136,26 +135,10 @@ class AppliedJobsDescription : Fragment() {
                         }
                         if (it.logo != null) {
                             logo = it.logo
-                            val executor = Executors.newSingleThreadExecutor()
-                            var image: Bitmap? = null
-                            val handler = Handler(Looper.getMainLooper())
-                            executor.execute {
-                                val imageUrl =
-                                    "https://www.searchbuddy.in/api/get-picture/organisation/" + logo
-                                try {
-                                    val `in` = java.net.URL(imageUrl).openStream()
-                                    image = BitmapFactory.decodeStream(`in`)
-                                    if (image != null) {
+                            var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
+                            Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
 
-                                        handler.post {
-                                            binding.build.setImageBitmap(image)
-                                            binding.build.setImageBitmap(image)
-                                        }
-                                    }
-                                } catch (e: Exception) {
-                                    e.printStackTrace()
-                                }
-                            }
+
                         }
                         if (it.location!=null) {
                             val some = it.location.toString()
@@ -184,6 +167,14 @@ class AppliedJobsDescription : Fragment() {
         return binding.root
         // Inflate the layout for this fragment
     }
+
+    override fun onResume() {
+        super.onResume()
+        binding.build.setImageResource(R.drawable.city)
+    }
+
+
+
     fun showToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
     }

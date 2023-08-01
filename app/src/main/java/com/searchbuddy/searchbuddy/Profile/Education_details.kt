@@ -79,6 +79,14 @@ class Education_details : AppCompatActivity() {
             "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010",
             "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"
         )
+        binding.tenthLlc.visibility=View.GONE
+        binding.gradLl.visibility=View.GONE
+        binding.postLl.visibility=View.GONE
+        binding.tweLl.visibility=View.VISIBLE
+        binding.twelve.setBackgroundResource(R.drawable.work_status_selected_border)
+        binding.tenth.setBackgroundResource(R.drawable.work_status_border)
+        binding.graduate.setBackgroundResource(R.drawable.work_status_border)
+        binding.postGraduate.setBackgroundResource(R.drawable.work_status_border)
         binding.save.setOnClickListener {
 updateDetails()
         }
@@ -458,9 +466,9 @@ pgSpecList.clear()
                         }
                         if (it.professionalDetails.educationDetails.intermediate.passingYear!=null){
                             var twe_passing_year= it.professionalDetails.educationDetails.intermediate.passingYear.toDouble().toString()
-//                            var twe_substring=twe_passing_year.substring(0,4)
-//                            var twe_pass_adapter=ENDDateAdapter.getPosition(twe_substring)
-//                            binding.tweEndYr.setSelection(twe_pass_adapter)
+                            var twe_substring=twe_passing_year.substring(0,4)
+                            var twe_pass_adapter=ENDDateAdapter.getPosition(twe_substring)
+                            binding.tweEndYr.setSelection(twe_pass_adapter)
                         }
                     }
                     if (it.professionalDetails.educationDetails.graduation!=null){
@@ -505,19 +513,19 @@ pgSpecList.clear()
                             if (it.professionalDetails.educationDetails.postGraduation.startYear!=0) {
                                 var startpostgrad =
                                     it.professionalDetails.educationDetails.postGraduation.startYear.toString()
-//                                var startpost_sybstring = startpostgrad.substring(0, 3)
-//                                var startpostgradadapter =
-//                                    DateAdapter.getPosition(startpost_sybstring)
-//                                binding.startPostgrad.setSelection(startpostgradadapter)
+                                var startpost_sybstring = startpostgrad.substring(0, 3)
+                                var startpostgradadapter =
+                                    DateAdapter.getPosition(startpost_sybstring)
+                                binding.startPostgrad.setSelection(startpostgradadapter)
                             }
                         }
                         if (it.professionalDetails.educationDetails.postGraduation.passingYear!=null){
                             if (it.professionalDetails.educationDetails.postGraduation.passingYear!=0) {
                                 var endpostgrad =
                                     it.professionalDetails.educationDetails.postGraduation.passingYear.toString()
-//                                var endpost_substring = endpostgrad.substring(0, 3)
+                                var endpost_substring = endpostgrad.substring(0, 3)
                                 var endpostgraadapter =
-                                    ENDDateAdapter.getPosition(endpostgrad)
+                                    ENDDateAdapter.getPosition(endpost_substring)
                                 binding.endPostgrad.setSelection(endpostgraadapter)
                             }
                         }
@@ -617,6 +625,7 @@ pgSpecList.clear()
         }
         else{
             var te=binding.tweEndYr.selectedItem.toString()
+            Log.i("endyr",te)
             Twe_ENDYEAR=te.toInt()
         }
         if (binding.startGrad.selectedItem=="Select Start year"){
@@ -640,13 +649,13 @@ pgSpecList.clear()
             var pgs=binding.startPostgrad.selectedItem.toString()
             PostGradPassingYear=pgs.toInt()
         }
-        if (binding.endPostgrad.selectedItem=="Select completion year"){
-            PostGradPassingYear=0
-        }
-        else{
-            var pge=binding.endPostgrad.selectedItem.toString()
-            PostGradPassingYear=pge.toInt()
-        }
+//        if (binding.endPostgrad.selectedItem=="Select completion year"){
+//            PostGradPassingYear=0
+//        }
+//        else{
+//            var pge=binding.endPostgrad.selectedItem.toString()
+//            PostGradPassingYear=pge.toInt()
+//        }
         var id = yo
         var professionalDetails = object {
             var educationDetails = object {
@@ -685,9 +694,7 @@ pgSpecList.clear()
                     var university = binding.tiPostgradUni!!.text.toString()
                     var degree = binding.tiPostgradDeg!!.selectedItem.toString()
                     var percentage = binding.cgpaPostgrad!!.text.toString()
-//                    var startYear = binding.startPostgrad!!.text.toString()
                     var startYear =PostGradStartYear
-//                    var passingYear = binding.endPostgrad!!.text.toString()
                     var passingYear = PostGradPassingYear
                     var specialization = binding.specPostgrad!!.text.toString()
                 }
@@ -697,7 +704,7 @@ pgSpecList.clear()
         viewModel.UpdateEducationDetail(this, RequestParams, binding.progress).observe(this, {
 //            Log.i("Educaaa", it.message)
             Toast.makeText(this,it.message,Toast.LENGTH_SHORT).show()
-            onBackPressed()
+//            onBackPressed()
         })
     }
 }

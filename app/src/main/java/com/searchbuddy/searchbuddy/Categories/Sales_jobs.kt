@@ -1,9 +1,11 @@
 package com.searchbuddy.searchbuddy.Categories
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.icu.text.Transliterator
 import android.os.Bundle
+import android.speech.SpeechRecognizer
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
@@ -24,7 +26,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.searchbuddy.R
 import com.bumptech.searchbuddy.databinding.FragmentSalesJobsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.rm.rmswitch.RMSwitch.RMSwitchObserver
 import com.searchbuddy.searchbuddy.Adapter.FieldSalesAdapter
 import com.searchbuddy.searchbuddy.Adapter.PremiumJobsAdapter
 import com.searchbuddy.searchbuddy.Dashboard.Dashboard
@@ -68,14 +69,17 @@ class Sales_jobs : Fragment() {
     var sal_from_int: Int = 0
     var sal_to_int: Int = 0
     lateinit var functionList:ArrayList<String>
-    lateinit var company:Array<String>
+//    lateinit var company:Array<String>
     lateinit var keyword:Array<String>
     lateinit var function_name:String
      var company_name:String=""
      var level:Int=0
      lateinit var level_string:Array<Int>
     var isPremium:Boolean=true
-
+    private lateinit var speech: SpeechRecognizer
+    private lateinit var recognizerIntent: Intent
+    private lateinit var searchText: String
+    private  var isSearched: Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         LocalSessionManager.removeValue(Constant.SalarySliderStartValue,requireContext())
@@ -85,21 +89,23 @@ class Sales_jobs : Fragment() {
 
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSalesJobsBinding.inflate(inflater, container, false)
-        header = (activity as Dashboard)!!.findViewById(R.id.header)
+        header = (activity as Dashboard)!!.findViewById(com.bumptech.searchbuddy.R.id.header)
         header.visibility = View.GONE
-        bottomNavView = (activity as Dashboard)!!.findViewById(R.id.nav_view)
+        bottomNavView = (activity as Dashboard)!!.findViewById(com.bumptech.searchbuddy.R.id.nav_view)
         bottomNavView.visibility = View.VISIBLE
         newArrayList = arrayListOf<Transliterator.Position>()
         activitySalesViewModel = ViewModelProvider(this).get(SalesJobsViewModel::class.java)
         layoutManager = LinearLayoutManager(requireContext())
         val nav: Menu = bottomNavView.menu
 
-        var home=nav.findItem(R.id.navigation_home)
+        var home=nav.findItem(com.bumptech.searchbuddy.R.id.navigation_home)
         home.setOnMenuItemClickListener(object : MenuItem.OnMenuItemClickListener {
             override fun onMenuItemClick(item: MenuItem): Boolean {
 
@@ -108,16 +114,25 @@ class Sales_jobs : Fragment() {
                 return true
             }
         })
-        binding.chip3.visibility=View.GONE
-        binding.chip2.visibility=View.GONE
-        binding.chip5.visibility=View.GONE
+
+//        binding.chip3.visibility=View.GONE
+//        binding.chip2.visibility=View.GONE
+//        binding.chip5.visibility=View.GONE
 //        binding.chip6.visibility=View.VISIBLE
-        binding.yourId.isChecked=true
+//        binding.yourId.isChecked=true
+        binding.shimmerView.setVisibility(View.VISIBLE);
+        binding.shimmerView.startShimmer();
+
         keyword= arrayOf<String>()
+        searchText=""
         if (arguments!=null) {
-            var searchText = requireArguments().getString("Search","")
+             searchText = requireArguments().getString("Search","")
+             isSearched = requireArguments().getBoolean("isSearched")
             binding.searchBar.setQuery(searchText,true)
-            keyword= arrayOf(searchText)
+//            var p=searchText
+//            Log.i("gora",p.toString())
+//            Log.i("kala", keyword.toString())
+
         }
 
         FieldJobRecycler = binding.fieldSaleRecycler
@@ -130,7 +145,9 @@ class Sales_jobs : Fragment() {
         activitySalesViewModel.errorMessage()?.observe(requireActivity(), {
             showToast(it.toString())
         })
+
         field_sale_list = arrayListOf<FieldSalesModel>()
+        binding.jobLength.visibility=View.VISIBLE
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
@@ -163,73 +180,72 @@ class Sales_jobs : Fragment() {
             }
         })
 
-        if (isPremium==false){
             requestData(binding.progress)
 
-        }
-        else if (isPremium==true){
-            requestPreData(binding.progress)
-        }
-        binding.jobLength.visibility=View.VISIBLE
-        binding.yourId.addSwitchObserver(RMSwitchObserver { switchView, isChecked ->
-            if (isChecked==false){
-                isPremium=false
-                requestData(binding.progress)
-                binding.fieldSaleRecycler.visibility=View.VISIBLE
-                binding.premiumJobRecyler.visibility=View.GONE
-                binding.chip3.visibility=View.VISIBLE
-                binding.chip5.visibility=View.VISIBLE
-                binding.chip2.visibility=View.VISIBLE
-                binding.chip6.visibility=View.GONE
 
 
-            }
-            else{
-                isPremium=true
-                requestPreData(binding.progress)
-                binding.fieldSaleRecycler.visibility=View.GONE
-                binding.premiumJobRecyler.visibility=View.VISIBLE
-                binding.chip3.visibility=View.GONE
-                binding.chip5.visibility=View.GONE
-                binding.chip2.visibility=View.GONE
-//                binding.chip6.visibility=View.VISIBLE
-
-            }
-        })
+//        else if (isPremium==true){
+//            requestPreData(binding.progress)
+//        }
+//        binding.yourId.addSwitchObserver(RMSwitchObserver { switchView, isChecked ->
+//            if (isChecked==false){
+//                isPremium=false
+//                requestData(binding.progress)
+//                binding.fieldSaleRecycler.visibility=View.VISIBLE
+//                binding.premiumJobRecyler.visibility=View.GONE
+//                binding.chip3.visibility=View.VISIBLE
+//                binding.chip5.visibility=View.VISIBLE
+//                binding.chip2.visibility=View.VISIBLE
+//                binding.chip6.visibility=View.GONE
+//
+//
+//            }
+//            else{
+//                isPremium=true
+////                requestPreData(binding.progress)
+//                binding.fieldSaleRecycler.visibility=View.GONE
+//                binding.premiumJobRecyler.visibility=View.VISIBLE
+//                binding.chip3.visibility=View.GONE
+//                binding.chip5.visibility=View.GONE
+//                binding.chip2.visibility=View.GONE
+////                binding.chip6.visibility=View.VISIBLE
+//
+//            }
+//        })
         binding.filters.setOnClickListener {
             var bundle:Bundle= Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip1.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip2.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip3.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip4.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip5.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.chip6.setOnClickListener {
             var bundle:Bundle=Bundle()
             bundle.putBoolean("isPremium",isPremium)
-            Navigation.findNavController(it).navigate(R.id.action_nav_sales_to_filter,bundle)
+            Navigation.findNavController(it).navigate(com.bumptech.searchbuddy.R.id.action_nav_sales_to_filter,bundle)
         }
         binding.backBtn.setOnClickListener {
             activity?.onBackPressed()
@@ -279,16 +295,22 @@ class Sales_jobs : Fragment() {
             var pagesize: Int = 200
 
         }
-        if (arguments != null){
-            company_name=requireArguments().getString("company").toString()
+if (arguments!=null){
+    isSearched=requireArguments().getBoolean("isSearched")
+}
+        if (isSearched==true){
+            keyword= arrayOf(searchText)
         }
 
-        if (company_name==""){
-            company= arrayOf()
-        }
+        else if (arguments != null) {
+            company_name = requireArguments().getString("company").toString()
 
-        else {
-            company = arrayOf(company_name)
+
+            if (company_name == "") {
+                keyword = arrayOf()
+            } else {
+                keyword = arrayOf(company_name)
+            }
         }
         exp_from = LocalSessionManager.getStringValue(
             Constant.SliderStartValue.toString(),
@@ -316,19 +338,19 @@ class Sales_jobs : Fragment() {
 
 if (exp_from=="0"){
     binding.chip2.chipBackgroundColor=
-        ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
+        ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
 }
         if (exp_to=="0"){
             binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
+                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
         }
         if (salary_from=="0"){
             binding.chip3.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
+                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
         }
         if (salary_to=="0"){
             binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
+                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
         }
 
         if (exp_from != "") {
@@ -336,8 +358,8 @@ if (exp_from=="0"){
         }
       if (exp_from_int>0){
           binding.chip2.chipBackgroundColor=
-              ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-          binding.chip2.setTextColor(resources.getColor(R.color.white))
+              ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
+          binding.chip2.setTextColor(resources.getColor(com.bumptech.searchbuddy.R.color.white))
 
       }
         if (exp_to != "") {
@@ -345,19 +367,19 @@ if (exp_from=="0"){
         }
         if (exp_from_int>0&&exp_to_int<=30){
             binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip2.setTextColor(resources.getColor(R.color.white))
+                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
+            binding.chip2.setTextColor(resources.getColor(com.bumptech.searchbuddy.R.color.white))
         }
         else if (exp_to_int==30&&exp_from_int==0){
-            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
+            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
         }
         if (salary_from != "") {
             sal_from_int = salary_from.toInt()
         }
         if (sal_from_int>0){
             binding.chip3.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip3.setTextColor(resources.getColor(R.color.white))
+                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
+            binding.chip3.setTextColor(resources.getColor(com.bumptech.searchbuddy.R.color.white))
 
         }
         if (salary_to != "") {
@@ -422,7 +444,6 @@ if (exp_from=="0"){
             LocationList,
             date_posted,
         functionList,
-            company,
             keyword,
 //            level_string
 
@@ -437,8 +458,6 @@ if (exp_from=="0"){
                 Log.i("kkkkkkk", it.toString())
                 checkIfFragmentAttached {
                     if (it.positions == null) {
-//                    binding.txtNoData.visibility=View.VISIBLE
-//                        Toast.makeText(requireContext(), "No Positions Found", Toast.LENGTH_SHORT).show()
                         binding.jobLength.setText(it.length.toString() + " results found")
                         binding.idPBLoading.visibility=View.GONE
                         binding.txtNoData.visibility=View.VISIBLE
@@ -455,7 +474,8 @@ if (exp_from=="0"){
                         binding.txtNoData.visibility=View.GONE
                         binding.imgNodata.visibility=View.GONE
                         binding.fieldSaleRecycler.visibility=View.VISIBLE
-
+                        binding.shimmerView.setVisibility(View.GONE);
+                        binding.shimmerView.stopShimmer();
                         if (temp > 3) {
                             binding.idPBLoading.visibility = View.GONE
 
@@ -491,194 +511,5 @@ if (exp_from=="0"){
         })
 //        (binding.progress)
     }
-    private fun requestPreData(progress: ProgressBar) {
-        var condition = object {
-            var index: Int = temp
-            var pagesize: Int = 200
 
-        }
-        if (arguments != null){
-            company_name=requireArguments().getString("company").toString()
-        }
-
-        if (company_name==""){
-            company= arrayOf()
-        }
-
-        else {
-            company = arrayOf(company_name)
-        }
-        exp_from = LocalSessionManager.getStringValue(
-            Constant.SliderStartValue.toString(),
-            "",
-            requireContext()
-        ).toString()
-
-        exp_to = LocalSessionManager.getStringValue(
-            Constant.SliderEndValue.toString(),
-            "",
-            requireContext()
-        ).toString()
-level= LocalSessionManager.getIntValue(Constant.DatePosted,0,requireContext())!!
-        if (level!=null){
-            level_string= arrayOf(level)
-        }
-
-        salary_from = LocalSessionManager.getStringValue(
-            Constant.SalarySliderStartValue.toString(),
-            "",
-            requireContext()
-        ).toString()
-
-        salary_to = LocalSessionManager.getStringValue(
-            Constant.SalarySliderEndValue.toString(),
-            "",
-            requireContext()
-        ).toString()
-
-        if (exp_from=="0"){
-            binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-        if (exp_to=="0"){
-            binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-        if (salary_from=="0"){
-            binding.chip3.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-        if (salary_to=="0"){
-            binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-
-        if (exp_from != "") {
-            exp_from_int = exp_from.toInt()
-        }
-        if (exp_from_int>0){
-            binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip2.setTextColor(resources.getColor(R.color.white))
-
-        }
-        if (exp_to != "") {
-            exp_to_int = exp_to.toInt()
-        }
-        if (exp_from_int>0&&exp_to_int<=30){
-            binding.chip2.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip2.setTextColor(resources.getColor(R.color.white))
-        }
-        else if (exp_to_int==30&&exp_from_int==0){
-            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-        if (salary_from != "") {
-            sal_from_int = salary_from.toInt()
-        }
-        if (sal_from_int>0){
-            binding.chip3.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip3.setTextColor(resources.getColor(R.color.white))
-
-        }
-        if (salary_to != "") {
-            sal_to_int = salary_to.toInt()
-        }
-        if (sal_from_int>0&&sal_to_int<=30){
-            binding.chip3.chipBackgroundColor=
-                ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip3.setTextColor(resources.getColor(R.color.white))
-
-        }
-        else if (sal_to_int==30&&sal_from_int==0){
-            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }
-        var location=LocalSessionManager.getStringValue(Constant.FilterLocation,"",requireContext())
-        Log.i("xxxx",location.toString())
-        LocationList=ArrayList()
-        if (location==""){
-            LocationList.remove(location)
-            binding.chip4.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-        }else {
-            LocationList.add(location.toString())
-            binding.chip4.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip4.setTextColor(resources.getColor(R.color.white))
-
-
-        }
-        function_name= LocalSessionManager.getStringValue("cat_name","",requireContext())!!
-        functionList= ArrayList()
-        if (function_name==""){
-            functionList.remove(function_name)
-        }
-        else{
-            functionList.add(function_name)
-        }
-
-        date_posted= LocalSessionManager.getStringValue(Constant.DatePosted,"",requireContext()).toString()
-        Log.i("cccc",date_posted)
-        if (date_posted==""){
-//            Log.i("pppp",date_post)
-
-            binding.chip5.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-
-        }
-        else if (date_posted=="All Jobs"){
-            binding.chip5.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
-
-        }
-        else {
-//            date_post = date_posted
-            binding.chip5.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
-            binding.chip5.setTextColor(resources.getColor(R.color.white))
-
-
-        }
-        var RequestParams = JobRequestModel(
-            condition,
-            exp_from_int,
-            exp_to_int,
-            sal_from_int * 100000,
-            sal_to_int * 100000,
-            LocationList,
-            date_posted,
-            functionList,
-            company,
-            keyword,
-//            level_string
-
-        )
-
-        activitySalesViewModel.requestPremiumJobs(requireContext(), RequestParams, progress)
-            .observe(requireActivity(), {
-                Log.i("kkkkkkk", it.toString())
-
-                if (it.positions == null) {
-                    binding.jobLength.setText(it.length.toString() + " results found")
-                    binding.idPBLoading.visibility= View.GONE
-                    binding.txtNoData.visibility= View.VISIBLE
-                    binding.imgNodata.visibility= View.VISIBLE
-                    binding.premiumJobRecyler.visibility= View.GONE
-                } else if (it.positions != null) {
-                    binding.jobLength.setText(it.length.toString() + " results found")
-                    if (it.length<10){
-                        binding.idPBLoading.visibility= View.GONE
-                    }
-                    Preposition_list = (it.positions as ArrayList<PrePosition>)
-                    preadapter = PremiumJobsAdapter(Preposition_list,requireContext(),{index->saveJobs(index)},{index->deleteJobs(index)})
-                    PremiumJobRecycler.adapter = preadapter
-                    binding.txtNoData.visibility= View.GONE
-                    binding.imgNodata.visibility= View.GONE
-                    binding.premiumJobRecyler.visibility= View.VISIBLE
-
-                    if (temp > 3) {
-                        binding.idPBLoading.visibility = View.GONE
-
-                    }
-                }
-
-            })
-
-    }
 }

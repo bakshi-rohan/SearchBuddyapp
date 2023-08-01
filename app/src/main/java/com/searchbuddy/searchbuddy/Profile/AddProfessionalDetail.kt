@@ -383,7 +383,7 @@ class AddProfessionalDetail : AppCompatActivity() {
             if (it.startDate != null) {
                 var startDate = it.startDate
 //                Log.i("Date",startDate)
-                var OutputStartDate=startDate.substring(0,8)
+                var OutputStartDate=startDate.substring(0,9)
                 binding.etDateWork.setText(OutputStartDate)
             }
 

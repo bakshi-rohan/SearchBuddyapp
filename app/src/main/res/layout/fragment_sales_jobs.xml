@@ -13,8 +13,6 @@
         android:orientation="vertical"
       >
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +40,6 @@
                 android:imeOptions="actionSearch"
                 app:queryHint="Job title,Companies"
                 app:searchIcon="@drawable/ic_baseline_search_24">
-
             </androidx.appcompat.widget.SearchView>
         </LinearLayout>
 
@@ -173,6 +170,7 @@
         app:forceAspectRatio="false"
         app:enabled="true"
         app:switchDesign="slim"
+        android:visibility="gone"
         android:layout_marginTop="12dp"
         app:switchBkgCheckedColor="@color/teal_200"
         app:switchBkgNotCheckedColor="@color/teal_200"
@@ -185,6 +183,7 @@
         android:text="Premium Jobs"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:visibility="gone"
         android:fontFamily="@font/seoge_bold_two"
         android:textSize="15sp"></TextView>
 </LinearLayout>
@@ -223,6 +222,37 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/sales_recyler_shimmer"/>
+
+                <include
+                    layout="@layout/sales_recyler_shimmer"/>
+
+                <include
+                    layout="@layout/sales_recyler_shimmer"/>
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+                <!--                    <include-->
+                <!--                        layout="@layout/place_holder_layout"/>-->
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/field_sale_recycler"
             android:layout_width="match_parent"

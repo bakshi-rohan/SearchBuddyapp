@@ -25,7 +25,6 @@ import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -597,29 +596,17 @@ userIdInt=userId.toInt()
                                 LocalSessionManager.saveValue("pdf_name", cv_sub, requireContext())
                             }
                         }
-                        if (it.userDTO.profilePicName!=null){
-                            val executor = Executors.newSingleThreadExecutor()
-                            var image: Bitmap? = null
-                            val handler = Handler(Looper.getMainLooper())
-                            executor.execute {
-                                val imageUrl =
-                                    "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
-                                try {
-                                    val `in` = java.net.URL(imageUrl).openStream()
-                                    image = BitmapFactory.decodeStream(`in`)
-                                    if (image != null) {
+                        checkIfFragmentAttached {
+                            if (it.userDTO.profilePicName != null) {
+                                val executor = Executors.newSingleThreadExecutor()
+                                var image: Bitmap? = null
+                                val handler = Handler(Looper.getMainLooper())
+                                var uri =
+                                    Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName)
+                                Glide.with(requireContext()).load(uri).into(binding.imProfilePic)
 
-                                        handler.post {
-                                            binding.imProfilePic.setImageBitmap(image)
-//                                            binding.dp.setImageBitmap(image)
-                                        }
-                                    }
-                                }
-                                catch (e: Exception) {
-                                    e.printStackTrace()
-                                }
+
                             }
-
                         }
                     }
                 }
@@ -871,17 +858,17 @@ userIdInt=userId.toInt()
         }
     }
 
-    fun createDocFileFromUri(context: Context, uri: Uri, fileName: String): File? {
-        return try {
-            val stream = context.contentResolver.openInputStream(uri)
-            val file = File.createTempFile(fileName, ".doc", context.cacheDir)
-            org.apache.commons.io.FileUtils.copyInputStreamToFile(stream, file)
-            file
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
-    }
+//    fun createDocFileFromUri(context: Context, uri: Uri, fileName: String): File? {
+//        return try {
+//            val stream = context.contentResolver.openInputStream(uri)
+//            val file = File.createTempFile(fileName, ".doc", context.cacheDir)
+//            org.apache.commons.io.FileUtils.copyInputStreamToFile(stream, file)
+//            file
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//            null
+//        }
+//    }
 
     fun createTmpFileFromUri(context: Context, uri: Uri, fileName: String): File? {
         return try {
@@ -967,21 +954,7 @@ userIdInt=userId.toInt()
         startActivityForResult(cameraIntent, REQUEST_CODE)
     }
 
-    private fun refreshFragment(context: Context) {
-        context.let {
-            val fragmentManager = (context as? AppCompatActivity)?.supportFragmentManager
-            fragmentManager?.let {
-                val currentFragment =
-                    fragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main)
-                currentFragment.let {
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    fragmentTransaction.detach(it!!)
-                    fragmentTransaction.attach(it)
-                    fragmentTransaction.commit()
-                }
-            }
-        }
-    }
+
 
     private fun UploadResume() {
         UserID =

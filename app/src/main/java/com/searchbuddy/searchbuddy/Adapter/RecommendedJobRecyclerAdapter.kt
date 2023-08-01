@@ -1,7 +1,8 @@
 package com.searchbuddy.searchbuddy.Adapter
 
+import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,11 +15,13 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.auth0.android.jwt.JWT
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.searchbuddy.searchbuddy.model.RecommendedJob
 import java.util.concurrent.Executors
 
-class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, val onClickSave:(Int)->Unit, val onClickDelete:(Int)->Unit) :
+class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, var context: Context,
+                                    val onClickSave:(Int)->Unit, val onClickDelete:(Int)->Unit) :
     RecyclerView.Adapter<RecommendedJobRecyclerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view
@@ -45,27 +48,29 @@ class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, val
             val executor = Executors.newSingleThreadExecutor()
             var image: Bitmap? = null
             val handler = Handler(Looper.getMainLooper())
-            executor.execute {
-                val imageUrl =
-                    "https://www.searchbuddy.in/api/get-picture/organisation/" + picname
-                try {
-                    val `in` = java.net.URL(imageUrl).openStream()
-                    image = BitmapFactory.decodeStream(`in`)
-                    if (image != null) {
-
-                        handler.post {
-                            holder.company_image.setImageBitmap(image)
-                        }
-                    }
-                    else{
-                        handler.post{
-                            holder.company_image.setImageResource(R.drawable.city)
-                        }
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
+            var uri= Uri.parse(  "https://www.searchbuddy.in/api/get-picture/organisation/" + picname)
+            Glide.with(context).load(uri).error(R.drawable.city).into(holder.company_image);
+//            executor.execute {
+//                val imageUrl =
+//                    "https://www.searchbuddy.in/api/get-picture/organisation/" + picname
+//                try {
+//                    val `in` = java.net.URL(imageUrl).openStream()
+//                    image = BitmapFactory.decodeStream(`in`)
+//                    if (image != null) {
+//
+//                        handler.post {
+//                            holder.company_image.setImageBitmap(image)
+//                        }
+//                    }
+//                    else{
+//                        handler.post{
+//                            holder.company_image.setImageResource(R.drawable.city)
+//                        }
+//                    }
+//                } catch (e: Exception) {
+//                    e.printStackTrace()
+//                }
+//            }
         }
         holder.save.setOnClickListener {
             val token =
@@ -120,7 +125,7 @@ class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, val
          var exp_from =  ItemsViewModel.expFrm.toString()+"-"
         var exp_to=ItemsViewModel.expTo.toString()
         var plus=exp_from+exp_to
-        holder.experience.text = plus+ " years"
+        holder.experience.text = plus+ " Yr"
 
     }
 

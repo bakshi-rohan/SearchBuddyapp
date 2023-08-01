@@ -85,12 +85,13 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/notification_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_marginEnd="16dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/notification_bell" />
 
 <!--        <com.google.android.material.imageview.ShapeableImageView-->

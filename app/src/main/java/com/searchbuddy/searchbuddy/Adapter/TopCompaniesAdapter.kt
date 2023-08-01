@@ -1,7 +1,8 @@
 package com.searchbuddy.searchbuddy.Adapter
 
+import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -12,11 +13,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
 import com.searchbuddy.searchbuddy.model.TopcomapniesResponseItem
 import java.util.concurrent.Executors
 
-class TopCompaniesAdapter(private val mList: List<TopcomapniesResponseItem>) :
+class TopCompaniesAdapter(private val mList: List<TopcomapniesResponseItem>,private var context:Context) :
     RecyclerView.Adapter<TopCompaniesAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view
@@ -42,26 +44,28 @@ class TopCompaniesAdapter(private val mList: List<TopcomapniesResponseItem>) :
             val executor = Executors.newSingleThreadExecutor()
             var image: Bitmap? = null
             val handler = Handler(Looper.getMainLooper())
-            executor.execute {
-                val imageUrl =
-                    "https://www.searchbuddy.in/api/get-picture/organisation/" + picname
-                try {
-                    val `in` = java.net.URL(imageUrl).openStream()
-                    image = BitmapFactory.decodeStream(`in`)
-                    if (image != null) {
-
-                        handler.post {
-                            holder.company_image.setImageBitmap(image)
-                        }
-                    }
-//                    else
-//                        handler.post{
-//                            holder.company_image.setImageResource(R.drawable.building)
+            var uri= Uri.parse( "https://www.searchbuddy.in/api/get-picture/organisation/" + picname)
+            Glide.with(context).load(uri).placeholder(R.drawable.city).into(holder.company_image)
+//            executor.execute {
+//                val imageUrl =
+//                    "https://www.searchbuddy.in/api/get-picture/organisation/" + picname
+//                try {
+//                    val `in` = java.net.URL(imageUrl).openStream()
+//                    image = BitmapFactory.decodeStream(`in`)
+//                    if (image != null) {
+//
+//                        handler.post {
+//                            holder.company_image.setImageBitmap(image)
 //                        }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
+//                    }
+////                    else
+////                        handler.post{
+////                            holder.company_image.setImageResource(R.drawable.building)
+////                        }
+//                } catch (e: Exception) {
+//                    e.printStackTrace()
+//                }
+//            }
         }
         // sets the image to the imageview from our itemHolder class
 //        holder.company_image.setImageResource(ItemsViewModel)

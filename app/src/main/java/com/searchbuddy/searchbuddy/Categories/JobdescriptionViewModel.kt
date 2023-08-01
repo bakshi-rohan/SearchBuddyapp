@@ -31,14 +31,73 @@ class JobdescriptionViewModel : ViewModel() {
         position_id: Int,
         progress: ProgressBar
     ): MutableLiveData<JobdescriptionResponse> {
-        progress.visibility = View.VISIBLE
+        progress.visibility = View.GONE
         val token = LocalSessionManager.getStringValue(Constant.TOKEN, "", context)
 
         try {
-            progress.visibility = View.VISIBLE
+            progress.visibility = View.GONE
             CoroutineScope(Dispatchers.IO).launch {
                 val apiService = ApiClient.apiClient().create(ApiClient.ApiInterface::class.java)
                 apiService.getLoggedJobdescription("Bearer " + token.toString(),position_id)
+                    .enqueue(object : Callback<JobdescriptionResponse> {
+                        override fun onFailure(call: Call<JobdescriptionResponse>, t: Throwable) {
+                            progress.visibility = View.GONE
+                            Log.i("hellooo", call.toString())
+                            Log.i("hellooo", t.toString())
+
+                            Toast.makeText(
+                                context,
+                                t.message,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                        override fun onResponse(
+                            call: Call<JobdescriptionResponse>,
+                            response: Response<JobdescriptionResponse>
+                        ) {
+                            progress.visibility = View.GONE
+
+                            if (response.code() == 200) {
+
+                                loginResponse.value = response.body()
+                            } else {
+                                Log.i("hellooo", response.errorBody().toString())
+                                val error = Gson().fromJson(
+                                    response.errorBody()!!.charStream(),
+                                    ErrorModel::class.java
+                                )
+                                errorResponse.value = error.message
+
+                                errorMessage()
+                            }
+
+                        }
+                    })
+
+
+            }
+        } catch (e: Exception) {
+            progress.visibility = View.GONE
+
+        }
+
+        return loginResponse
+    }
+
+    fun requestNotLoggedJobs(
+        context: Context,
+        position_id: Int,
+        progress: ProgressBar
+    ): MutableLiveData<JobdescriptionResponse> {
+        progress.visibility = View.GONE
+        val token = LocalSessionManager.getStringValue(Constant.TOKEN, "", context)
+
+        try {
+            progress.visibility = View.GONE
+            CoroutineScope(Dispatchers.IO).launch {
+                val apiService = ApiClient.apiClient().create(ApiClient.ApiInterface::class.java)
+                apiService.getJobdescription(position_id)
                     .enqueue(object : Callback<JobdescriptionResponse> {
                         override fun onFailure(call: Call<JobdescriptionResponse>, t: Throwable) {
                             progress.visibility = View.GONE

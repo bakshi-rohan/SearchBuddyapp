@@ -35,11 +35,11 @@ class AppliedJobsViewModel : ViewModel() {
         index:Int,
         progress: ProgressBar
     ): MutableLiveData<AppliedJobsModel> {
-        progress.visibility = View.VISIBLE
+        progress.visibility = View.GONE
         val token = LocalSessionManager.getStringValue(Constant.TOKEN, "", context)
 
         try {
-            progress.visibility = View.VISIBLE
+            progress.visibility = View.GONE
             CoroutineScope(Dispatchers.IO).launch {
                 val apiService = ApiClient.apiClient().create(ApiClient.ApiInterface::class.java)
                 apiService.requestAppliedJobs("Bearer " + token.toString(),userId,pagesize,index)

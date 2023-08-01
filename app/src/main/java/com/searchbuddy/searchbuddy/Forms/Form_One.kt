@@ -237,9 +237,8 @@ class Form_One : AppCompatActivity() {
 
 
         binding.btnSbmtFormone.setOnClickListener {
-//            Toast.makeText(this,"Hello",Toast.LENGTH_SHORT).show()
-//var intent=Intent(this,Signup_Education_Details::class.java)
-//            startActivity(intent)
+
+
             createProfile()
 
         }

@@ -46,19 +46,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="9dp"
                     android:fontFamily="@font/seoge_bold_two"
-                    android:text="Graphic Designer"
+                    android:text=""
+                    android:layout_marginTop="14dp"
                     android:textSize="17sp"
                     android:textColor="#30475E">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/company_name_field"
+                    android:id="@+id/company_name_field_apply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="9dp"
                     android:paddingTop="1dp"
-                    android:text="XYZ technologies"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="12sp">
                 </TextView>
@@ -113,36 +114,39 @@
                 android:layout_height="13dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
+                android:visibility="gone"
                 android:layout_marginTop="1dp"
                 android:src="@drawable/rupee"></ImageView>
 
             <TextView
-                android:id="@+id/salary_field"
+                android:id="@+id/salary_field_apply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/seogee_ui"
-                android:text="6-8 Lpa"
+                android:visibility="gone"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="13sp">
 
             </TextView>
 
             <ImageView
+                android:id="@+id/loc_icon"
                 android:layout_width="16dp"
                 android:layout_height="13dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginHorizontal="4dp"
                 android:src="@drawable/location_ico"></ImageView>
 
             <TextView
-                android:id="@+id/location_field"
+                android:id="@+id/location_field_apply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/seogee_ui"
-                android:text="Delhi"
+                android:text=""
                 android:layout_marginStart="3dp"
                 android:textColor="@color/black"
                 android:textSize="13sp">
