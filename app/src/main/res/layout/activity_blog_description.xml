@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nested_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.searchbuddy.searchbuddy.BlogDescription">
+
+
+  <ImageView
+      android:id="@+id/blog_image"
+      android:layout_width="match_parent"
+      android:layout_height="280dp"
+      android:layout_marginTop="-9dp"
+      android:src="@drawable/blog_one"></ImageView>
+    <TextView
+        android:id="@+id/blog_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:fontFamily="@font/seogee_ui"
+        android:textColor="@color/black"
+        android:text="hello"></TextView>
+</LinearLayout>
+</ScrollView>

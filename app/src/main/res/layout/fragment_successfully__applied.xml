@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/sbs_logo"
+                    ></ImageView>
+            </LinearLayout>
+
+
+
+
+            <!--To be Implemented-->
+            <ImageView
+                android:id="@+id/iv_applied"
+                android:layout_width="94dp"
+                android:layout_height="94dp"
+                android:src="@drawable/applied_success"
+                app:layout_constraintBottom_toBottomOf="@id/ll_a"
+                android:layout_marginTop="154dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toStartOf="parent">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your application is sucessfully sent"
+                android:textSize="14sp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/iv_applied"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toStartOf="parent">
+            </TextView>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/login_btn_border"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:backgroundTint="#936030">
+
+            </com.google.android.material.button.MaterialButton>
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/btn_login_otp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Login with OTP"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/choclate"
+                android:textSize="18dp"
+                app:backgroundTint="#FFFFFF">
+
+            </com.google.android.material.button.MaterialButton>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/black"
+                android:layout_marginHorizontal="36dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

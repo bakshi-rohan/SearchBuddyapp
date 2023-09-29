@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/field_job_shadow"
+        android:minWidth="195dp"
+        android:minHeight="90dp"
+        android:elevation="28dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/company_image_field"
+                android:layout_width="58dp"
+                android:layout_height="52dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/city"
+                >
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/job_name_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="9dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Graphic Designer"
+                    android:textSize="17sp"
+                    android:textColor="#30475E">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/company_name_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:paddingTop="1dp"
+                    android:text="XYZ technologies"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Graphic Designer"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:textColor="@color/app_grey">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/lvl_img"
+                            android:layout_width="16dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/lvl"></ImageView>
+
+                        <TextView
+                            android:id="@+id/lvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/seogee_ui"
+                            android:text=""
+                            android:layout_marginTop="1dp"
+                            android:layout_marginHorizontal="4dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp">
+
+                        </TextView>
+
+            <ImageView
+                android:id="@+id/rupee"
+                android:layout_width="16dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/rupee"></ImageView>
+
+            <TextView
+                android:id="@+id/salary_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogee_ui"
+                android:text="6-8 Lpa"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="13sp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginHorizontal="4dp"
+                android:src="@drawable/location_ico"></ImageView>
+
+            <TextView
+                android:id="@+id/location_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Delhi"
+                android:layout_marginStart="3dp"
+                android:textColor="@color/black"
+                android:textSize="13sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="Status:"
+                android:layout_marginStart="9dp"></TextView>
+
+            <TextView
+                android:id="@+id/status_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_grey"
+                android:textSize="10sp"
+                android:text="Status:"
+                android:layout_marginStart="4dp"></TextView>
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:id="@+id/your_state_progress_bar_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spb_currentStateNumber="one"
+                app:spb_maxStateNumber="four"
+                app:spb_descriptionTopSpaceIncrementer="6dp"
+                app:spb_stateDescriptionSize="9.5sp"
+                android:visibility="gone"
+                app:spb_stateBackgroundColor="#f7f5f5"
+                app:spb_stateSize="27dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                app:spb_stateForegroundColor="#009688"
+                app:spb_stateNumberBackgroundColor="#808080"
+                app:spb_stateNumberForegroundColor="#eeeeee"
+                app:spb_currentStateDescriptionColor="#009688"
+                app:spb_stateDescriptionColor="#808080"
+                app:spb_animateToCurrentProgressState="true"
+                app:spb_checkStateCompleted="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0.4dp"-->
+        <!--            android:background="@color/black"-->
+
+
+    </LinearLayout>
+</RelativeLayout>

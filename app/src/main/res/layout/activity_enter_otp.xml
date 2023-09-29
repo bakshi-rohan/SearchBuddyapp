@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/login_bg">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/sbs_logo">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="29.5dp"
+                android:layout_marginTop="148dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Enter OTP"
+                    android:textColor="@color/choclate"
+                    android:textSize="22sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Enter OTP"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+                    <com.chaos.view.PinView
+                        android:id="@+id/pin_view"
+                        style="@style/PinWidget.PinView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="24dp"
+                        android:cursorVisible="true"
+                        android:inputType="number"
+                        android:itemBackground="#65EAEAEA"
+                        android:visibility="visible"
+                        app:cursorColor="@color/black"
+                        app:hideLineWhenFilled="true"
+                        app:itemCount="6"
+                        app:itemHeight="50dp"
+                        app:itemRadius="8dp"
+                        app:itemWidth="50dp"
+                        app:lineWidth="1dp" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/timer"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/seogee_ui"-->
+<!--                android:text=""-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginStart="2dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:textColor="@color/choclate"-->
+<!--                android:textSize="17sp"></TextView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Didn't recived OTP?"
+                    android:layout_marginStart="29.5dp"
+                    android:textColor="#414141"
+                    android:textSize="17sp"></TextView>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Resend"
+                    android:layout_marginEnd="44dp"
+                    android:textColor="@color/choclate"
+                    android:textSize="17sp"></TextView>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/verify_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/login_btn_border"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Verify OTP"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:backgroundTint="#936030">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/sbs_logo"
+                    ></ImageView>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginLeft="95dp">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="11dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/magnifine"></ImageView>
+                    <TextView
+                        android:id="@+id/browse_jobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Browse Jobs"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:textColor="@color/choclate"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Sales job openings from the best companies"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/comp_three"
+                    android:layout_marginHorizontal="8dp"></ImageView>
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/mednet"
+                    android:layout_marginHorizontal="8dp"></ImageView>
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/fleetx"
+                    android:layout_marginHorizontal="8dp"></ImageView>
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/sab_paisa"
+                    android:layout_marginHorizontal="8dp"></ImageView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/hi"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seoge_bold_two"
+                        android:text="Get Started with your phone number"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="1.5dp"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Enter your mobile number below"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:textSize="13sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:hint="Mobile No."
+                app:boxStrokeColor="@color/choclate"
+                app:hintTextColor="#8A414141"
+                app:startIconDrawable="@drawable/mobile_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:digits="1234567890"
+                    android:textColor="#414141" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By clicking Continue, you agree to SearchBuddy Terms of Service and Privacy Policy"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/app_grey"
+                android:layout_marginHorizontal="3dp"></TextView>
+
+            <!--        <com.chaos.view.PinView-->
+            <!--            android:id="@+id/pin_view"-->
+            <!--            style="@style/PinWidget.PinView"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:layout_marginTop="15dp"-->
+            <!--            android:cursorVisible="true"-->
+            <!--            android:inputType="number"-->
+            <!--            android:itemBackground="#65EAEAEA"-->
+            <!--            android:visibility="visible"-->
+            <!--            app:cursorColor="@color/black"-->
+            <!--            app:hideLineWhenFilled="true"-->
+            <!--            app:itemCount="4"-->
+            <!--            app:itemHeight="50dp"-->
+            <!--            app:itemRadius="8dp"-->
+            <!--            app:itemWidth="50dp"-->
+            <!--            app:lineWidth="1dp" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/verify_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_btn_border"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:backgroundTint="#936030">
+
+            </com.google.android.material.button.MaterialButton>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/grey"
+                android:layout_marginHorizontal="36dp"
+                android:layout_marginTop="14dp"
+                android:visibility="visible"
+                android:layout_marginLeft="20dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_btn_border"
+                android:fontFamily="@font/seogee_ui"
+                android:text="Login with E-mail"
+                android:textAllCaps="false"
+                android:textColor="@color/choclate"
+                android:textSize="18dp"
+                app:backgroundTint="#ffffff">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/google_login"></ImageView>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/linkedin"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="8dp"></ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

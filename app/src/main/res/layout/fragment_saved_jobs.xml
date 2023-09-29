@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idNestedSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Categories.FieldSales">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Jobs"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/seoge_bold"></TextView>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar_"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15.6dp"
+            android:background="@drawable/search_bar"
+            android:layoutDirection="rtl"
+            app:defaultQueryHint="search"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@null"
+            android:imeOptions="actionSearch"
+            app:queryHint="Search Saved Jobs"
+            app:searchIcon="@drawable/ic_baseline_search_24">
+        </androidx.appcompat.widget.SearchView>
+        <ImageView
+            android:id="@+id/img_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            android:src="@drawable/nosavedjobs"></ImageView>
+        <TextView
+            android:id="@+id/txtNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/seogee_ui"
+            android:text="No saved jobs found"
+            android:textColor="@color/app_grey"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/applied_job_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

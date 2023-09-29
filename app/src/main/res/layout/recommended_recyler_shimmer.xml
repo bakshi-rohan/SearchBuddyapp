@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="245dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/recomm_jo_border"
+        android:minWidth="195dp"
+        android:minHeight="85dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/company_image"
+                android:layout_width="58dp"
+                android:layout_height="52dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="4dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/job_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text=""
+                    android:textColor="#30475E">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:paddingTop="1dp"
+                    android:text=""
+                    android:textColor="@color/app_grey"
+                    android:textSize="11sp"></TextView>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/save_job_button"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/bookmark"></ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="3dp"></ImageView>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text=""
+                android:maxLines="2"
+                android:layout_marginStart="3dp"
+                android:textColor="@color/black"
+                android:textSize="9sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"></ImageView>
+
+            <TextView
+                android:id="@+id/experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/seoge_bold_two"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="11sp"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
