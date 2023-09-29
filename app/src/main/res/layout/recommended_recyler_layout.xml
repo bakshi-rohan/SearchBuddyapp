@@ -6,12 +6,12 @@
 
     <LinearLayout
         android:layout_width="245dp"
-        android:layout_height="129dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/recomm_jo_border"
         android:minWidth="195dp"
-        android:minHeight="85dp"
+        android:minHeight="90dp"
         android:orientation="vertical"
         android:padding="5dp">
 
@@ -23,14 +23,13 @@
 
             <ImageView
                 android:id="@+id/company_image"
-                android:layout_width="58dp"
+                android:layout_width="50dp"
                 android:layout_height="52dp"
                 android:paddingBottom="6dp"
                 android:paddingTop="4dp"
                 android:scaleType="centerInside"
                 android:adjustViewBounds="true"
                 android:layout_weight="1"
-                android:layout_marginStart="3dp"
                 android:src="@drawable/jobs_two">
 
             </ImageView>
@@ -75,12 +74,16 @@
                 android:src="@drawable/bookmark"></ImageView>
 
         </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="4dp"
+    android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -93,7 +96,7 @@
 
             <TextView
                 android:id="@+id/location"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/seoge_bold_two"
@@ -107,9 +110,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -131,7 +134,18 @@
                 android:textColor="@color/black"
                 android:textSize="11sp"></TextView>
         </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="0 days ago"
+    android:layout_marginTop="2dp"
+    android:layout_marginStart="1dp"
+    android:textSize="7sp"
+    android:layout_marginBottom="7dp"
+    android:textColor="@color/app_grey"
+    android:id="@+id/days_ago"></TextView>
 
-
+</LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

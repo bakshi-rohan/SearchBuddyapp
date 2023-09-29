@@ -27,60 +27,25 @@
             android:src="@drawable/baseline_menu_24"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:id="@+id/drawer_icon"-->
-<!--            android:layout_width="34dp"-->
-<!--            android:layout_height="34dp"-->
-<!--            android:layout_alignParentStart="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:layout_marginTop="7dp"-->
-<!--            android:src="@drawable/place_profile" />-->
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/back"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
 
-        <LinearLayout
-            android:id="@+id/tv_profile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="5dp"
-            android:layout_toLeftOf="@+id/notification_icon"
-            android:layout_toRightOf="@+id/drawer_icon"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/toolbar_dropdown_menu_layout"
+
+            <TextView
+                android:id="@+id/header_name"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seoge_bold_two"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="49dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:visibility="visible"
+                android:text=""></TextView>
 
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/bottm_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="-2dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/notification_bell" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
 
 
         <com.google.android.material.imageview.ShapeableImageView

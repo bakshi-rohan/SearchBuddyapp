@@ -18,6 +18,6 @@ data class JobdescriptionResponse(
     val roleDesc: String,
     val id: String,
     val totalViewed: Int,
-    val totalApplied: Int,
+    val totalApplied: String,
     val skills: List<String>
 )

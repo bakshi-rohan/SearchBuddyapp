@@ -3,16 +3,22 @@ package com.searchbuddy.searchbuddy.Adapter
 //import com.example.searchbuddy.model.Position
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
@@ -39,6 +45,7 @@ var saved:Boolean=false
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val ItemsViewModel = filterProductList.get(position)
+        holder.cardView.visibility=View.GONE
         holder.itemView.setOnClickListener {
             val token =
                 ItemsViewModel.id
@@ -98,28 +105,43 @@ var saved:Boolean=false
 
         }
 if (ItemsViewModel.postedDay!=null){
-    holder.days.text=ItemsViewModel.postedDay.toString()+" days ago"
+    if (ItemsViewModel.postedDay==0){
+        holder.days.text="Just now"
+
+    }
+    else {
+        holder.days.text = ItemsViewModel.postedDay.toString() + " days ago"
+    }
 }
 
             if (ItemsViewModel.salary.isEmpty()==true) {
-                holder.salary_field.text = ""
-                holder.rupee.visibility = View.GONE
+                holder.salary_field.text = "Not Disclosed"
+                holder.rupee.visibility = View.VISIBLE
             }
         else if (ItemsViewModel.salary!=null){
             if (ItemsViewModel.salary.isEmpty()!=true) {
                 var salfrom = ItemsViewModel.salary.get(0).toString()
                 var salTo = ItemsViewModel.salary.get(1).toString()
-                holder.salary_field.text = salfrom+" Lpa"+" - "+salTo+" Lpa"
+                holder.salary_field.text = salfrom+"-"+salTo+" PA"
             }
         }
         if (ItemsViewModel.location!=null) {
+            Log.i("dddd",ItemsViewModel.location.size.toString())
             if (ItemsViewModel.location.size>2) {
                 var loc_one = ItemsViewModel.location.get(0)
                 var loc_two = ItemsViewModel.location.get(1)
-                holder.location.text = loc_one+" , "+loc_two+" and more"
+
+               val fullText= loc_one+" , "+loc_two+" and more..."
+                val spannableBuilder :SpannableStringBuilder= SpannableStringBuilder(fullText)
+                val firstWord = "and more..."
+                val firstWordColor = Color.BLUE
+                val startIndex = fullText.indexOf(firstWord)
+                val endIndex = startIndex + firstWord.length
+                spannableBuilder.setSpan(ForegroundColorSpan(firstWordColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                holder.location.text=spannableBuilder
             }
             else if (ItemsViewModel.location.size<2){
-                var loc = ItemsViewModel.location.toString()
+                val loc = ItemsViewModel.location.toString()
                 var locres = loc.substring(1, loc.length - 1)
                 holder.location.text = locres
             }
@@ -128,9 +150,9 @@ if (ItemsViewModel.postedDay!=null){
 //            holder.experience_field.text = ItemsViewModel.industry
 //        }
         if (ItemsViewModel.expFrm!=null&&ItemsViewModel.expTo!=null){
-            var expfrm=ItemsViewModel.expFrm.toString()
-            var expto=ItemsViewModel.expTo.toString()
-            holder.exp_field.text=expfrm+ " - "+expto+" Yr"
+            val expfrm=ItemsViewModel.expFrm.toString()
+            val expto=ItemsViewModel.expTo.toString()
+            holder.exp_field.text=expfrm+ " - "+expto+" Year"
         }
         if (holder.company_name_field!=null) {
             holder.company_name_field.text = ItemsViewModel.organisationName
@@ -143,16 +165,17 @@ if (ItemsViewModel.postedDay!=null){
                 ItemsViewModel.id
             val jwt = JWT(token)
 
-            val issuer = jwt.issuer //get registered claims
+//            val issuer = jwt.issuer //get registered claims
 
             val claim = jwt.getClaim("id").asString() //get custom claims
-            var id= claim?.toInt()
+            val id= claim?.toInt()
             if (id != null) {
                 onClickSave(id)
                 holder.save.setImageResource(R.drawable.bookmark_saved)
                 saved=true
-                Toast.makeText(context,"Job saved successfully",Toast.LENGTH_SHORT).show()
             }
+            notifyItemChanged(holder.adapterPosition)
+            Toast.makeText(context,"Job saved successfully",Toast.LENGTH_SHORT).show()
 
         }
         if (ItemsViewModel.positionSaved==true){
@@ -234,6 +257,8 @@ if (ItemsViewModel.postedDay!=null){
         val save: ImageView = itemView.findViewById(R.id.save_job_button)
         val rupee: ImageView = itemView.findViewById(R.id.rupee)
         val exp_field:TextView=itemView.findViewById(R.id.exp_field)
+        val cardView: LinearLayout =itemView.findViewById(R.id.card)
+
     }
 
     override fun getFilter(): Filter {
@@ -246,6 +271,7 @@ if (ItemsViewModel.postedDay!=null){
 
                 } else {
                     val resultList = ArrayList<Positions>()
+                    var resultlength=resultList.size
                     for (row in datalist) {
                         if (row.positionName.uppercase().contains(charSearch.uppercase())) {
                             resultList.add(row)

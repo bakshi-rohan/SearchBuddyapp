@@ -266,7 +266,7 @@ class Form_One : AppCompatActivity() {
         persons.forEachIndexed { idx, city ->
 //             someList = person.Districtname
             val CityArray : JsonArray = JsonArray()
-            val dataa : String = city.CombinedName
+            val dataa : String = city.District
 
             CityArray.add(dataa)
 

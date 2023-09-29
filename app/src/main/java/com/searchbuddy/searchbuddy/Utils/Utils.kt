@@ -74,15 +74,7 @@ class Utils {
 
         }
 
-        fun dummyList(): ArrayList<String> {
-            var arrayList:ArrayList<String> = ArrayList();
-           arrayList.add("Hardik");
-           arrayList.add("Archit");
-           arrayList.add("Jignesh");
-           arrayList.add("Umang");
-           arrayList.add("Gatti");
-         return arrayList
-        }
+
 
         fun showDialougeList(context: Context, gaushlaList: ArrayList<String>): AlertDialog.Builder {
             val alertDialog = androidx.appcompat.app.AlertDialog.Builder(context)

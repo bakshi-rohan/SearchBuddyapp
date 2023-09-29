@@ -15,9 +15,9 @@ android {
     defaultConfig {
         applicationId "com.bumptech.searchbuddy"
         minSdk 23
-        targetSdk 32
-        versionCode 5
-        versionName "1.4"
+        targetSdk 33
+        versionCode 11
+        versionName "0.8"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,6 +42,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    ext {
+
+        room_version = '2.4.2'
     }
 }
 
@@ -105,6 +109,7 @@ dependencies {
     implementation 'com.rm:rmswitch:1.2.2'
     implementation("com.ericktijerou.koleton:koleton:1.0.0-beta01")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation 'hanks.xyz:htextview-library:0.1.5'
         // ...
 
 //    implementation 'com.karumi:dexter:5.0.0'

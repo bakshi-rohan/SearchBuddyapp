@@ -26,6 +26,7 @@ import com.searchbuddy.searchbuddy.Utils.Constant
 import com.searchbuddy.searchbuddy.Utils.LocalSessionManager
 import com.searchbuddy.searchbuddy.model.CityList
 import java.io.IOException
+import kotlin.math.log
 import kotlin.math.roundToInt
 
 
@@ -64,6 +65,10 @@ class FilterFragment : Fragment() {
     lateinit var LocationList: ArrayList<String>
     lateinit var Dateadapter:ArrayAdapter<String>
     lateinit var Leveldapter:ArrayAdapter<String>
+    lateinit var checkvalue:String
+    lateinit var checkContract:String
+    lateinit var checkWfo:String
+    lateinit var checkHybrid:String
  var ispremium:Boolean=false
 
     override fun onCreateView(
@@ -112,6 +117,7 @@ class FilterFragment : Fragment() {
             findNavController().navigateUp()
 
         }
+
         location_string=""
         val rangeSlider: RangeSlider = binding.rangeSliderExp;
         rangeSlider.values.set(0,30F)
@@ -134,7 +140,7 @@ class FilterFragment : Fragment() {
                 //Those are the new updated values of sldier when user has finshed dragging
                 Log.i("SliderNewValue From", values[0].toString())
                 Log.i("SliderNewValue To", values[1].toString())
-                binding.expValue.setText(l.toString()+ " Yr"+ " to " +m.toString()+ " years")
+                binding.expValue.setText(l.toString()+ " Year"+ " to " +m.toString()+ " years")
 
                 Log.i("SalarySliderNewValuef", salaryValues[0].toString())
                 Log.i("SalarySliderNewValue To", salaryValues[1].toString())
@@ -171,7 +177,7 @@ class FilterFragment : Fragment() {
             var exp_end_int = exp_End.toInt()
 
             rangeSlider.setValues(exp_start, exp_End)
-            binding.expValue.setText(exp_start_int.toString() + " Yr" + " to " + exp_end_int.toString() + " years")
+            binding.expValue.setText(exp_start_int.toString() + " Year" + " to " + exp_end_int.toString() + " years")
         }
         rangeSlidersalary.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
             override fun onStartTrackingTouch(slider: RangeSlider) {
@@ -261,8 +267,8 @@ class FilterFragment : Fragment() {
 
         freshnessList.put("1", "3 days")
         freshnessList.put("2", "7 days")
-        freshnessList.put("3", "1 month")
-        freshnessList.put("4", "3 month")
+        freshnessList.put("3", "14 days")
+        freshnessList.put("4", "30 days")
 
         departmentList.put("1", "Field Sales")
         departmentList.put("2", "Lead Generation")
@@ -309,6 +315,8 @@ class FilterFragment : Fragment() {
             binding.layoutFreshnessType.visibility = View.GONE
             binding.layoutDepartmentType.visibility = View.GONE
             binding.layoutLocationType.visibility = View.GONE
+            binding.layoutLevel.visibility = View.GONE
+
         }
         binding.imageView2.setOnClickListener {
             activity?.onBackPressed()
@@ -319,6 +327,8 @@ class FilterFragment : Fragment() {
             binding.exparrow.setImageResource(R.drawable.down_arrow)
             binding.salArrow.setImageResource(R.drawable.down_arrow)
             binding.locArrow.setImageResource(R.drawable.down_arrow)
+            binding.level.setImageResource(R.drawable.down_arrow)
+
             binding.freshArrow.setImageResource(R.drawable.down_arrow)
             binding.departArrow.setImageResource(R.drawable.down_arrow)
             binding.cattleTypeHead.setBackgroundColor(resources.getColor(R.color.choclate))
@@ -337,6 +347,7 @@ class FilterFragment : Fragment() {
             binding.layoutCattleStatus.visibility = View.GONE
             binding.layoutCattleType.visibility = View.VISIBLE
             binding.layoutSalaryType.visibility = View.GONE
+            binding.layoutLevel.visibility = View.GONE
             binding.layoutFreshnessType.visibility = View.GONE
         }
         binding.salaryHead.setOnClickListener {
@@ -346,6 +357,7 @@ class FilterFragment : Fragment() {
             binding.locArrow.setImageResource(R.drawable.down_arrow)
             binding.freshArrow.setImageResource(R.drawable.down_arrow)
             binding.departArrow.setImageResource(R.drawable.down_arrow)
+            binding.level.setImageResource(R.drawable.down_arrow)
             binding.salArrow.setImageResource(R.drawable.down_arrow_white)
             binding.salaryHead.setBackgroundColor(resources.getColor(R.color.choclate))
             binding.experLayout.setBackgroundColor(resources.getColor(R.color.white))
@@ -363,6 +375,7 @@ class FilterFragment : Fragment() {
             binding.layoutCattleStatus.visibility = View.GONE
             binding.layoutCattleType.visibility = View.GONE
             binding.layoutSalaryType.visibility = View.VISIBLE
+            binding.layoutLevel.visibility = View.GONE
             binding.layoutFreshnessType.visibility = View.GONE
         }
         binding.locationHead.setOnClickListener {
@@ -370,6 +383,7 @@ class FilterFragment : Fragment() {
             binding.exparrow.setImageResource(R.drawable.down_arrow)
             binding.wfhArrow.setImageResource(R.drawable.down_arrow)
             binding.salArrow.setImageResource(R.drawable.down_arrow)
+            binding.level.setImageResource(R.drawable.down_arrow)
             binding.locArrow.setImageResource(R.drawable.down_arrow_white)
             binding.departArrow.setImageResource(R.drawable.down_arrow)
             binding.freshArrow.setImageResource(R.drawable.down_arrow)
@@ -391,6 +405,7 @@ class FilterFragment : Fragment() {
             binding.layoutSalaryType.visibility = View.GONE
             binding.layoutLocationType.visibility = View.VISIBLE
             binding.layoutFreshnessType.visibility = View.GONE
+            binding.layoutLevel.visibility = View.GONE
         }
         binding.levelHead.setOnClickListener {
 
@@ -427,6 +442,7 @@ class FilterFragment : Fragment() {
             binding.wfhArrow.setImageResource(R.drawable.down_arrow)
             binding.salArrow.setImageResource(R.drawable.down_arrow)
             binding.locArrow.setImageResource(R.drawable.down_arrow)
+            binding.level.setImageResource(R.drawable.down_arrow)
             binding.freshArrow.setImageResource(R.drawable.down_arrow_white)
             binding.departArrow.setImageResource(R.drawable.down_arrow)
             binding.freshHead.setBackgroundColor(resources.getColor(R.color.choclate))
@@ -446,6 +462,7 @@ class FilterFragment : Fragment() {
             binding.layoutCattleType.visibility = View.GONE
             binding.layoutSalaryType.visibility = View.GONE
             binding.layoutLocationType.visibility = View.GONE
+            binding.layoutLevel.visibility = View.GONE
             binding.layoutFreshnessType.visibility = View.VISIBLE
         }
         binding.departmentHead.setOnClickListener {
@@ -455,6 +472,7 @@ class FilterFragment : Fragment() {
             binding.salArrow.setImageResource(R.drawable.down_arrow)
             binding.locArrow.setImageResource(R.drawable.down_arrow)
             binding.freshArrow.setImageResource(R.drawable.down_arrow)
+            binding.level.setImageResource(R.drawable.down_arrow)
             binding.departArrow.setImageResource(R.drawable.down_arrow_white)
             binding.departmentHead.setBackgroundColor(resources.getColor(R.color.choclate))
             binding.experLayout.setBackgroundColor(resources.getColor(R.color.white))
@@ -474,6 +492,7 @@ class FilterFragment : Fragment() {
             binding.layoutSalaryType.visibility = View.GONE
             binding.layoutLocationType.visibility = View.GONE
             binding.layoutFreshnessType.visibility = View.GONE
+            binding.layoutLevel.visibility = View.GONE
             binding.layoutDepartmentType.visibility = View.VISIBLE
         }
 //binding.ivRefresh.setOnClickListener {
@@ -657,7 +676,7 @@ class FilterFragment : Fragment() {
 
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 
             for (i in 0 until CityArray.size()) {
@@ -695,8 +714,8 @@ class FilterFragment : Fragment() {
         DateList.add("All Jobs")
         DateList.add("3 days")
         DateList.add("7 days")
-        DateList.add("1 month")
-        DateList.add("3 month")
+        DateList.add("14 days")
+        DateList.add("30 days")
          Dateadapter =
             ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, DateList)
         Dateadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -734,13 +753,41 @@ class FilterFragment : Fragment() {
             var date_pos:Int=Dateadapter.getPosition(date_pos_string)
             binding.tiDatePosted.setSelection(date_pos,true)
         }
-        LevelList.add("Fresher")
-        LevelList.add("Lateral")
-        LevelList.add("Team Manager")
-        LevelList.add("Managerial")
-        LevelList.add("Functional Head")
-        LevelList.add("CXO")
-        LevelList.add("CEO/MD/Chairman")
+        LevelList.add("Permanent")
+        LevelList.add("Contractual")
+        LevelList.add("Work from office")
+        LevelList.add("Hybrid")
+binding.questionCheckBox.setOnClickListener{
+   checkvalue=  binding.questionCheckBox.toString()
+    Log.i("potty",checkvalue.toString())
+    LocalSessionManager.saveValue(
+        Constant.CheckValue,
+        checkvalue,requireContext()
+    )
+}
+         binding.checkWfh.setOnClickListener{
+    checkWfo=  binding.checkWfh.text.toString()
+    LocalSessionManager.saveValue(
+        Constant.CheckHWfo,
+        checkWfo,requireContext()
+    )
+        }
+         binding.checkContract.setOnClickListener{
+    checkContract=  binding.checkContract.text.toString()
+    LocalSessionManager.saveValue(
+        Constant.CheckContract,
+        checkContract,requireContext()
+    )
+        }
+
+         binding.checkHybrid.setOnClickListener{
+    checkHybrid=  binding.checkHybrid.text.toString()
+             Log.i("lll",checkHybrid.toString())
+    LocalSessionManager.saveValue(
+        Constant.CheckHybrid,
+        checkHybrid,requireContext()
+    )
+        }
         Leveldapter =
             ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, LevelList)
         Leveldapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)

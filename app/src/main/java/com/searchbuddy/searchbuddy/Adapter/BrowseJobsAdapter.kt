@@ -14,11 +14,13 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.auth0.android.jwt.JWT
 import com.bumptech.glide.Glide
 import com.bumptech.searchbuddy.R
+import com.searchbuddy.searchbuddy.Forms.Form_One
 import com.searchbuddy.searchbuddy.Login.BrowseJobsDescription
 import com.searchbuddy.searchbuddy.Login.Login
 import com.searchbuddy.searchbuddy.model.Positions
@@ -39,6 +41,12 @@ class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val ItemsViewModel = filterProductList.get(position)
+        if (position % 4 == 0) {
+            holder.cardView.visibility = View.VISIBLE
+        } else {
+            holder.cardView.visibility = View.GONE
+        }
+
         holder.itemView.setOnClickListener { view ->
             val token =
                 ItemsViewModel.id
@@ -124,7 +132,7 @@ class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context
         if (ItemsViewModel.expFrm!=null&&ItemsViewModel.expTo!=null){
             var expfrm=ItemsViewModel.expFrm.toString()
             var expto=ItemsViewModel.expTo.toString()
-            holder.exp_field.text=expfrm+" - "+expto+" Yr"
+            holder.exp_field.text=expfrm+" - "+expto+" Year"
         }
 //        if (holder.experience_field!=null) {
 //            holder.experience_field.text = ItemsViewModel.industry
@@ -144,7 +152,9 @@ class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context
             builder.setPositiveButton("OK") { dialog, which ->
                 // handle OK button click
                 val intent = Intent(view.context, Login::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                 view.context.startActivity(intent)
+
 
             }
             builder.setNegativeButton("Cancel") { dialog, which ->
@@ -154,6 +164,16 @@ class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context
             dialog.show()
 
 
+        }
+        holder.login.setOnClickListener {
+            val intent = Intent(context, Login::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+        }
+        holder.signup.setOnClickListener {
+            val intent = Intent(context, Form_One::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
         }
     }
 
@@ -169,12 +189,14 @@ class BrowseJobsAdapter(private val mList: List<Positions>, var context: Context
         val location: TextView = itemView.findViewById(R.id.location_field)
         val salary_field: TextView = itemView.findViewById(R.id.salary_field)
         val apply: TextView = itemView.findViewById(R.id.apply_positions)
+        val login: TextView = itemView.findViewById(R.id.login_card)
+        val signup: TextView = itemView.findViewById(R.id.signup_card)
         val company_name_field: TextView = itemView.findViewById(R.id.company_name_field)
         val job_name_field: TextView = itemView.findViewById(R.id.job_name_field)
         val rupee: ImageView = itemView.findViewById(R.id.rupee)
         val save: ImageView = itemView.findViewById(R.id.save_job_button)
         val exp_field:TextView=itemView.findViewById(R.id.exp_field)
-
+        val cardView:LinearLayout=itemView.findViewById(R.id.card)
     }
 
     override fun getFilter(): Filter {

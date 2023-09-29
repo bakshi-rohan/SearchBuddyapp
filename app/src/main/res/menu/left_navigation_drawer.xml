@@ -9,7 +9,7 @@
             android:id="@+id/search_jobs"
             android:iconTint="@color/purple_500"
             android:title="Search Jobs"
-            android:icon="@drawable/search_jobss"
+            android:icon="@drawable/opportunity"
             />
 
 <!--        <item-->
@@ -21,7 +21,7 @@
         <item
             android:id="@+id/saved_jobs"
             android:title="Saved Jobs"
-            android:icon="@drawable/diskette"/>
+            android:icon="@drawable/save_new"/>
 
     </group>
     <group android:checkableBehavior="none"
@@ -31,11 +31,12 @@
             android:title="Contact Us" />
         <item
             android:id="@+id/abou_us"
-            android:title="About Us" />
+            android:title="Who are we" />
 
         <item
             android:id="@+id/blogs"
-            android:title="Blogs" />
+            android:title="Blogs"
+            />
 
         <item
             android:id="@+id/Faq"

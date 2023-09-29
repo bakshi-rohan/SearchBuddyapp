@@ -30,12 +30,17 @@ class Constant {
         var FillLocation = "FillLocation"
         var DatePosted = "DatePosted"
         var LevelPosted = "LevelPosted"
+        var CheckValue = "CheckValue"
+        var CheckContract = "CheckContract"
+        var CheckHybrid = "CheckHybrid"
+        var CheckHWfo = "CheckWfo"
         var DatePost = "DatePost"
         var UserID = "UserID"
         var SignupUserID = "SignupUserID"
         var OtpID = "OtpID"
         var Highest = "Highest"
         var OtpMobile = "OtpMobile"
+        var blogpos = "Blogpos"
 
     }
 }

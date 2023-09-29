@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/seoge_bold_two"
                 android:text="The sales function in a business setup is the most critical. Recruiting for sales functions requires speed, rigor, focus, and the right evaluation. SearchBuddy is a digital platform to bring together sales professionals and sales recruiters"
-                android:textColor="@color/app_grey"
+                android:textColor="@color/black"
                 android:textSize="16sp"></TextView>
 
             <TextView
@@ -88,7 +88,7 @@
                 android:layout_marginTop="7.5dp"
                 android:fontFamily="@font/seoge_bold_two"
                 android:text="The power behind SearchBuddy is IndiHire. Founded in 2011, IndiHire Group today employs over 150+ FTEs and is a leading player in the headhunting and recruiting industry."
-                android:textColor="@color/app_grey"
+                android:textColor="@color/black"
                 android:textSize="16sp"></TextView>
 
             <TextView

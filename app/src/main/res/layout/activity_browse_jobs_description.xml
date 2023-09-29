@@ -306,7 +306,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/seoge_bold_two"
                 android:textSize="12dp"
-                android:text="Position Overview">
+                android:text="What the person will do:">
             </TextView>
             <TextView
                 android:id="@+id/position_overview_detail"
@@ -329,7 +329,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/seoge_bold_two"
                 android:textSize="12dp"
-                android:text="KRA">
+                android:text="What the person will be:">
             </TextView>
             <TextView
                 android:id="@+id/ti_kra"

@@ -59,14 +59,14 @@ class Form_Two : AppCompatActivity() {
         val gson = Gson()
         val listCityType = object : TypeToken<List<CityList>>() {}.type
         var persons: List<CityList> = gson.fromJson(jsonFileString, listCityType)
-        persons.forEachIndexed { idx, city -> Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
+        persons.forEachIndexed { idx, city -> Log.i("dataaaaa", "> Item $idx:\n${city.District}")
 //             someList = person.Districtname
             val CityArray : JsonArray = JsonArray()
-            val dataa : String = city.CombinedName
+            val dataa : String = city.District
 
             CityArray.add(dataa)
 
-            Log.i("kkkkkkkkk",city.CombinedName)
+            Log.i("kkkkkkkkk",city.District)
             for (i in 0 until CityArray.size()) {
 //                val he = CityList("","",person.CombinedName,"","")
 //                exampleList.add(exampleArray.toString())

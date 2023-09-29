@@ -46,7 +46,7 @@ class Prefrence : AppCompatActivity() {
         "Institutional Sales",
         "Sales(B2C)"
     )
-    var employmentArray = arrayOf("Permanent", "Contractual", "Gig")
+    var employmentArray = arrayOf("Permanent", "Contractual", "Work from office","Hybrid")
     var workArray = arrayOf("Only Remote", "Work from Office", "Hybrid")
     lateinit var viewModel: PrefrencesViewModel
     var yo: Int = 0
@@ -86,7 +86,7 @@ class Prefrence : AppCompatActivity() {
         var persons: List<CityList> = gson.fromJson(jsonFileString, listCityType)
         persons.forEachIndexed { idx, city ->
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
             for (i in 0 until CityArray.size()) {
                 var kuch = CityArray.get(i).toString()
@@ -104,7 +104,7 @@ class Prefrence : AppCompatActivity() {
                     var role = it.professionalDetails.preferences.role.toString()
                     var employement = it.professionalDetails.preferences.employementType.toString()
                     var loc = it.professionalDetails.preferences.location.toString()
-                    var worktype = it.professionalDetails.preferences.workType.toString()
+                    var worktype = it.professionalDetails.preferences.employementType.toString()
                     var roleString = role.substring(1, role.length - 1)
                     var empString = employement.substring(1, employement.length - 1)
                     var LocString = loc.substring(1, loc.length - 1)

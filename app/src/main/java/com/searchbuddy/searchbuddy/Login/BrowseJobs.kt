@@ -68,12 +68,15 @@ class BrowseJobs : AppCompatActivity() {
     lateinit var functionList:ArrayList<String>
     lateinit var company:Array<String>
     lateinit var function_name:String
+    lateinit var emp_type:String
     var company_name:String=""
     lateinit var keyword:Array<String>
     var isPremium:Boolean=true
 lateinit var level:Array<Int>
     private var isScrollingDown = false
     private var lastVisibleItemPosition = 0
+    lateinit var job_Type:ArrayList<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBrowseJobsBinding.inflate(layoutInflater)
@@ -95,9 +98,7 @@ lateinit var level:Array<Int>
     FieldJobRecycler.loadSkeleton(R.layout.field_sale_recycler_layout){
         shimmer(false)
     }
-//        activitySalesViewModel.errorMessage()?.observe(this, {
-//            showToast(it.toString())
-//        })
+
 
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -136,30 +137,6 @@ lateinit var level:Array<Int>
 
         binding.jobLength.visibility= View.VISIBLE
 
-//        binding.yourId.addSwitchObserver(RMSwitch.RMSwitchObserver { switchView, isChecked ->
-//            if (isChecked) {
-//                isPremium=true
-//                requestPreData(binding.progress)
-//                binding.fieldSaleRecycler.visibility = View.GONE
-//                binding.premiumJobRecyler.visibility = View.VISIBLE
-//                binding.chip3.visibility=View.GONE
-//                binding.chip5.visibility=View.GONE
-//                binding.chip2.visibility=View.GONE
-//                requestPreData(binding.progress)
-////           binding.txtNopreData.visibility=View.VISIBLE
-////           binding.txtNoData.visibility=View.GONE
-//
-//            } else {
-//                isPremium=false
-//                requestData(binding.progress)
-//                binding.fieldSaleRecycler.visibility = View.VISIBLE
-//                binding.premiumJobRecyler.visibility = View.GONE
-//                binding.chip3.visibility=View.VISIBLE
-//                binding.chip5.visibility=View.VISIBLE
-//                binding.chip2.visibility=View.VISIBLE
-//
-//            }
-//        })
         binding.filters.setOnClickListener {
             var intent= Intent(this,FragmentActivity::class.java)
             intent.putExtra("premium",isPremium)
@@ -201,40 +178,7 @@ lateinit var level:Array<Int>
 
     }
 
-//    override fun onPostResume() {
-//        super.onPostResume()
-//        if (isPremium==true){
-//            requestPreData(binding.progress)
-//        }
-//        else{
-//            requestData(binding.progress)
-//        }
-//    }
-//        override fun onPause() {
-//        super.onPause()
-//        LocalSessionManager.removeValue(Constant.SliderStartValue,this)
-//        LocalSessionManager.removeValue(Constant.SliderEndValue,this)
-//        LocalSessionManager.removeValue(Constant.SalarySliderStartValue,this)
-//        LocalSessionManager.removeValue(Constant.SalarySliderEndValue,this)
-//        LocalSessionManager.removeValue(Constant.FilterLocation,this)
-//        LocalSessionManager.removeValue(Constant.DatePosted,this)
-//        LocalSessionManager.removeValue(Constant.cat_name,this)
-//    }
-//
-//        override fun onDestroy() {
-//        super.onDestroy()
-//        LocalSessionManager.removeValue(Constant.SliderStartValue,this)
-//        LocalSessionManager.removeValue(Constant.SliderEndValue,this)
-//        LocalSessionManager.removeValue(Constant.SalarySliderStartValue,this)
-//        LocalSessionManager.removeValue(Constant.SalarySliderEndValue,this)
-//        LocalSessionManager.removeValue(Constant.FilterLocation,this)
-//        LocalSessionManager.removeValue(Constant.DatePosted,this)
-//        LocalSessionManager.removeValue(Constant.cat_name,this)
-//    }
-//    override fun onResume() {
-//        super.onResume()
-//        requestData(binding.progress)
-//    }
+
 
     fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
@@ -245,9 +189,6 @@ lateinit var level:Array<Int>
             var pagesize: Int = 200
 
         }
-//        if (arguments != null){
-//            company_name=requireArguments().getString("company").toString()
-//        }
 
         if (company_name==""){
             company= arrayOf()
@@ -369,6 +310,14 @@ lateinit var level:Array<Int>
         else{
             functionList.add(function_name)
         }
+        emp_type=LocalSessionManager.getStringValue("CheckContract","",this)!!
+        job_Type= ArrayList()
+        if (emp_type==""){
+            job_Type.remove(emp_type)
+        }
+        else {
+            job_Type.add(emp_type)
+        }
 
         date_posted= LocalSessionManager.getStringValue(Constant.DatePosted,"",this).toString()
         Log.i("cccc",date_posted)
@@ -398,6 +347,7 @@ lateinit var level:Array<Int>
             date_posted,
             functionList,
             keyword,
+//            job_Type
 //            level
 
         )
@@ -587,6 +537,7 @@ lateinit var level:Array<Int>
             date_posted,
             functionList,
             keyword,
+//            job_Type
 //            level
 
         )

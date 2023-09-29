@@ -477,16 +477,12 @@ pgSpecList.clear()
                         }
                         if (it.professionalDetails.educationDetails.graduation.startYear!=null){
                             var gradstart=it.professionalDetails.educationDetails.graduation.startYear.toString()
-//                            var gradstart_substring=gradstart.substring(0,3)
-//                            var gradstartadapter=DateAdapter.getPosition(gradstart_substring)
-//                            binding.startGrad.setSelection(gradstartadapter)
+
                         }
                         if (it.professionalDetails.educationDetails.graduation.passingYear!=null){
                             var gradend=it.professionalDetails.educationDetails.graduation.passingYear.toString()
-//                            var gradend_substring=gradend.substring(0,3)
-//                            Log.i("fffff",gradend_substring)
-                            var gread_end_adapter=ENDDateAdapter.getPosition(gradend)
-                            binding.endGrad.setSelection(gread_end_adapter)
+                            var grad_end_adapter=ENDDateAdapter.getPosition(gradend)
+                            binding.endGrad.setSelection(grad_end_adapter)
                         }
                         if (it.professionalDetails.educationDetails.graduation.specialization!=null){
                             binding.specGrad.setText(it.professionalDetails.educationDetails.graduation.specialization.toString())
@@ -609,16 +605,8 @@ pgSpecList.clear()
 
     }
 
-//    override fun onUserInteraction() {
-//        super.onUserInteraction()
-//        if (currentFocus != null) {
-//            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-//            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-//        }
-//    }
-    private fun isInRange(a: Int, b: Int, c: Int): Boolean {
-        return if (b > a) c in a..b else c in b..a
-    }
+
+
     private fun updateDetails() {
         if (binding.tweEndYr.selectedItem=="Select completion year"){
             Twe_ENDYEAR=0
@@ -684,9 +672,7 @@ pgSpecList.clear()
                     var university = binding.tiGradUni!!.text.toString()
                     var degree = binding.tiGradDeg!!.selectedItem.toString()
                     var percentage = binding.cgpaGrad!!.text.toString()
-//                    var startYear = binding.startGrad!!.text.toString()
                     var startYear = GradStartYear
-//                    var passingYear = binding.endGrad!!.text.toString()
                     var passingYear = GradPassingYear
                     var specialization = binding.specGrad!!.text.toString()
                 }

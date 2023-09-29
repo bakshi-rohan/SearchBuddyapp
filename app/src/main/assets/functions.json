@@ -1,7 +1,7 @@
 [
 	{
 		"Id" : 0,
-		"Value" : "Select Function"
+		"Value" : "Select Category"
 	},
 	{
 		"Id" : 13,
@@ -29,6 +29,10 @@
 	},{
 	"Id" : 4005,
 	"Value" : "Sales (B2C)"
-}
+},
+	{
+		"Id" : 4276,
+		"Value" : "Others"
+	}
 
 ]

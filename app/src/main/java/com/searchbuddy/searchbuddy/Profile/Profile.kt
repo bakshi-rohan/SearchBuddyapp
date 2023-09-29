@@ -22,6 +22,7 @@ import android.provider.OpenableColumns
 import android.util.Log
 import android.view.*
 import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -83,6 +84,7 @@ class Profile : Fragment() {
     lateinit var bottomNavView: BottomNavigationView
     lateinit var userId:String
      var userIdInt:Int=0
+    lateinit var header_user: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,6 +99,7 @@ class Profile : Fragment() {
 //        profileIcon = (activity as Dashboard)!!.findViewById(R.id._icon_profile)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 //
+
         bottomNavView = (activity as Dashboard?)!!.findViewById(R.id.nav_view)
         val nav: Menu = bottomNavView.menu
         var home = nav.findItem(R.id.navigation_home)
@@ -117,6 +120,8 @@ class Profile : Fragment() {
             (activity as Dashboard)!!.findViewById(com.bumptech.searchbuddy.R.id.notification_icon)
 //        bar = (activity as Dashboard)!!.findViewById(com.example.searchbuddy.R.id.search_bar_home)
 //        bar.visibility=View.GONE
+        header_user = (activity as Dashboard)!!.findViewById(R.id.header_name)
+        header_user.visibility=View.GONE
         profileIcon =
             (activity as Dashboard)!!.findViewById(com.bumptech.searchbuddy.R.id.drawer_icon)
         profileIcon.visibility = View.GONE

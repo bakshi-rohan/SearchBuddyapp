@@ -603,7 +603,7 @@ if (it.professionalDetails.industry!=null) {
         }
         Log.i("Chips",chiplist.toString())
          var id=10
-        if (binding.tiFunctionForm.selectedItem.toString()=="Select Function"){
+        if (binding.tiFunctionForm.selectedItem.toString()=="Select Category"){
 id=10
         }else if (binding.tiFunctionForm.selectedItem.toString()=="Channel Sales and P&L"){
             id=13
@@ -621,7 +621,7 @@ id=10
             id=11
         }
         else if (binding.tiFunctionForm.selectedItem.toString()=="Other"){
-            id=4005
+            id=4276
         }
         var path: File? =null
         var Salary = binding.etSalary!!.text.toString()

@@ -184,7 +184,7 @@ class Job_description : Fragment() {
                             binding.companyNameDescription.setText(it.client)
                         }
                         if (it.expTo != null && it.expFrom != null) {
-                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
+                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Year")
                         }
                         if (it.roleDesc != null) {
                             binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -208,7 +208,6 @@ class Job_description : Fragment() {
                             val handler = Handler(Looper.getMainLooper())
                             var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/organisation/" + logo)
                             Glide.with(this).load(uri).placeholder(R.drawable.city).into(binding.build)
-
                         }
                         if (it.positionSaved != null) {
                             if (it.positionSaved == true) {
@@ -229,10 +228,18 @@ class Job_description : Fragment() {
                                 var somstr = some.substring(1, some.length - 1)
                                 binding.locationDesc.setText(somstr)
                             }
-                            else if (it.location.size>2){
+                            else if (it.location.size==2){
                                 var loc_one=it.location.get(0)
                                 var loc_two=it.location.get(1)
-                                binding.locationDesc.text=loc_one+" , "+loc_two+" and more"
+                                binding.locationDesc.text=loc_one+" , "+loc_two
+                            }
+                            else if(it.location.size==3){
+                                var loc_one=it.location.get(0)
+                                var loc_two=it.location.get(1)
+                                var loc_three=it.location.get(2)
+                                Log.i("sbuddy",it.location.get(2).toString())
+
+                                binding.locationDesc.text=loc_one+" , "+loc_two+" , "+loc_three
                             }
                         }
                         if (it.level != null) {
@@ -298,7 +305,7 @@ class Job_description : Fragment() {
                                     binding.companyNameDescription.setText(it.client)
                                 }
                                 if (it.expTo != null && it.expFrom != null) {
-                                    binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
+                                    binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Year")
                                 }
                                 if (it.roleDesc != null) {
                                     binding.positionOverviewDetail.setText(getHtml(it.roleDesc))
@@ -403,7 +410,7 @@ class Job_description : Fragment() {
                                 binding.companyNameDescription.setText(it.client)
                             }
                             if (it.expTo != null && it.expFrom != null) {
-                                binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Yr")
+                                binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + "Year")
                             }
                             if (it.roleDesc != null) {
                                 binding.positionOverviewDetail.setText(getHtml(it.roleDesc))

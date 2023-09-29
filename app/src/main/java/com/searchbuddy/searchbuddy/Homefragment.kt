@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.SearchView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -64,8 +65,6 @@ import java.util.concurrent.Executors
     lateinit var experience: Array<String>
     lateinit var company_image: Array<Int>
     lateinit var comapny_name_top: Array<String>
-    lateinit var post_name_top: Array<String>
-    lateinit var experience_top: Array<String>
     lateinit var company_image_top: Array<Int>
     lateinit var myadapter: JobCategoryAdapter
     lateinit var my_adapter: RecommendedJobRecyclerAdapter
@@ -83,11 +82,19 @@ import java.util.concurrent.Executors
     //    lateinit var profileIcon: ShapeableImageView
     lateinit var notificationIcon: ShapeableImageView
     lateinit var profileIcon: ShapeableImageView
+    lateinit var header_user: TextView
     lateinit var UserID: String
     var yo: Int = 0
     private lateinit var viewPager: ViewPager2
     private lateinit var carouselAdapter: CarouselAdapter
     private  var isSearched: Boolean=false
+    private val handler = Handler()
+    var string="Companies"
+    var jobtitle="Job Title"
+    var keywor="Keywords"
+    private val hintTexts = listOf("Search by \"$string\"", "Search by \"$jobtitle\"", "Search by \"$keywor\"")
+    private var currentHintIndex = 0
+
 
     //    lateinit var bar: androidx.appcompat.widget.SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -183,9 +190,8 @@ import java.util.concurrent.Executors
         })
         date = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
         currentDate = date.format(Date())
-
-
-
+       binding.searchBarHom.queryHint = hintTexts[currentHintIndex]
+        handler.postDelayed(updateHintTask, 5000)
         binding.searchBarHom.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -253,9 +259,11 @@ import java.util.concurrent.Executors
         bottomNavView = (activity as Dashboard)!!.findViewById(R.id.nav_view)
         bottomNavView.visibility = View.VISIBLE
         profileIcon = (activity as Dashboard)!!.findViewById(R.id.drawer_icon)
+        header_user = (activity as Dashboard)!!.findViewById(R.id.header_name)
         notificationIcon = (activity as Dashboard)!!.findViewById(R.id.notification_icon)
 
         profileIcon.visibility = View.VISIBLE
+        header_user.visibility=View.VISIBLE
 //        bar.visibility=View.VISIBLE
         notificationIcon.visibility = View.GONE
         notificationIcon.visibility = View.GONE
@@ -345,6 +353,24 @@ binding.shimmerViewRecommended.visibility=View.GONE
 
             })
     }
+    private val updateHintTask = object : Runnable {
+        override fun run() {
+            // Update the hint text to the next one in the list
+            currentHintIndex = (currentHintIndex + 1) % hintTexts.size
+            binding.searchBarHom.queryHint = hintTexts[currentHintIndex]
+
+            // Schedule the task again after 2 seconds
+            handler.postDelayed(this, 3000)
+        }
+    }
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacks(updateHintTask)
+
+    }
 
     private fun getBasicDetails() {
         var UserId =
@@ -362,6 +388,9 @@ binding.shimmerViewRecommended.visibility=View.GONE
                         var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName)
                         Glide.with(this).load(uri).into(binding.imProfilePic);
                         Glide.with(this).load(uri).into(binding.dp);
+                        header_user.setText("Hello, "+ it.userDTO.name.toString())
+
+                        header_user.visibility=View.VISIBLE
 //                        executor.execute {
 //                            val imageUrl =
 //                                "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName

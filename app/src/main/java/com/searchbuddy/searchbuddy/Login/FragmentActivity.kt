@@ -113,7 +113,7 @@ class FragmentActivity : AppCompatActivity() {
                 //Those are the new updated values of sldier when user has finshed dragging
                 Log.i("SliderNewValue From", values[0].toString())
                 Log.i("SliderNewValue To", values[1].toString())
-                binding.expValue.setText(l.toString()+ " Yr"+ " to " +m.toString()+ " years")
+                binding.expValue.setText(l.toString()+ " Year"+ " to " +m.toString()+ " years")
 
                 Log.i("SalarySliderNewValuef", salaryValues[0].toString())
                 Log.i("SalarySliderNewValue To", salaryValues[1].toString())
@@ -150,7 +150,7 @@ class FragmentActivity : AppCompatActivity() {
             var exp_end_int = exp_End.toInt()
 
             rangeSlider.setValues(exp_start, exp_End)
-            binding.expValue.setText(exp_start_int.toString() + " Yr" + " to " + exp_end_int.toString() + " years")
+            binding.expValue.setText(exp_start_int.toString() + " Year" + " to " + exp_end_int.toString() + " years")
         }
         rangeSlidersalary.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
             override fun onStartTrackingTouch(slider: RangeSlider) {
@@ -240,8 +240,8 @@ class FragmentActivity : AppCompatActivity() {
 
         freshnessList.put("1", "3 days")
         freshnessList.put("2", "7 days")
-        freshnessList.put("3", "1 month")
-        freshnessList.put("4", "3 month")
+        freshnessList.put("3", "14 days")
+        freshnessList.put("4", "30 days")
 
         departmentList.put("1", "Field Sales")
         departmentList.put("2", "Lead Generation")
@@ -600,7 +600,7 @@ class FragmentActivity : AppCompatActivity() {
 
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 
             for (i in 0 until CityArray.size()) {
@@ -644,8 +644,8 @@ class FragmentActivity : AppCompatActivity() {
         DateList.add("All Jobs")
         DateList.add("3 days")
         DateList.add("7 days")
-        DateList.add("1 month")
-        DateList.add("3 month")
+        DateList.add("14 days")
+        DateList.add("30 days")
         Dateadapter =
             ArrayAdapter(this, android.R.layout.simple_spinner_item, DateList)
         Dateadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)

@@ -74,6 +74,8 @@ class QuestionViewModel : ViewModel() {
                             }
 
                         }
+
+
                     })
 
 
@@ -91,10 +93,7 @@ class QuestionViewModel : ViewModel() {
         progress: ProgressBar
     ): MutableLiveData<SubmitResponse> {
         progress.visibility = View.VISIBLE
-//        val requestFile: RequestBody =
-//            resume.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-//        val ResumeFiles =
-//            MultipartBody.Part.createFormData("resume", resume.name, requestFile)
+
         val token = LocalSessionManager.getStringValue(Constant.TOKEN, "", context)
 
         try {

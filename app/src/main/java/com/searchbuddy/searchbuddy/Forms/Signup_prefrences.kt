@@ -50,7 +50,7 @@ class Signup_prefrences : AppCompatActivity() {
         "Institutional Sales",
         "Sales(B2C)"
     )
-    var employmentArray = arrayOf("Permanent", "Contractual", "Gig")
+    var employmentArray = arrayOf("Permanent", "Contractual", "Work from office","Hybrid")
     var workArray = arrayOf("Only Remote", "Work from Office", "Hybrid")
     lateinit var viewModel: PrefrencesViewModel
     var locString: String = ""
@@ -98,7 +98,7 @@ class Signup_prefrences : AppCompatActivity() {
 //            Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 //            Log.i("kkkkkkkkk", city.CombinedName)
             for (i in 0 until CityArray.size()) {

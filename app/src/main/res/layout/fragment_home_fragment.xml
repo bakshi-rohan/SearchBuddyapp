@@ -55,6 +55,7 @@
                     android:visibility="gone"
                     app:defaultQueryHint="location"
                     app:iconifiedByDefault="false"
+                    android:gravity="right"
                     app:queryBackground="@null"></androidx.appcompat.widget.SearchView>
 
             </LinearLayout>
@@ -238,20 +239,28 @@
             </LinearLayout>
 
 <!--            -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="22dp"
-                android:fontFamily="@font/seoge_bold_two"
-                android:text="Explore Job Categories"
-                android:textColor="#936030"
-                android:textSize="15sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/seoge_bold_two"
+                    android:text="Recommended Jobs"
+                    android:textColor="#936030"
+                    android:textSize="15sp"></TextView>
+
+                <TextView
+                    android:id="@+id/based"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/seogee_ui"
+                    android:text="Based on your preferences"
+                    android:textColor="@color/app_grey"
+                    android:textSize="12sp"></TextView>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -266,9 +275,8 @@
                     android:layout_marginEnd="20dp"
                     android:textColor="#936030"
                     android:textSize="10sp"></TextView>
-            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler"
+                android:id="@+id/recomm_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -282,20 +290,11 @@
                 android:layout_marginHorizontal="22dp"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/seoge_bold_two"
-                android:text="Recommended Jobs"
+                android:text="Explore By Job Categories"
                 android:textColor="#936030"
                 android:textSize="15sp"></TextView>
 
-            <TextView
-                android:id="@+id/based"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="22dp"
-                android:layout_marginTop="1dp"
-                android:fontFamily="@font/seogee_ui"
-                android:text="Based on your preferences"
-                android:textColor="@color/app_grey"
-                android:textSize="12sp"></TextView>
+
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:id="@+id/shimmer_view_recommended"
                 android:layout_width="match_parent"
@@ -343,7 +342,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/based" />
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recomm_recycler"
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"

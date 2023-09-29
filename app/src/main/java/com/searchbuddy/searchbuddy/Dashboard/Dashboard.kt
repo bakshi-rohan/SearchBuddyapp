@@ -60,7 +60,6 @@ import java.util.concurrent.Executors
     private lateinit var binding: ActivityDashboardBinding
     lateinit var header: RelativeLayout
     lateinit var viewModel: DashBoardViewModel
-    private var pressedTime: Long = 0
     lateinit var analytics: FirebaseAnalytics
     lateinit var Jobadapter: FieldSalesAdapter
     lateinit var profile_pic: ShapeableImageView
@@ -83,9 +82,7 @@ lateinit var appUpdateManager:AppUpdateManager
         var contact_us = menu.findItem(R.id.contact_us)
         val drawer: DrawerLayout = binding.drawerView
         var toolbar: LinearLayout = findViewById(R.id.toolbar)
-        var arrow_back: ShapeableImageView = toolbar.findViewById(R.id.back)
-        arrow_back.visibility = View.GONE
-//        var bar:SearchView=toolbar.findViewById(R.id.search_bar_home)
+
         drawer_profile = toolbar.findViewById(R.id.drawer_icon)
         val logout = menu.findItem(R.id.log_out)
         var tnc = menu.findItem(R.id.tnc)
@@ -99,6 +96,7 @@ lateinit var appUpdateManager:AppUpdateManager
 
         val headerview: View = drawerNav.inflateHeaderView(R.layout.nav_header_navigation)
         val drawericon: ShapeableImageView = toolbar.findViewById(R.id.drawer_icon)
+        val header_name: TextView = toolbar.findViewById(R.id.header_name)
         profile_pic = headerview.findViewById<ShapeableImageView>(R.id.iv_profile_photo)
         var user = headerview.findViewById<TextView>(R.id.tv_name)
         navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -112,10 +110,10 @@ lateinit var appUpdateManager:AppUpdateManager
         LocalSessionManager.removeValue(Constant.FilterLocation, this)
         LocalSessionManager.removeValue(Constant.DatePosted, this)
         LocalSessionManager.removeValue(Constant.DatePost, this)
-
         var username = LocalSessionManager.getStringValue("userName", "", this)
         if (username != null) {
             user.setText(username)
+            header_name.setText("Hello "+ username)
         }
 
 // Creates instance of the manager.
@@ -398,6 +396,15 @@ binding.linkdn.setOnClickListener{
 
     override fun onResume() {
         super.onResume()
+        var toolbar: LinearLayout = findViewById(R.id.toolbar)
+
+        val header_name: TextView = toolbar.findViewById(R.id.header_name)
+
+        var username = LocalSessionManager.getStringValue("userName", "", this)
+        if (username != null) {
+            header_name.text="Hello "+ username
+        }
+
         appUpdateManager
             .appUpdateInfo
             .addOnSuccessListener { appUpdateInfo ->
@@ -443,7 +450,6 @@ binding.linkdn.setOnClickListener{
         viewModel.requestLogout(this, binding.progress).observe(this, {
             LocalSessionManager.deleteAll(this)
             LocalSessionManager.saveValue(Constant.IS_LOGED_IN, false, this)
-            Log.i("kkkkkkkkkkkk", tokeno.toString())
 
             OnLogout()
 
@@ -471,36 +477,22 @@ binding.linkdn.setOnClickListener{
                     var uri= Uri.parse("https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName)
                     Glide.with(this).load(uri).into(drawer_profile);
                     Glide.with(this).load(uri).into(profile_pic);
-//                    executor.execute {
-//                        val imageUrl =
-//                            "https://www.searchbuddy.in/api/get-picture/profilepicture/" + it.userDTO.profilePicName
-//                        try {
-//                            val `in` = java.net.URL(imageUrl).openStream()
-//                            image = BitmapFactory.decodeStream(`in`)
-//                            if (image != null) {
+                    var toolbar: LinearLayout = findViewById(R.id.toolbar)
 //
-//                                handler.post {
-//                                    profile_pic.setImageBitmap(image)
-//                                    drawer_profile.setImageBitmap(image)
-//                                }
-//                            }
-//                        } catch (e: Exception) {
-//                            e.printStackTrace()
-//                        }
-//                    }
+                    val header_name: TextView = toolbar.findViewById(R.id.header_name)
+                    header_name.text="Hello "+ it.userDTO.name.toString()
+
+
 
                 }
                 if (it.userDTO.email!=null){
                     LocalSessionManager.saveValue(Constant.EMAIL,it.userDTO.email.toString(),this)
+
                 }
             }
         })
     }
-//    private fun setCurrentFragment(fragment: Fragment)=
-//        supportFragmentManager.beginTransaction().apply {
-//            replace(R.id.ss,fragment)
-//            commit()
-//        }
+
 }
 
 

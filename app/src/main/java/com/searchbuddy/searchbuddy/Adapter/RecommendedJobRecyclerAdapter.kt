@@ -125,7 +125,13 @@ class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, var
          var exp_from =  ItemsViewModel.expFrm.toString()+"-"
         var exp_to=ItemsViewModel.expTo.toString()
         var plus=exp_from+exp_to
-        holder.experience.text = plus+ " Yr"
+        holder.experience.text = plus+ " Year"
+        if (ItemsViewModel.postedDay==0){
+            holder.days.text="Just Now"
+        }
+        else {
+            holder.days.text = ItemsViewModel.postedDay.toString() + " days ago"
+        }
 
     }
 
@@ -141,7 +147,7 @@ class RecommendedJobRecyclerAdapter(private val mList: List<RecommendedJob>, var
         val company_name: TextView = itemView.findViewById(R.id.company_name)
         val location: TextView = itemView.findViewById(R.id.location)
         val experience: TextView = itemView.findViewById(R.id.experience)
-//        val days: TextView = itemView.findViewById(R.id.days)
+        val days: TextView = itemView.findViewById(R.id.days_ago)
         val save: ImageView = itemView.findViewById(R.id.save_job_button)
 
     }

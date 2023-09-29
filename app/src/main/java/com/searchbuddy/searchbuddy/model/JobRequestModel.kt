@@ -11,9 +11,8 @@ data class JobRequestModel(
     var location :Any,
     var postedIn :String,
     var functions:Any,
-//    var company:Array<String>,
     var keyword:Array<String>,
-//    var level:Array<Int>
+//    var jobType: Any
 
 
 )

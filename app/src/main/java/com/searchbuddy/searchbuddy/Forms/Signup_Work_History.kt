@@ -414,7 +414,7 @@ class Signup_Work_History : AppCompatActivity() {
 //            Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 
 //            Log.i("kkkkkkkkk", city.CombinedName)
@@ -535,8 +535,8 @@ class Signup_Work_History : AppCompatActivity() {
     }
 
     fun validatefunction(): Boolean {
-        if (binding.tiFunctionForm.selectedItem.toString() == "Select Function") {
-            Toast.makeText(this, "Please select function", Toast.LENGTH_SHORT)
+        if (binding.tiFunctionForm.selectedItem.toString() == "Select Category") {
+            Toast.makeText(this, "Please select Category", Toast.LENGTH_SHORT)
             return false
         } else {
         }
@@ -575,7 +575,7 @@ class Signup_Work_History : AppCompatActivity() {
             var designation=binding.etDesignation!!.text.toString()
         }
         var id=1
-        if (binding.tiFunctionForm.selectedItem.toString()=="Select Function"){
+        if (binding.tiFunctionForm.selectedItem.toString()=="Select Category"){
             id=1
         }else if (binding.tiFunctionForm.selectedItem.toString()=="Business Development"){
             id=10
@@ -597,6 +597,9 @@ class Signup_Work_History : AppCompatActivity() {
         }
         else if (binding.tiFunctionForm.selectedItem.toString()=="Sales (B2C)"){
             id=15
+        }
+        else if (binding.tiFunctionForm.selectedItem.toString()=="Other"){
+            id=4276
         }
 //        var path: File? =null
 //        var Salary = binding.etSalary!!.text.toString()

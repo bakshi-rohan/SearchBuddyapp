@@ -133,7 +133,6 @@ class AddProfessionalDetail : AppCompatActivity() {
             val dataa: String = func.Value
             CityArray.add(dataa)
 
-//            Log.i("kkkkkkkkk", city.CombinedName)
             for (i in 0 until CityArray.size()) {
 //                val he = CityList("","",person.CombinedName,"","")
 //                exampleList.add(exampleArray.toString())
@@ -255,9 +254,9 @@ class AddProfessionalDetail : AppCompatActivity() {
                     else if (binding.radioNoWork.isChecked){
                         is_Prsent=false
                     }
-                    binding.tiFunctionForm.selectedItem=="Select Function"
+                    binding.tiFunctionForm.selectedItem=="Select Category"
                     var id=10
-                    if (binding.tiFunctionForm.selectedItem.toString()=="Select Function"){
+                    if (binding.tiFunctionForm.selectedItem.toString()=="Select Category"){
                         id=10
                     }else if (binding.tiFunctionForm.selectedItem.toString()=="Channel Sales and P&L"){
                         id=13
@@ -274,8 +273,8 @@ class AddProfessionalDetail : AppCompatActivity() {
                     else if (binding.tiFunctionForm.selectedItem.toString()=="Sales Strategy"){
                         id=11
                     }
-                    else if (binding.tiFunctionForm.selectedItem.toString()=="Other"){
-                        id=4005
+                    else if (binding.tiFunctionForm.selectedItem.toString()=="Others"){
+                        id=4276
                     }
                     var function = object {
                         var id = id
@@ -300,7 +299,7 @@ class AddProfessionalDetail : AppCompatActivity() {
 //            Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 
 //            Log.i("kkkkkkkkk", city.CombinedName)
@@ -455,7 +454,7 @@ class AddProfessionalDetail : AppCompatActivity() {
             var designation=binding.etDesignation!!.text.toString()
         }
         var id=1
-        if (binding.tiFunctionForm.selectedItem.toString()=="Select Function"){
+        if (binding.tiFunctionForm.selectedItem.toString()=="Select Category"){
             id=1
         }else if (binding.tiFunctionForm.selectedItem.toString()=="Business Development"){
             id=10
@@ -477,6 +476,9 @@ class AddProfessionalDetail : AppCompatActivity() {
         }
         else if (binding.tiFunctionForm.selectedItem.toString()=="Sales (B2C)"){
             id=15
+        }
+        else if (binding.tiFunctionForm.selectedItem.toString()=="Others"){
+            id=4276
         }
 //        var path: File? =null
 //        var Salary = binding.etSalary!!.text.toString()

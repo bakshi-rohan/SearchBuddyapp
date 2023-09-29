@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.icu.text.Transliterator
 import android.os.Bundle
+import android.os.Handler
 import android.speech.SpeechRecognizer
 import android.util.Log
 import android.view.LayoutInflater
@@ -75,11 +76,19 @@ class Sales_jobs : Fragment() {
      var company_name:String=""
      var level:Int=0
      lateinit var level_string:Array<Int>
+     lateinit var job_Type:ArrayList<String>
     var isPremium:Boolean=true
     private lateinit var speech: SpeechRecognizer
     private lateinit var recognizerIntent: Intent
     private lateinit var searchText: String
     private  var isSearched: Boolean=false
+    private val handler = Handler()
+    var string="Companies"
+    var jobtitle="Job Title"
+    var keywor="Keywords"
+    private val hintTexts = listOf("Search by \"$string\"", "Search by \"$jobtitle\"", "Search by \"$keywor\"")
+    private var currentHintIndex = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         LocalSessionManager.removeValue(Constant.SalarySliderStartValue,requireContext())
@@ -114,12 +123,8 @@ class Sales_jobs : Fragment() {
                 return true
             }
         })
-
-//        binding.chip3.visibility=View.GONE
-//        binding.chip2.visibility=View.GONE
-//        binding.chip5.visibility=View.GONE
-//        binding.chip6.visibility=View.VISIBLE
-//        binding.yourId.isChecked=true
+        binding.searchBar.queryHint = hintTexts[currentHintIndex]
+        handler.postDelayed(updateHintTask, 5000)
         binding.shimmerView.setVisibility(View.VISIBLE);
         binding.shimmerView.startShimmer();
 
@@ -129,9 +134,7 @@ class Sales_jobs : Fragment() {
              searchText = requireArguments().getString("Search","")
              isSearched = requireArguments().getBoolean("isSearched")
             binding.searchBar.setQuery(searchText,true)
-//            var p=searchText
-//            Log.i("gora",p.toString())
-//            Log.i("kala", keyword.toString())
+
 
         }
 
@@ -152,7 +155,7 @@ class Sales_jobs : Fragment() {
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.jobLength.visibility=View.GONE
+//                binding.jobLength.visibility=View.GONE
                 if (::myadapter.isInitialized) {
 
                     myadapter.filter.filter(query)
@@ -165,15 +168,17 @@ class Sales_jobs : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                binding.jobLength.visibility=View.GONE
+//                binding.jobLength.visibility=View.GONE
 
                 if (::myadapter.isInitialized) {
 
                     myadapter.filter.filter(newText)
+
                 }
                 if (::preadapter.isInitialized) {
 
                     preadapter.filter.filter(newText)
+
                 }
 
                 return true
@@ -183,35 +188,6 @@ class Sales_jobs : Fragment() {
             requestData(binding.progress)
 
 
-
-//        else if (isPremium==true){
-//            requestPreData(binding.progress)
-//        }
-//        binding.yourId.addSwitchObserver(RMSwitchObserver { switchView, isChecked ->
-//            if (isChecked==false){
-//                isPremium=false
-//                requestData(binding.progress)
-//                binding.fieldSaleRecycler.visibility=View.VISIBLE
-//                binding.premiumJobRecyler.visibility=View.GONE
-//                binding.chip3.visibility=View.VISIBLE
-//                binding.chip5.visibility=View.VISIBLE
-//                binding.chip2.visibility=View.VISIBLE
-//                binding.chip6.visibility=View.GONE
-//
-//
-//            }
-//            else{
-//                isPremium=true
-////                requestPreData(binding.progress)
-//                binding.fieldSaleRecycler.visibility=View.GONE
-//                binding.premiumJobRecyler.visibility=View.VISIBLE
-//                binding.chip3.visibility=View.GONE
-//                binding.chip5.visibility=View.GONE
-//                binding.chip2.visibility=View.GONE
-////                binding.chip6.visibility=View.VISIBLE
-//
-//            }
-//        })
         binding.filters.setOnClickListener {
             var bundle:Bundle= Bundle()
             bundle.putBoolean("isPremium",isPremium)
@@ -365,13 +341,17 @@ if (exp_from=="0"){
         if (exp_to != "") {
             exp_to_int = exp_to.toInt()
         }
+        if (exp_to_int>0){
+            binding.chip2.chipBackgroundColor=ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
+            binding.chip2.setTextColor(resources.getColor(com.bumptech.searchbuddy.R.color.white))
+        }
         if (exp_from_int>0&&exp_to_int<=30){
             binding.chip2.chipBackgroundColor=
                 ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
             binding.chip2.setTextColor(resources.getColor(com.bumptech.searchbuddy.R.color.white))
         }
-        else if (exp_to_int==30&&exp_from_int==0){
-            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.white))
+        else if (exp_to_int>=30){
+            ColorStateList.valueOf(ContextCompat.getColor(requireContext(), com.bumptech.searchbuddy.R.color.orange))
         }
         if (salary_from != "") {
             sal_from_int = salary_from.toInt()
@@ -385,6 +365,10 @@ if (exp_from=="0"){
         if (salary_to != "") {
             sal_to_int = salary_to.toInt()
         }
+        if (sal_to_int>0){
+            binding.chip3.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
+            binding.chip3.setTextColor(resources.getColor(R.color.white))
+        }
         if (sal_from_int>0&&sal_to_int<=30){
             binding.chip3.chipBackgroundColor=
                 ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.orange))
@@ -394,8 +378,16 @@ if (exp_from=="0"){
         else if (sal_to_int==30&&sal_from_int==0){
             ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
         }
+        var iscontract=LocalSessionManager.getStringValue(Constant.CheckContract,"",requireContext())
+        Log.i("chomu",iscontract.toString())
+        job_Type=ArrayList()
+        if (iscontract!=null){
+            job_Type.add(iscontract.toString())
+        }
+        else if (iscontract==""){
+            job_Type.remove(iscontract)
+        }
         var location=LocalSessionManager.getStringValue(Constant.FilterLocation,"",requireContext())
-        Log.i("xxxx",location.toString())
         LocationList=ArrayList()
         if (location==""){
             LocationList.remove(location)
@@ -417,9 +409,7 @@ if (exp_from=="0"){
         }
 
         date_posted= LocalSessionManager.getStringValue(Constant.DatePosted,"",requireContext()).toString()
-        Log.i("cccc",date_posted)
         if (date_posted==""){
-//            Log.i("pppp",date_post)
 
             binding.chip5.chipBackgroundColor= ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white))
 
@@ -445,7 +435,7 @@ if (exp_from=="0"){
             date_posted,
         functionList,
             keyword,
-//            level_string
+
 
         )
         fun checkIfFragmentAttached(operation: Context.() -> Unit) {
@@ -455,7 +445,6 @@ if (exp_from=="0"){
         }
         activitySalesViewModel.requestJobsLogged(requireContext(), RequestParams, progress)
             .observe(requireActivity(), {
-                Log.i("kkkkkkk", it.toString())
                 checkIfFragmentAttached {
                     if (it.positions == null) {
                         binding.jobLength.setText(it.length.toString() + " results found")
@@ -467,49 +456,56 @@ if (exp_from=="0"){
                         binding.jobLength.setText(it.length.toString() + " results found")
                         if (it.length<10){
                             binding.idPBLoading.visibility=View.GONE
+                            binding.jobLength.setText(it.length.toString() + " results found")
+
                         }
                         position_list = (it.positions as ArrayList<Positions>)
                         myadapter = FieldSalesAdapter(position_list,this,{index->saveJobs(index)},{index->deleteJobs(index)})
                         FieldJobRecycler.adapter = myadapter
                         binding.txtNoData.visibility=View.GONE
                         binding.imgNodata.visibility=View.GONE
+                        binding.jobLength.setText(it.length.toString() + " results found")
                         binding.fieldSaleRecycler.visibility=View.VISIBLE
                         binding.shimmerView.setVisibility(View.GONE);
                         binding.shimmerView.stopShimmer();
-                        if (temp > 3) {
-                            binding.idPBLoading.visibility = View.GONE
 
-                        }
                     }
                 }
             })
 
     }
 
+
+
     private fun saveJobs(index:Int){
 
         var jobList= arrayListOf<Any>()
-        var kk=object {
+        var id=object {
             var id=index
         }
-        jobList.add(kk)
+        jobList.add(id)
         activitySalesViewModel.saveJobs(requireContext(),jobList,binding.progress).observe(viewLifecycleOwner,{
-//            Toast.makeText(requireContext(),it.message,Toast.LENGTH_SHORT).show()
             requestData(binding.progress)
         })
-//        requestData(binding.progress)
+    }
+    private val updateHintTask = object : Runnable {
+        override fun run() {
+            // Update the hint text to the next one in the list
+            currentHintIndex = (currentHintIndex + 1) % hintTexts.size
+            binding.searchBar.queryHint = hintTexts[currentHintIndex]
+
+            // Schedule the task again after 2 seconds
+            handler.postDelayed(this, 2500)
+        }
     }
     private fun deleteJobs(index:Int){
 
 
             var id=index
 
-//        jobList.add(kk)
         activitySalesViewModel.deleteJobs(requireContext(),id,binding.progress).observe(viewLifecycleOwner,{
-//            Toast.makeText(requireContext(),it.message,Toast.LENGTH_SHORT).show()
             requestData(binding.progress)
         })
-//        (binding.progress)
     }
 
 }

@@ -122,7 +122,7 @@ class AppliedJobsDescription : Fragment() {
                             binding.companyNameDescription.setText(it.client)
                         }
                         if (it.expTo!=null&&it.expFrom!=null) {
-                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + " Yr")
+                            binding.experienceDesc.setText(it.expFrom + "-" + it.expTo + " Year")
                         }
                         if (it.roleDesc!=null) {
                             binding.positionOverviewDetail.setText(getHtml(it.roleDesc))

@@ -69,10 +69,10 @@ class BasicDetails : AppCompatActivity() {
         var persons: List<CityList> = gson.fromJson(jsonFileString, listCityType)
 
         persons.forEachIndexed { idx, city ->
-            Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
+//            Log.i("dataaaaa", "> Item $idx:\n${city.Districtname}")
 //             someList = person.Districtname
             val CityArray: JsonArray = JsonArray()
-            val dataa: String = city.CombinedName
+            val dataa: String = city.District
             CityArray.add(dataa)
 
             Log.i("kkkkkkkkk", city.CombinedName)
